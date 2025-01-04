@@ -1,4 +1,4 @@
-I'm Burak Soykan, I’m currently learning in Ecole 42 in kocaeli
+ I’m currently learning in Ecole 42 in kocaeli
 
 # 42 Projects
 
