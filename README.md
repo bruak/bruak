@@ -1,4 +1,4 @@
- I’m currently learning in Ecole 42 in kocaeli
+ I’m currently in Ecole 42 in kocaeli member
 
 # 42 Projects
 
