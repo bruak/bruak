@@ -1,4 +1,4 @@
- I’m currently in Ecole 42 in kocaeli member
+ I’m currently workin as R&D developer
 
 # 42 Projects
 
