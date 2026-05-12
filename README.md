@@ -73,6 +73,8 @@ I design and develop production-focused software systems for industrial environm
 - Dockerized services and Linux / Windows deployment workflows
 - Automation tools, sync services and internal business applications
 - Windows COM integration and reverse engineering of native and managed executables
+- End-to-end software delivery — design, development, cross-platform builds (Windows exe / Linux), installer packaging and machine-wide deployment
+- Technical reporting and documentation throughout the full delivery cycle
 
 ---
 
