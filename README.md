@@ -256,13 +256,6 @@ I like solving problems around industrial data collection, machine state normali
 
 ---
 
-## GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bruak&show_icons=true&theme=tokyonight)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bruak&layout=compact&theme=tokyonight)
-
----
-
 ## Contact
 
 - GitHub: [github.com/bruak](https://github.com/bruak)
