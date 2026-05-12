@@ -48,6 +48,13 @@ I design and develop production-focused software systems for industrial environm
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Windows Services](https://img.shields.io/badge/Windows_Services-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+**Reverse Engineering & Windows Internals**
+
+![Windows COM](https://img.shields.io/badge/Windows_COM-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![ILSpy](https://img.shields.io/badge/ILSpy-.NET_Decompiler-5C2D91?style=for-the-badge)
+![dotPeek](https://img.shields.io/badge/dotPeek-.NET_Decompiler-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
+![Detect-It-Easy](https://img.shields.io/badge/Detect--It--Easy-die.exe-CC0000?style=for-the-badge)
+
 **Core Programming**
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
@@ -65,6 +72,7 @@ I design and develop production-focused software systems for industrial environm
 - Frontend dashboards with React and Next.js
 - Dockerized services and Linux / Windows deployment workflows
 - Automation tools, sync services and internal business applications
+- Windows COM integration and reverse engineering of native and managed executables
 
 ---
 
