@@ -50,10 +50,10 @@ I design and develop production-focused software systems for industrial environm
 
 **Reverse Engineering & Windows Internals**
 
-![Windows COM](https://img.shields.io/badge/Windows_COM-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![ILSpy](https://img.shields.io/badge/ILSpy-.NET_Decompiler-5C2D91?style=for-the-badge)
-![dotPeek](https://img.shields.io/badge/dotPeek-.NET_Decompiler-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
-![Detect-It-Easy](https://img.shields.io/badge/Detect--It--Easy-die.exe-CC0000?style=for-the-badge)
+![Windows COM](https://img.shields.io/badge/Windows_COM-0078D6?style=flat-square&logo=windows&logoColor=white)
+![ILSpy](https://img.shields.io/badge/ILSpy-.NET_Decompiler-5C2D91?style=flat-square)
+![dotPeek](https://img.shields.io/badge/dotPeek-.NET_Decompiler-444444?style=flat-square&logo=jetbrains&logoColor=white)
+![Detect-It-Easy](https://img.shields.io/badge/Detect--It--Easy-die.exe-CC0000?style=flat-square)
 
 **Core Programming**
 
