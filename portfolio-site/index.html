@@ -8,6 +8,7 @@
       content="Burak Soykan - R&D Software Developer building real-time industrial systems, telemetry pipelines and production-ready service architectures."
     />
     <title>Burak Soykan | R&D Software Developer</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +41,11 @@
       <section id="home" class="hero section-shell">
         <div class="hero-content">
           <p class="eyebrow">Industrial IoT • Real-Time Systems • Full-Stack Service Architecture</p>
-          <h1>From machine data to production-ready software systems.</h1>
+          <h1 class="hero-title">
+            <span class="title-kicker">Industrial systems engineering</span>
+            <span class="title-main">Machine data.</span>
+            <span class="title-subline">Runtime-ready software systems.</span>
+          </h1>
           <p class="hero-lead">
             I design, build and ship production-focused software systems for industrial and operational environments.
             My work covers machine connectivity, telemetry pipelines, real-time dashboards, cross-platform delivery,
@@ -54,23 +59,23 @@
           </div>
         </div>
 
-        <aside class="architecture-panel professional-panel" aria-label="System design matrix preview">
+        <aside class="architecture-panel professional-panel" aria-label="System architecture map preview">
           <div class="architecture-header professional-header">
-            <span>SYSTEM DESIGN MATRIX</span>
-            <strong>Production-oriented delivery model</strong>
+            <span>SYSTEM ARCHITECTURE MAP</span>
+            <strong>Industrial data acquisition to operational delivery</strong>
           </div>
 
-          <div class="system-matrix" aria-label="System architecture layers">
+          <div class="system-matrix compact-matrix" aria-label="System architecture layers">
             <div class="matrix-layer">
-              <span>Source Systems</span>
-              <strong>CNC / PLC / DB / API</strong>
-              <small>Machine controllers, operational databases, ERP sources, field devices and external services.</small>
+              <span>Field & Machine Layer</span>
+              <strong>CNC / PLC / ERP / DB / API</strong>
+              <small>Mitsubishi, NUM, Heidenhain, Siemens, Fanuc and operational data sources.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
               <span>Vendor Access Layer</span>
-              <strong>Mitsubishi / NUM / Heidenhain / Siemens / Fanuc / etc.</strong>
-              <small>Controller-specific protocols, SDKs, native libraries, gateway tools and access constraints.</small>
+              <strong>SDKs / Native Libraries / Protocol Tools</strong>
+              <small>Controller-specific APIs, DLLs, LSV2, MTConnect, vendor gateways and access constraints.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
@@ -80,9 +85,9 @@
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
-              <span>Acquisition Services</span>
+              <span>Acquisition Layer</span>
               <strong>Collectors / Adapters / Gateways</strong>
-              <small>Protocol bridges, vendor SDK integrations, database readers and gateway-side data capture.</small>
+              <small>Protocol bridges, database readers, machine data collectors and gateway-side capture services.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
@@ -100,67 +105,13 @@
             <div class="matrix-layer">
               <span>MES & Operations Layer</span>
               <strong>MES / Dashboards / OEE / Logs / Health</strong>
-              <small>Production visibility, MES-ready telemetry, runtime diagnostics, health checks and operator dashboards.</small>
+              <small>MES-ready telemetry, operator dashboards, service diagnostics, health checks and runtime visibility.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
               <span>Lifecycle Layer</span>
               <strong>Packaging / Installers / Monitoring / Handoff</strong>
               <small>Deployment validation, installer workflows, operational documentation and maintainable delivery.</small>
-            </div>
-          </div>
-
-          <div class="architecture-summary">
-            <div>
-              <span>Primary Output</span>
-              <strong>MES-ready industrial data systems</strong>
-            </div>
-            <div>
-              <span>Delivery Scope</span>
-              <strong>Machine connectivity → MES → Dashboards → Deployment</strong>
-            </div>
-          </div>
-
-          <div class="pipeline-visual professional-pipeline" id="pipelineVisual">
-            <button class="pipeline-node is-active" type="button" data-stage="collect">
-              <span>01</span>
-              <strong>Collect</strong>
-              <small>Machine / DB / API</small>
-            </button>
-            <button class="pipeline-node" type="button" data-stage="normalize">
-              <span>02</span>
-              <strong>Normalize</strong>
-              <small>Payload / State</small>
-            </button>
-            <button class="pipeline-node" type="button" data-stage="stream">
-              <span>03</span>
-              <strong>Stream</strong>
-              <small>MQTT / WS / REST</small>
-            </button>
-            <button class="pipeline-node" type="button" data-stage="deploy">
-              <span>04</span>
-              <strong>Deploy</strong>
-              <small>Windows / Linux</small>
-            </button>
-          </div>
-
-          <div class="architecture-detail professional-detail" id="architectureDetail">
-            <span>Selected stage</span>
-            <strong>Collect operational data from machines, databases, protocols and service endpoints.</strong>
-          </div>
-
-          <div class="signal-panel professional-signals" aria-label="Architecture signals">
-            <div>
-              <span>Runtime Visibility</span>
-              <i style="--level: 88%"></i>
-            </div>
-            <div>
-              <span>Deployment Readiness</span>
-              <i style="--level: 94%"></i>
-            </div>
-            <div>
-              <span>Integration Depth</span>
-              <i style="--level: 91%"></i>
             </div>
           </div>
         </aside>
@@ -409,7 +360,7 @@
           </div>
           <p>
             The stack is intentionally grouped by system responsibility: backend, frontend, industrial protocols,
-            data, delivery and diagnostics.
+            data, delivery, diagnostics and reverse engineering.
           </p>
         </div>
 
@@ -435,8 +386,8 @@
             <p>Docker, Docker Compose, Windows Services, systemd, Nginx, PyInstaller, Nuitka</p>
           </div>
           <div class="stack-card interactive-card">
-            <h3>Diagnostics</h3>
-            <p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, Windows API tools</p>
+            <h3>Diagnostics & Reverse Engineering</h3>
+            <p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, DLL export analysis, protocol tracing, native API inspection and Windows runtime tools</p>
           </div>
         </div>
       </section>
@@ -446,8 +397,7 @@
           <p class="eyebrow">Core Systems Background</p>
           <h2>42 School project base</h2>
           <p>
-            These projects are kept as supporting evidence of C, C++, Unix, networking, algorithms, graphics,
-            concurrency and DevOps fundamentals.
+            42 School is a globally recognized, comprehensive and demanding project-based software engineering program that builds strong C, C++, Unix, networking, algorithms, graphics, concurrency and DevOps fundamentals through peer-reviewed assignments.
           </p>
         </div>
 
