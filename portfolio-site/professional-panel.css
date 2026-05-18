@@ -6,8 +6,46 @@
 }
 
 .professional-panel::before {
-  opacity: 0.16;
-  animation-duration: 9s;
+  opacity: 0.12;
+  animation-duration: 14s;
+}
+
+.hero-title {
+  display: grid;
+  gap: 10px;
+  max-width: 940px;
+  line-height: 0.98;
+}
+
+.hero-title .title-kicker {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  padding: 9px 13px;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #bae6fd;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.75rem, 1.25vw, 0.92rem);
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title .title-main {
+  display: block;
+  background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 44%, #38bdf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-title .title-subline {
+  display: block;
+  color: #e2e8f0;
+  font-size: clamp(2.15rem, 6vw, 5.1rem);
+  letter-spacing: -0.08em;
 }
 
 .professional-header {
@@ -21,7 +59,7 @@
 }
 
 .professional-header strong {
-  max-width: 260px;
+  max-width: 300px;
   color: #e5e7eb;
   font-weight: 700;
   text-align: right;
@@ -34,9 +72,13 @@
   padding: 22px;
 }
 
+.system-matrix.compact-matrix {
+  padding-top: 18px;
+}
+
 .matrix-layer {
   position: relative;
-  padding: 18px;
+  padding: 16px 18px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   border-radius: 18px;
   background:
@@ -74,84 +116,22 @@
 .matrix-layer strong {
   margin-top: 6px;
   color: #f8fafc;
-  font-size: 1.02rem;
+  font-size: 1rem;
   letter-spacing: -0.02em;
 }
 
 .matrix-layer small {
-  margin-top: 7px;
+  margin-top: 6px;
   color: #94a3b8;
-  font-size: 0.84rem;
-  line-height: 1.45;
+  font-size: 0.82rem;
+  line-height: 1.42;
 }
 
 .matrix-connector {
   width: 1px;
-  height: 22px;
+  height: 14px;
   margin-left: 28px;
   background: linear-gradient(180deg, rgba(56, 189, 248, 0.65), rgba(34, 197, 94, 0.45));
-}
-
-.architecture-summary {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 0 22px 18px;
-}
-
-.architecture-summary div {
-  padding: 15px;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 16px;
-  background: rgba(2, 6, 23, 0.52);
-}
-
-.architecture-summary span,
-.architecture-summary strong {
-  display: block;
-}
-
-.architecture-summary span {
-  color: #64748b;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-}
-
-.architecture-summary strong {
-  margin-top: 6px;
-  color: #dbeafe;
-  font-size: 0.9rem;
-  line-height: 1.35;
-}
-
-.professional-pipeline {
-  padding-top: 0;
-}
-
-.professional-pipeline .pipeline-node {
-  border-color: rgba(148, 163, 184, 0.16);
-  background: rgba(15, 23, 42, 0.72);
-}
-
-.professional-pipeline .pipeline-node:hover,
-.professional-pipeline .pipeline-node.is-active {
-  border-color: rgba(56, 189, 248, 0.38);
-  background: rgba(30, 41, 59, 0.8);
-  transform: translateY(-2px);
-}
-
-.professional-detail {
-  border-color: rgba(148, 163, 184, 0.16);
-  background: rgba(15, 23, 42, 0.68);
-}
-
-.professional-detail strong {
-  color: #e2e8f0;
-}
-
-.professional-signals i::before {
-  background: linear-gradient(90deg, #38bdf8, #60a5fa);
 }
 
 @media (max-width: 680px) {
@@ -161,9 +141,5 @@
 
   .professional-header strong {
     text-align: left;
-  }
-
-  .architecture-summary {
-    grid-template-columns: 1fr;
   }
 }
