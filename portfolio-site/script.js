@@ -3,7 +3,7 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const cards = document.querySelectorAll('.project-card, .capability-card, .stack-card');
+const cards = document.querySelectorAll('.project-card, .capability-card, .stack-card, .timeline-item');
 
 const observer = new IntersectionObserver(
   entries => {
@@ -20,4 +20,55 @@ const observer = new IntersectionObserver(
 cards.forEach(card => {
   card.classList.add('reveal-card');
   observer.observe(card);
+});
+
+const glow = document.querySelector('.cursor-glow');
+if (glow && window.matchMedia('(pointer: fine)').matches) {
+  document.body.classList.add('has-pointer');
+
+  window.addEventListener('pointermove', event => {
+    glow.style.left = `${event.clientX}px`;
+    glow.style.top = `${event.clientY}px`;
+  });
+}
+
+const interactiveCards = document.querySelectorAll('.interactive-card');
+interactiveCards.forEach(card => {
+  card.addEventListener('pointermove', event => {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const rotateX = ((y / rect.height) - 0.5) * -5;
+    const rotateY = ((x / rect.width) - 0.5) * 5;
+
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+
+  card.addEventListener('pointerleave', () => {
+    card.style.transform = '';
+  });
+});
+
+const stageCopy = {
+  collect: 'Collect operational data from machines, databases, protocols and service endpoints.',
+  normalize: 'Normalize raw records into clean identifiers, payloads, states and runtime-safe structures.',
+  stream: 'Move data through MQTT, WebSocket, REST, polling workers or gateway services.',
+  deploy: 'Package the system with logs, health checks and Windows/Linux runtime delivery in mind.'
+};
+
+const pipelineButtons = document.querySelectorAll('.pipeline-node');
+const architectureDetail = document.getElementById('architectureDetail');
+
+pipelineButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    pipelineButtons.forEach(item => item.classList.remove('is-active'));
+    button.classList.add('is-active');
+
+    const stage = button.dataset.stage;
+    if (architectureDetail && stageCopy[stage]) {
+      architectureDetail.innerHTML = `<span>Selected stage</span><strong>${stageCopy[stage]}</strong>`;
+    }
+  });
 });
