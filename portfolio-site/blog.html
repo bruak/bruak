@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical articles by Burak Soykan about industrial systems, telemetry, CNC connectivity, deployment and software engineering."
+    />
+    <title>Blog | Burak Soykan</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./professional-panel.css" />
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html#home" aria-label="Go to home">
+        <span class="brand-mark">BS</span>
+        <span>Burak Soykan</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="./index.html#systems">Systems</a>
+        <a href="./index.html#projects">Engineering</a>
+        <a href="./index.html#approach">Approach</a>
+        <a href="./index.html#stack">Stack</a>
+        <a class="is-active" href="./blog.html">Blog</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-shell blog-hero">
+        <div>
+          <p class="eyebrow">Technical Writing</p>
+          <h1 class="blog-title">Industrial software notes, system design breakdowns and field integration logs.</h1>
+          <p class="blog-lead">
+            Articles focused on machine connectivity, telemetry pipelines, MES-ready data flows, service deployment,
+            diagnostics, reverse engineering and production-oriented software engineering.
+          </p>
+        </div>
+        <aside class="blog-index-panel">
+          <span>Writing Scope</span>
+          <strong>CNC connectivity → telemetry → MES → deployment</strong>
+          <p>Use this area for deep technical posts, implementation notes, debugging records and project write-ups.</p>
+        </aside>
+      </section>
+
+      <section class="section-shell blog-layout">
+        <aside class="blog-sidebar" aria-label="Blog categories">
+          <div class="sidebar-card">
+            <span>Categories</span>
+            <a href="#industrial-iot">Industrial IoT</a>
+            <a href="#cnc">CNC Connectivity</a>
+            <a href="#deployment">Deployment</a>
+            <a href="#diagnostics">Diagnostics</a>
+            <a href="#architecture">Architecture</a>
+          </div>
+          <div class="sidebar-card muted-card">
+            <span>Post Format</span>
+            <p>Problem → Context → Architecture → Implementation → Validation → Notes</p>
+          </div>
+        </aside>
+
+        <div class="post-list">
+          <article id="industrial-iot" class="post-card interactive-card">
+            <div class="post-meta">
+              <span>Industrial IoT</span>
+              <time datetime="2026-05-18">May 18, 2026</time>
+            </div>
+            <h2><a href="./posts/industrial-telemetry-pipeline.html">Designing an industrial telemetry pipeline from machine data to MES-ready payloads</a></h2>
+            <p>
+              A practical breakdown of collecting raw operational signals, normalizing machine states, transporting data
+              with MQTT / REST / WebSocket and preparing outputs for dashboards or MES integration.
+            </p>
+            <div class="tag-list">
+              <span>Telemetry</span><span>MQTT</span><span>MES</span><span>OEE</span>
+            </div>
+          </article>
+
+          <article id="cnc" class="post-card interactive-card">
+            <div class="post-meta">
+              <span>CNC Connectivity</span>
+              <time datetime="2026-05-18">May 18, 2026</time>
+            </div>
+            <h2><a href="./posts/multi-brand-cnc-data-acquisition.html">Multi-brand CNC data acquisition: Mitsubishi, NUM, Heidenhain, Siemens, Fanuc and beyond</a></h2>
+            <p>
+              Notes on vendor-specific CNC access paths, native libraries, protocol constraints, alarm/state extraction,
+              controller identity and telemetry-ready machine data modeling.
+            </p>
+            <div class="tag-list">
+              <span>CNC</span><span>LSV2</span><span>MTConnect</span><span>Reverse Engineering</span>
+            </div>
+          </article>
+
+          <article id="deployment" class="post-card interactive-card">
+            <div class="post-meta">
+              <span>Deployment</span>
+              <time datetime="2026-05-18">May 18, 2026</time>
+            </div>
+            <h2><a href="./posts/runtime-delivery-checklist.html">Runtime delivery checklist for Windows and Linux industrial services</a></h2>
+            <p>
+              A compact checklist for service installation, logs, health checks, environment variables, recovery policy,
+              Docker packaging, installer workflows and handoff documentation.
+            </p>
+            <div class="tag-list">
+              <span>Windows Service</span><span>systemd</span><span>Docker</span><span>Handoff</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Burak Soykan</span>
+      <span>Technical Blog</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
