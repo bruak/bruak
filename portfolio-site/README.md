@@ -1,14 +1,24 @@
 # Burak Soykan Portfolio Site
 
-Static portfolio website for an R&D Software Developer profile focused on industrial IoT, real-time systems, telemetry pipelines, microservices and production-ready delivery.
+Static portfolio website for an R&D Software Developer profile focused on industrial IoT, real-time systems, telemetry pipelines, microservices, technical writing and production-ready delivery.
 
 ## Structure
 
 ```text
 portfolio-site/
 ├── index.html
+├── blog.html
+├── blog.css
 ├── styles.css
+├── professional-panel.css
 ├── script.js
+├── favicon.svg
+├── CNAME
+├── posts/
+│   ├── industrial-telemetry-pipeline.html
+│   ├── multi-brand-cnc-data-acquisition.html
+│   ├── runtime-delivery-checklist.html
+│   └── article-template.html
 └── README.md
 ```
 
@@ -25,6 +35,7 @@ Then open:
 
 ```text
 http://127.0.0.1:8080
+http://127.0.0.1:8080/blog.html
 ```
 
 ## Deployment
@@ -36,14 +47,49 @@ This folder is prepared as a static site and can be deployed through GitHub Page
 Primary positioning:
 
 ```text
-From machine data to production-ready software systems.
+Machine data. Runtime-ready software systems.
 ```
 
-Featured project groups:
+Main engineering groups:
 
-- MindMyMachine Publisher
-- IBBCAM
-- ParkIt
-- ft_transcendence
-- Matcha
-- Deployment & Infrastructure Toolkit
+- Publisher / industrial telemetry pipeline
+- IBBCAM / camera map and health runtime
+- ParkIt / mobile product system
+- ft_transcendence / real-time web platform
+- Matcha / distributed application and matching engine
+- Industry 4.0 CNC connectivity
+- Deployment engineering toolkit
+
+## Blog Publishing Workflow
+
+To publish a new article:
+
+1. Copy `posts/article-template.html`.
+2. Rename it with a URL-safe slug, for example:
+
+```text
+posts/my-new-technical-post.html
+```
+
+3. Update the page title, meta description, category, date, article title, summary and article content.
+4. Add a new card to `blog.html` inside `.post-list`.
+5. Commit and push. GitHub Pages will publish the new article after deployment.
+
+Recommended article structure:
+
+```text
+Problem
+Context
+Architecture / Implementation
+Validation
+Operational Notes
+```
+
+Recommended categories:
+
+- Industrial IoT
+- CNC Connectivity
+- MES / OEE
+- Deployment
+- Diagnostics & Reverse Engineering
+- Architecture
