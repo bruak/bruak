@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Designing an industrial telemetry pipeline | Burak Soykan</title>
-    <meta name="description" content="A practical breakdown of industrial telemetry pipeline design from raw machine data to MES-ready payloads." />
+    <title>Industrial telemetry pipeline tasarımı | Burak Soykan</title>
+    <meta name="description" content="Raw machine data bilgisinden MES-ready payloads yapısına industrial telemetry pipeline tasarımı üzerine teknik yazı." />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,31 +17,32 @@
     <div class="page-noise"></div>
     <header class="site-header">
       <a class="brand" href="../index.html#home"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main-nav" aria-label="Ana navigasyon">
         <a href="../index.html#systems">Systems</a>
         <a href="../index.html#projects">Engineering</a>
         <a class="is-active" href="../blog.html">Blog</a>
         <a href="../index.html#contact">Contact</a>
+        <a href="./industrial-telemetry-pipeline-en.html">EN</a>
       </nav>
     </header>
 
     <main class="section-shell article-layout">
       <article class="article-shell">
-        <div class="article-meta"><span>Industrial IoT</span><time datetime="2026-05-18">May 18, 2026</time><span>7 min read</span></div>
-        <h1>Designing an industrial telemetry pipeline from machine data to MES-ready payloads</h1>
-        <p class="article-summary">A practical structure for turning raw machine, database or controller data into stable telemetry that can feed dashboards, OEE screens, MES integrations and runtime monitoring flows.</p>
+        <div class="article-meta"><span>Industrial IoT</span><time datetime="2026-05-18">18 Mayıs 2026</time><span>7 min read</span></div>
+        <h1>Machine data’dan MES-ready payloads yapısına industrial telemetry pipeline tasarımı</h1>
+        <p class="article-summary">Raw machine, database veya controller data bilgisini dashboards, OEE screens, MES integrations ve runtime monitoring flows için stable telemetry haline getiren pratik bir yapı.</p>
 
         <div class="article-content">
           <h2 id="problem">Problem</h2>
-          <p>Industrial data is rarely clean at the source. A machine may expose counters, states, alarms or program data through a controller protocol, a local database, a vendor SDK or a gateway service. The first engineering task is not visualization; it is building a reliable acquisition and normalization path.</p>
+          <p>Industrial data çoğu zaman kaynağında temiz değildir. Bir machine, controller protocol, local database, vendor SDK veya gateway service üzerinden counters, states, alarms ya da program data bilgisi verebilir. İlk engineering görevi visualization değildir; güvenilir acquisition ve normalization path oluşturmaktır.</p>
 
           <h2 id="pipeline">Pipeline model</h2>
           <ol>
-            <li><strong>Acquire:</strong> read from CNC, PLC, database, API or local service.</li>
-            <li><strong>Normalize:</strong> map vendor-specific values into stable operational states.</li>
-            <li><strong>Shape:</strong> create payloads with machine identity, timestamp, status, counters and alarm context.</li>
-            <li><strong>Transport:</strong> publish through MQTT, REST, WebSocket or MTConnect depending on the target environment.</li>
-            <li><strong>Operate:</strong> add logs, health checks, restart policy, configuration files and deployment documentation.</li>
+            <li><strong>Acquire:</strong> CNC, PLC, database, API veya local service üzerinden oku.</li>
+            <li><strong>Normalize:</strong> vendor-specific values bilgisini stable operational states haline getir.</li>
+            <li><strong>Shape:</strong> machine identity, timestamp, status, counters ve alarm context içeren payloads oluştur.</li>
+            <li><strong>Transport:</strong> hedef ortama göre MQTT, REST, WebSocket veya MTConnect ile yayınla.</li>
+            <li><strong>Operate:</strong> logs, health checks, restart policy, configuration files ve deployment documentation ekle.</li>
           </ol>
 
           <h2 id="payload">Payload design</h2>
@@ -55,16 +56,14 @@
 }</code></pre>
 
           <h2 id="validation">Validation</h2>
-          <p>A telemetry pipeline is useful only if it can be operated after deployment. The validation checklist should include reconnect behavior, duplicate handling, timestamp consistency, offline state mapping, log rotation, credential protection and service recovery.</p>
+          <p>Bir telemetry pipeline ancak deployment sonrasında işletilebiliyorsa değerlidir. Validation checklist içinde reconnect behavior, duplicate handling, timestamp consistency, offline state mapping, log rotation, credential protection ve service recovery bulunmalıdır.</p>
         </div>
 
-        <div class="article-footer-nav">
-          <a class="btn btn-secondary" href="../blog.html">Back to Blog</a>
-        </div>
+        <div class="article-footer-nav"><a class="btn btn-secondary" href="../blog.html">Blog’a dön</a></div>
       </article>
 
       <aside class="article-toc">
-        <span>On this page</span>
+        <span>Bu sayfada</span>
         <a href="#problem">Problem</a>
         <a href="#pipeline">Pipeline model</a>
         <a href="#payload">Payload design</a>
