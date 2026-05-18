@@ -18,6 +18,7 @@
   </head>
   <body>
     <div class="page-noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Go to home">
@@ -50,55 +51,65 @@
             <a class="btn btn-secondary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
-
-          <div class="hero-metrics" aria-label="Core capability summary">
-            <div>
-              <strong>6</strong>
-              <span>featured systems</span>
-            </div>
-            <div>
-              <strong>IoT</strong>
-              <span>telemetry focus</span>
-            </div>
-            <div>
-              <strong>Win/Linux</strong>
-              <span>delivery targets</span>
-            </div>
-          </div>
         </div>
 
-        <aside class="status-panel" aria-label="System status preview">
-          <div class="panel-header">
-            <span class="panel-dot"></span>
-            <span>SYSTEM STATUS</span>
+        <aside class="architecture-panel" aria-label="Delivery architecture preview">
+          <div class="architecture-header">
+            <span>PORTFOLIO CORE</span>
+            <strong>Delivery Architecture</strong>
           </div>
-          <div class="status-grid">
-            <div class="status-row">
-              <span>MQTT Broker</span>
-              <strong class="online">ONLINE</strong>
-            </div>
-            <div class="status-row">
-              <span>Telemetry Flow</span>
-              <strong class="online">ACTIVE</strong>
-            </div>
-            <div class="status-row">
-              <span>Camera Health</span>
-              <strong class="warning">MONITORING</strong>
-            </div>
-            <div class="status-row">
-              <span>Service Runtime</span>
-              <strong class="online">STABLE</strong>
-            </div>
-            <div class="status-row">
-              <span>Docker Build</span>
-              <strong class="online">READY</strong>
+
+          <div class="architecture-canvas" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="orbit orbit-three"></span>
+            <div class="core-node">
+              <span>R&D</span>
+              <strong>System</strong>
             </div>
           </div>
-          <div class="terminal-card">
-            <p>$ deploy --target production</p>
-            <p>✓ service packaged</p>
-            <p>✓ health endpoint verified</p>
-            <p>✓ runtime logs enabled</p>
+
+          <div class="pipeline-visual" id="pipelineVisual">
+            <button class="pipeline-node is-active" type="button" data-stage="collect">
+              <span>01</span>
+              <strong>Collect</strong>
+              <small>Machine / DB / API</small>
+            </button>
+            <button class="pipeline-node" type="button" data-stage="normalize">
+              <span>02</span>
+              <strong>Normalize</strong>
+              <small>Payload / State</small>
+            </button>
+            <button class="pipeline-node" type="button" data-stage="stream">
+              <span>03</span>
+              <strong>Stream</strong>
+              <small>MQTT / WS / REST</small>
+            </button>
+            <button class="pipeline-node" type="button" data-stage="deploy">
+              <span>04</span>
+              <strong>Deploy</strong>
+              <small>Windows / Linux</small>
+            </button>
+          </div>
+
+          <div class="architecture-detail" id="architectureDetail">
+            <span>Selected stage</span>
+            <strong>Collect operational data from machines, databases, protocols and service endpoints.</strong>
+          </div>
+
+          <div class="signal-panel" aria-label="Architecture signals">
+            <div>
+              <span>Latency Focus</span>
+              <i style="--level: 86%"></i>
+            </div>
+            <div>
+              <span>Deployability</span>
+              <i style="--level: 94%"></i>
+            </div>
+            <div>
+              <span>Observability</span>
+              <i style="--level: 88%"></i>
+            </div>
           </div>
         </aside>
       </section>
@@ -114,27 +125,27 @@
         </div>
 
         <div class="capability-grid">
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>Industrial IoT</h3>
             <p>Machine data collection, telemetry pipelines, MQTT flows and dashboard-oriented device modeling.</p>
           </article>
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>Real-Time Systems</h3>
             <p>WebSocket, Socket.IO, live dashboards, background workers and async task notifications.</p>
           </article>
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>Service Architecture</h3>
             <p>Microservices, API gateways, Redis, PostgreSQL, Docker Compose and deployable service boundaries.</p>
           </article>
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>Cross-Platform Delivery</h3>
             <p>Windows services, Linux services, executable packaging, installer workflows and deployment validation.</p>
           </article>
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>CNC & Machine Connectivity</h3>
             <p>MTConnect, LSV2, CNC API research, machine state normalization and industrial data extraction.</p>
           </article>
-          <article class="capability-card">
+          <article class="capability-card interactive-card">
             <h3>Internal Tools & Automation</h3>
             <p>Business process tools, sync services, monitoring utilities and operational dashboards.</p>
           </article>
@@ -154,12 +165,12 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card featured">
+          <article class="project-card featured interactive-card">
             <div class="project-topline">
               <span>Industrial Telemetry</span>
               <a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Repository</a>
             </div>
-            <h3>MindMyMachine Publisher</h3>
+            <h3>Publisher</h3>
             <p>
               SQLite-based SMARTFACTORY telemetry publisher that normalizes machine identifiers, polls machine tables
               and streams structured JSON payloads to a cloud MQTT broker.
@@ -169,7 +180,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card interactive-card">
             <div class="project-topline">
               <span>Map Monitoring</span>
               <a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">Repository</a>
@@ -184,7 +195,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card interactive-card">
             <div class="project-topline">
               <span>Mobile Product</span>
               <a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">Repository</a>
@@ -199,7 +210,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card interactive-card">
             <div class="project-topline">
               <span>Real-Time Platform</span>
               <a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">Repository</a>
@@ -214,7 +225,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card interactive-card">
             <div class="project-topline">
               <span>Microservices Product</span>
               <a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Repository</a>
@@ -229,7 +240,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card interactive-card">
             <div class="project-topline">
               <span>Delivery Toolkit</span>
               <a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Repository</a>
@@ -257,28 +268,28 @@
         </div>
 
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item interactive-card">
             <span>01</span>
             <div>
               <h3>Collect</h3>
               <p>Read machine, camera, database, protocol or service-level data from the source system.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item interactive-card">
             <span>02</span>
             <div>
               <h3>Normalize</h3>
               <p>Convert raw records into stable identifiers, clean payloads and service-ready structures.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item interactive-card">
             <span>03</span>
             <div>
               <h3>Stream</h3>
               <p>Move data through MQTT, WebSocket, REST, polling workers or gateway services.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item interactive-card">
             <span>04</span>
             <div>
               <h3>Operate</h3>
@@ -301,27 +312,27 @@
         </div>
 
         <div class="stack-grid">
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Backend</h3>
             <p>Python, FastAPI, Flask, Node.js, Go, C, C++, C#</p>
           </div>
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Frontend & Mobile</h3>
             <p>React, Next.js, TypeScript, React Native, Expo, Tailwind CSS</p>
           </div>
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Industrial / IoT</h3>
             <p>MQTT, MTConnect, LSV2, Modbus, OPC UA, ThingsBoard, CNC APIs</p>
           </div>
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Data</h3>
             <p>PostgreSQL, Redis, SQLite, SQL Server, PostGIS, TimescaleDB</p>
           </div>
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Delivery</h3>
             <p>Docker, Docker Compose, Windows Services, systemd, Nginx, PyInstaller, Nuitka</p>
           </div>
-          <div class="stack-card">
+          <div class="stack-card interactive-card">
             <h3>Diagnostics</h3>
             <p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, Windows API tools</p>
           </div>
