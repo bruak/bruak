@@ -64,36 +64,60 @@
             <div class="matrix-layer">
               <span>Source Systems</span>
               <strong>CNC / PLC / DB / API</strong>
-              <small>Machine controllers, operational databases, field devices and external services.</small>
+              <small>Machine controllers, operational databases, ERP sources, field devices and external services.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Vendor Access Layer</span>
+              <strong>Mitsubishi / NUM / Heidenhain / Siemens / Fanuc / etc.</strong>
+              <small>Controller-specific protocols, SDKs, native libraries, gateway tools and access constraints.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Edge Runtime Layer</span>
+              <strong>Windows Services / Linux Services / Docker</strong>
+              <small>Long-running collectors, scheduled polling, service recovery, local logs and environment adaptation.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
               <span>Acquisition Services</span>
-              <strong>Collectors / Adapters</strong>
-              <small>Polling workers, protocol bridges, vendor SDKs and gateway-side data capture.</small>
+              <strong>Collectors / Adapters / Gateways</strong>
+              <small>Protocol bridges, vendor SDK integrations, database readers and gateway-side data capture.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Normalization Layer</span>
+              <strong>States / Alarms / Counters / OEE Signals</strong>
+              <small>Machine status mapping, telemetry shaping, counter deltas, alarms and production-state models.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
               <span>Transport Layer</span>
-              <strong>MQTT / REST / WebSocket</strong>
-              <small>Structured payloads, topic design, request routing and real-time update channels.</small>
+              <strong>MQTT / REST / WebSocket / MTConnect</strong>
+              <small>Structured payloads, topic design, request routing, real-time updates and standard data exchange.</small>
             </div>
             <div class="matrix-connector" aria-hidden="true"></div>
             <div class="matrix-layer">
-              <span>Operations Layer</span>
-              <strong>Dashboards / Logs / Health</strong>
-              <small>Runtime visibility, service diagnostics, health checks and deployment validation.</small>
+              <span>MES & Operations Layer</span>
+              <strong>MES / Dashboards / OEE / Logs / Health</strong>
+              <small>Production visibility, MES-ready telemetry, runtime diagnostics, health checks and operator dashboards.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Lifecycle Layer</span>
+              <strong>Packaging / Installers / Monitoring / Handoff</strong>
+              <small>Deployment validation, installer workflows, operational documentation and maintainable delivery.</small>
             </div>
           </div>
 
           <div class="architecture-summary">
             <div>
               <span>Primary Output</span>
-              <strong>Production-ready data systems</strong>
+              <strong>MES-ready industrial data systems</strong>
             </div>
             <div>
               <span>Delivery Scope</span>
-              <strong>Architecture → Runtime → Deployment</strong>
+              <strong>Machine connectivity → MES → Dashboards → Deployment</strong>
             </div>
           </div>
 
