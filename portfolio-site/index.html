@@ -28,7 +28,7 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#systems">Systems</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Engineering</a>
         <a href="#approach">Approach</a>
         <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
@@ -47,7 +47,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore Systems</a>
+            <a class="btn btn-primary" href="#projects">Explore Engineering Work</a>
             <a class="btn btn-secondary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
@@ -152,104 +152,134 @@
         </div>
       </section>
 
-      <section id="projects" class="section-shell">
+      <section id="projects" class="section-shell engineering-work-section">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">Featured Projects</p>
-            <h2>Selected systems</h2>
+            <p class="eyebrow">Engineering Work</p>
+            <h2>Technical execution across real systems</h2>
           </div>
           <p>
-            These projects represent the strongest direction for the portfolio: telemetry, maps, mobile apps,
-            microservices and deployment tooling.
+            I work below the surface of the interface: data ingestion, protocol handling, service boundaries,
+            runtime behavior, deployment packaging, health checks, logging and production-oriented delivery.
           </p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card featured interactive-card">
+        <div class="engineering-grid">
+          <article class="project-card featured interactive-card engineering-card">
             <div class="project-topline">
-              <span>Industrial Telemetry</span>
-              <a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Repository</a>
+              <span>Telemetry Pipeline</span>
+              <a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Publisher</a>
             </div>
-            <h3>Publisher</h3>
+            <h3>Industrial data publishing layer</h3>
             <p>
-              SQLite-based SMARTFACTORY telemetry publisher that normalizes machine identifiers, polls machine tables
-              and streams structured JSON payloads to a cloud MQTT broker.
+              Built the service layer that reads operational data from a local SMARTFACTORY database, normalizes
+              machine identity and publishes deterministic telemetry payloads to a cloud MQTT broker.
             </p>
+            <ul class="work-list">
+              <li>Implemented database polling and row state handling for controlled data replay.</li>
+              <li>Designed MQTT topic and JSON payload flow for cloud-side machine telemetry.</li>
+              <li>Added credential guarding, runtime configuration, rotated logs and testable service behavior.</li>
+            </ul>
             <div class="tag-list">
-              <span>Python</span><span>MQTT</span><span>SQLite</span><span>Telemetry</span><span>Tests</span>
+              <span>Python</span><span>MQTT</span><span>SQLite</span><span>Telemetry</span><span>Testing</span>
             </div>
           </article>
 
-          <article class="project-card interactive-card">
+          <article class="project-card interactive-card engineering-card">
             <div class="project-topline">
-              <span>Map Monitoring</span>
-              <a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">Repository</a>
+              <span>Map + Health Runtime</span>
+              <a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">IBBCAM</a>
             </div>
-            <h3>IBBCAM</h3>
+            <h3>Camera monitoring and data proxy architecture</h3>
             <p>
-              FastAPI web application that displays Istanbul camera data on a Leaflet map, tracks camera health in the
-              background and proxies normalized TKM data layers.
+              Created a FastAPI-backed monitoring application that parses camera source data, protects sensitive
+              fields, exposes clean API endpoints and serves a browser-based operational map interface.
             </p>
+            <ul class="work-list">
+              <li>Parsed XML camera records and exposed only whitelisted public fields.</li>
+              <li>Built background health tracking and lightweight liveness endpoints.</li>
+              <li>Proxied and normalized external traffic, parking, bridge and weather data layers.</li>
+            </ul>
             <div class="tag-list">
-              <span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Check</span>
+              <span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Checks</span>
             </div>
           </article>
 
-          <article class="project-card interactive-card">
+          <article class="project-card interactive-card engineering-card">
             <div class="project-topline">
-              <span>Mobile Product</span>
-              <a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">Repository</a>
+              <span>Mobile Product System</span>
+              <a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">ParkIt</a>
             </div>
-            <h3>ParkIt</h3>
+            <h3>Location-based mobile application flow</h3>
             <p>
-              Mobile parking-space rental application with listing creation, location-based discovery, map view,
-              favorites, messaging, push notifications and profile flows.
+              Developed the technical structure for a parking-space rental product with authentication, listings,
+              map discovery, media handling, favorites, messaging and notification-driven user flows.
             </p>
+            <ul class="work-list">
+              <li>Structured Expo / React Native screens around listing, profile and map workflows.</li>
+              <li>Integrated Firebase Auth, Firestore data models and Supabase media storage.</li>
+              <li>Built real-time messaging and notification flows around operational user actions.</li>
+            </ul>
             <div class="tag-list">
-              <span>Expo</span><span>React Native</span><span>Firebase</span><span>Supabase</span>
+              <span>React Native</span><span>Expo</span><span>Firebase</span><span>Supabase</span>
             </div>
           </article>
 
-          <article class="project-card interactive-card">
+          <article class="project-card interactive-card engineering-card">
             <div class="project-topline">
-              <span>Real-Time Platform</span>
-              <a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">Repository</a>
+              <span>Real-Time Web Platform</span>
+              <a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">ft_transcendence</a>
             </div>
-            <h3>ft_transcendence</h3>
+            <h3>Service-oriented multiplayer architecture</h3>
             <p>
-              Containerized real-time multiplayer Pong platform with authentication, 2FA, user services, WebSocket game
-              flow, Redis, PostgreSQL, API gateway and monitoring-oriented architecture.
+              Built a containerized web platform with real-time game state synchronization, authentication services,
+              user and social modules, gateway routing and monitoring-oriented service separation.
             </p>
+            <ul class="work-list">
+              <li>Designed service boundaries for auth, game, user, notification and gateway layers.</li>
+              <li>Implemented WebSocket-based real-time interaction and JWT-protected flows.</li>
+              <li>Packaged the stack with PostgreSQL, Redis, Docker Compose and monitoring components.</li>
+            </ul>
             <div class="tag-list">
-              <span>FastAPI</span><span>WebSocket</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+              <span>FastAPI</span><span>WebSocket</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span>
             </div>
           </article>
 
-          <article class="project-card interactive-card">
+          <article class="project-card interactive-card engineering-card">
             <div class="project-topline">
-              <span>Microservices Product</span>
-              <a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Repository</a>
+              <span>Microservice Product Stack</span>
+              <a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Matcha</a>
             </div>
-            <h3>Matcha</h3>
+            <h3>Distributed application and matching engine</h3>
             <p>
-              Location-based dating platform with Next.js frontend, isolated backend services, JWT auth, profile and
-              photo flows, interaction tracking and proximity-based matching.
+              Designed a multi-service product architecture with frontend routing, authentication, profile management,
+              media handling, location logic, interaction tracking and match scoring workflows.
             </p>
+            <ul class="work-list">
+              <li>Separated auth, user, photo, interaction and match responsibilities into independent services.</li>
+              <li>Used Redis, PostgreSQL and PostGIS-oriented logic for session, event and location flows.</li>
+              <li>Built protected frontend flows with Next.js, TypeScript and API gateway routing.</li>
+            </ul>
             <div class="tag-list">
               <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>PostGIS</span>
             </div>
           </article>
 
-          <article class="project-card interactive-card">
+          <article class="project-card interactive-card engineering-card">
             <div class="project-topline">
-              <span>Delivery Toolkit</span>
-              <a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Repository</a>
+              <span>Deployment Engineering</span>
+              <a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Tooling</a>
             </div>
-            <h3>Build, Broker & Sync Utilities</h3>
+            <h3>Build, broker and Linux service tooling</h3>
             <p>
-              Deployment support tools covering Dockerized MQTT broker setup, ARM Nuitka build environment and Linux
-              systemd-based file synchronization workflows.
+              Built supporting infrastructure utilities that turn development work into runnable environments:
+              Dockerized brokers, ARM binary build environments and Linux background synchronization services.
             </p>
+            <ul class="work-list">
+              <li>Prepared Docker Compose environments for MQTT broker and ARM/Nuitka compilation flows.</li>
+              <li>Implemented systemd-oriented sync service behavior with inotify and rsync workflows.</li>
+              <li>Documented repeatable commands for build, run, logs, cleanup and operational validation.</li>
+            </ul>
             <div class="tag-list">
               <span>Docker</span><span>Nuitka</span><span>ARM</span><span>systemd</span><span>MQTT</span>
             </div>
