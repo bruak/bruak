@@ -3,6 +3,27 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const sanitizeCompanySpecificCopy = root => {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const replacements = [
+    [/Local SMARTFACTORY database/g, 'Local production database'],
+    [/local SMARTFACTORY database/g, 'local production database'],
+    [/SMARTFACTORY/g, 'production database'],
+    [/SmartFactory/g, 'production system'],
+    [/smartfactory/g, 'production system']
+  ];
+
+  while (walker.nextNode()) {
+    let value = walker.currentNode.nodeValue;
+    replacements.forEach(([pattern, replacement]) => {
+      value = value.replace(pattern, replacement);
+    });
+    walker.currentNode.nodeValue = value;
+  }
+};
+
+sanitizeCompanySpecificCopy(document.body);
+
 const cards = document.querySelectorAll('.project-card, .capability-card, .stack-card, .timeline-item');
 
 const observer = new IntersectionObserver(
