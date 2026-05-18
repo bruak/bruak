@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Burak Soykan - R&D Software Developer building real-time industrial systems, telemetry pipelines and production-ready service architectures."
+    />
+    <title>Burak Soykan | R&D Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-mark">BS</span>
+        <span>Burak Soykan</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#systems">Systems</a>
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-shell">
+        <div class="hero-content">
+          <p class="eyebrow">Industrial IoT • Real-Time Systems • Full-Stack Service Architecture</p>
+          <h1>From machine data to production-ready software systems.</h1>
+          <p class="hero-lead">
+            I design, build and ship production-focused software systems for industrial and operational environments.
+            My work covers machine connectivity, telemetry pipelines, real-time dashboards, cross-platform delivery,
+            background services and deployment-ready architecture.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Systems</a>
+            <a class="btn btn-secondary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="hero-metrics" aria-label="Core capability summary">
+            <div>
+              <strong>6</strong>
+              <span>featured systems</span>
+            </div>
+            <div>
+              <strong>IoT</strong>
+              <span>telemetry focus</span>
+            </div>
+            <div>
+              <strong>Win/Linux</strong>
+              <span>delivery targets</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="status-panel" aria-label="System status preview">
+          <div class="panel-header">
+            <span class="panel-dot"></span>
+            <span>SYSTEM STATUS</span>
+          </div>
+          <div class="status-grid">
+            <div class="status-row">
+              <span>MQTT Broker</span>
+              <strong class="online">ONLINE</strong>
+            </div>
+            <div class="status-row">
+              <span>Telemetry Flow</span>
+              <strong class="online">ACTIVE</strong>
+            </div>
+            <div class="status-row">
+              <span>Camera Health</span>
+              <strong class="warning">MONITORING</strong>
+            </div>
+            <div class="status-row">
+              <span>Service Runtime</span>
+              <strong class="online">STABLE</strong>
+            </div>
+            <div class="status-row">
+              <span>Docker Build</span>
+              <strong class="online">READY</strong>
+            </div>
+          </div>
+          <div class="terminal-card">
+            <p>$ deploy --target production</p>
+            <p>✓ service packaged</p>
+            <p>✓ health endpoint verified</p>
+            <p>✓ runtime logs enabled</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="systems" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Focus Areas</p>
+          <h2>Systems I build</h2>
+          <p>
+            The portfolio is organized around deployable systems, not isolated UI screens. The emphasis is data flow,
+            service boundaries, observability and delivery.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card">
+            <h3>Industrial IoT</h3>
+            <p>Machine data collection, telemetry pipelines, MQTT flows and dashboard-oriented device modeling.</p>
+          </article>
+          <article class="capability-card">
+            <h3>Real-Time Systems</h3>
+            <p>WebSocket, Socket.IO, live dashboards, background workers and async task notifications.</p>
+          </article>
+          <article class="capability-card">
+            <h3>Service Architecture</h3>
+            <p>Microservices, API gateways, Redis, PostgreSQL, Docker Compose and deployable service boundaries.</p>
+          </article>
+          <article class="capability-card">
+            <h3>Cross-Platform Delivery</h3>
+            <p>Windows services, Linux services, executable packaging, installer workflows and deployment validation.</p>
+          </article>
+          <article class="capability-card">
+            <h3>CNC & Machine Connectivity</h3>
+            <p>MTConnect, LSV2, CNC API research, machine state normalization and industrial data extraction.</p>
+          </article>
+          <article class="capability-card">
+            <h3>Internal Tools & Automation</h3>
+            <p>Business process tools, sync services, monitoring utilities and operational dashboards.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section-shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Featured Projects</p>
+            <h2>Selected systems</h2>
+          </div>
+          <p>
+            These projects represent the strongest direction for the portfolio: telemetry, maps, mobile apps,
+            microservices and deployment tooling.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-topline">
+              <span>Industrial Telemetry</span>
+              <a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>MindMyMachine Publisher</h3>
+            <p>
+              SQLite-based SMARTFACTORY telemetry publisher that normalizes machine identifiers, polls machine tables
+              and streams structured JSON payloads to a cloud MQTT broker.
+            </p>
+            <div class="tag-list">
+              <span>Python</span><span>MQTT</span><span>SQLite</span><span>Telemetry</span><span>Tests</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Map Monitoring</span>
+              <a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>IBBCAM</h3>
+            <p>
+              FastAPI web application that displays Istanbul camera data on a Leaflet map, tracks camera health in the
+              background and proxies normalized TKM data layers.
+            </p>
+            <div class="tag-list">
+              <span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Check</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Mobile Product</span>
+              <a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>ParkIt</h3>
+            <p>
+              Mobile parking-space rental application with listing creation, location-based discovery, map view,
+              favorites, messaging, push notifications and profile flows.
+            </p>
+            <div class="tag-list">
+              <span>Expo</span><span>React Native</span><span>Firebase</span><span>Supabase</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Real-Time Platform</span>
+              <a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>ft_transcendence</h3>
+            <p>
+              Containerized real-time multiplayer Pong platform with authentication, 2FA, user services, WebSocket game
+              flow, Redis, PostgreSQL, API gateway and monitoring-oriented architecture.
+            </p>
+            <div class="tag-list">
+              <span>FastAPI</span><span>WebSocket</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Microservices Product</span>
+              <a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>Matcha</h3>
+            <p>
+              Location-based dating platform with Next.js frontend, isolated backend services, JWT auth, profile and
+              photo flows, interaction tracking and proximity-based matching.
+            </p>
+            <div class="tag-list">
+              <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>PostGIS</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Delivery Toolkit</span>
+              <a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+            <h3>Build, Broker & Sync Utilities</h3>
+            <p>
+              Deployment support tools covering Dockerized MQTT broker setup, ARM Nuitka build environment and Linux
+              systemd-based file synchronization workflows.
+            </p>
+            <div class="tag-list">
+              <span>Docker</span><span>Nuitka</span><span>ARM</span><span>systemd</span><span>MQTT</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="approach" class="section-shell approach-section">
+        <div class="section-heading">
+          <p class="eyebrow">Engineering Approach</p>
+          <h2>Built for runtime, not only for screenshots</h2>
+          <p>
+            The recurring pattern across my work is converting raw operational data into monitored, packaged and
+            deployable software systems.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>01</span>
+            <div>
+              <h3>Collect</h3>
+              <p>Read machine, camera, database, protocol or service-level data from the source system.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span>02</span>
+            <div>
+              <h3>Normalize</h3>
+              <p>Convert raw records into stable identifiers, clean payloads and service-ready structures.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span>03</span>
+            <div>
+              <h3>Stream</h3>
+              <p>Move data through MQTT, WebSocket, REST, polling workers or gateway services.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span>04</span>
+            <div>
+              <h3>Operate</h3>
+              <p>Package the system, add logs and health checks, then prepare it for Windows or Linux runtime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section-shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Technology Stack</p>
+            <h2>Tools grouped by delivery role</h2>
+          </div>
+          <p>
+            The stack is intentionally grouped by system responsibility: backend, frontend, industrial protocols,
+            data, delivery and diagnostics.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h3>Backend</h3>
+            <p>Python, FastAPI, Flask, Node.js, Go, C, C++, C#</p>
+          </div>
+          <div class="stack-card">
+            <h3>Frontend & Mobile</h3>
+            <p>React, Next.js, TypeScript, React Native, Expo, Tailwind CSS</p>
+          </div>
+          <div class="stack-card">
+            <h3>Industrial / IoT</h3>
+            <p>MQTT, MTConnect, LSV2, Modbus, OPC UA, ThingsBoard, CNC APIs</p>
+          </div>
+          <div class="stack-card">
+            <h3>Data</h3>
+            <p>PostgreSQL, Redis, SQLite, SQL Server, PostGIS, TimescaleDB</p>
+          </div>
+          <div class="stack-card">
+            <h3>Delivery</h3>
+            <p>Docker, Docker Compose, Windows Services, systemd, Nginx, PyInstaller, Nuitka</p>
+          </div>
+          <div class="stack-card">
+            <h3>Diagnostics</h3>
+            <p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, Windows API tools</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell education-section">
+        <div class="section-heading">
+          <p class="eyebrow">Core Systems Background</p>
+          <h2>42 School project base</h2>
+          <p>
+            These projects are kept as supporting evidence of C, C++, Unix, networking, algorithms, graphics,
+            concurrency and DevOps fundamentals.
+          </p>
+        </div>
+
+        <div class="school-grid">
+          <span>libft</span>
+          <span>ft_printf</span>
+          <span>get_next_line</span>
+          <span>push_swap</span>
+          <span>minitalk</span>
+          <span>minishell</span>
+          <span>netpractice</span>
+          <span>ft_irc</span>
+          <span>so_long</span>
+          <span>cub3d</span>
+          <span>philosophers</span>
+          <span>CPP_00 - CPP_09</span>
+          <span>Born2beroot</span>
+          <span>Inception</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Available for system-focused software work.</h2>
+          <p>
+            Best fit: industrial data collection, real-time monitoring, internal operational tools, service deployment,
+            integration research and production-oriented dashboards.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub Profile</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Burak Soykan</span>
+      <span>Industrial R&D Developer Portfolio</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
