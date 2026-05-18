@@ -1,20 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Technical articles by Burak Soykan about industrial systems, telemetry, deployment and software engineering."
-    />
+    <meta name="description" content="Burak Soykan teknik blog: industrial systems, telemetry, runtime delivery ve software engineering notları." />
     <title>Blog | Burak Soykan</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./professional-panel.css" />
     <link rel="stylesheet" href="./blog.css" />
@@ -22,20 +16,16 @@
   <body>
     <div class="page-noise"></div>
     <div class="cursor-glow" aria-hidden="true"></div>
-
     <header class="site-header">
-      <a class="brand" href="./index.html#home" aria-label="Go to home">
-        <span class="brand-mark">BS</span>
-        <span>Burak Soykan</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main navigation">
+      <a class="brand" href="./index.html#home" aria-label="Ana sayfaya git"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
+      <nav class="main-nav" aria-label="Ana navigasyon">
         <a href="./index.html#systems">Systems</a>
         <a href="./index.html#projects">Engineering</a>
         <a href="./index.html#approach">Approach</a>
         <a href="./index.html#stack">Stack</a>
         <a class="is-active" href="./blog.html">Blog</a>
         <a href="./index.html#contact">Contact</a>
+        <a href="./blog-en.html">EN</a>
       </nav>
     </header>
 
@@ -43,36 +33,22 @@
       <section class="section-shell blog-hero single-blog-hero">
         <div>
           <p class="eyebrow">Technical Blog</p>
-          <h1 class="blog-title">Industrial software notes.</h1>
-          <p class="blog-lead">
-            Focused writing on machine data, telemetry pipelines, runtime delivery and production-oriented software systems.
-          </p>
+          <h1 class="blog-title">Industrial software notları.</h1>
+          <p class="blog-lead">Machine data, telemetry pipelines, runtime delivery ve production-oriented software systems üzerine teknik yazılar.</p>
         </div>
       </section>
 
       <section class="section-shell single-post-section">
         <article class="post-card interactive-card single-post-card">
-          <div class="post-meta">
-            <span>Industrial IoT</span>
-            <time datetime="2026-05-18">May 18, 2026</time>
-          </div>
-          <h2><a href="./posts/industrial-telemetry-pipeline.html">Designing an industrial telemetry pipeline from machine data to MES-ready payloads</a></h2>
-          <p>
-            A practical breakdown of collecting raw operational signals, normalizing machine states, transporting data
-            with MQTT / REST / WebSocket and preparing outputs for dashboards or MES integration.
-          </p>
-          <div class="tag-list">
-            <span>Telemetry</span><span>MQTT</span><span>MES</span><span>OEE</span>
-          </div>
+          <div class="post-meta"><span>Industrial IoT</span><time datetime="2026-05-18">18 Mayıs 2026</time></div>
+          <h2><a href="./posts/industrial-telemetry-pipeline.html">Machine data’dan MES-ready payloads yapısına industrial telemetry pipeline tasarımı</a></h2>
+          <p>Raw operational signals toplama, machine states normalize etme, veriyi MQTT / REST / WebSocket ile taşıma ve dashboards veya MES integration için hazır hale getirme üzerine pratik bir teknik not.</p>
+          <div class="tag-list"><span>Telemetry</span><span>MQTT</span><span>MES</span><span>OEE</span></div>
         </article>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>© <span id="year"></span> Burak Soykan</span>
-      <span>Technical Blog</span>
-    </footer>
-
+    <footer class="site-footer"><span>© <span id="year"></span> Burak Soykan</span><span>Technical Blog</span></footer>
     <script src="./script.js"></script>
   </body>
 </html>
