@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./professional-panel.css" />
   </head>
   <body>
     <div class="page-noise"></div>
@@ -53,23 +54,50 @@
           </div>
         </div>
 
-        <aside class="architecture-panel" aria-label="Delivery architecture preview">
-          <div class="architecture-header">
-            <span>PORTFOLIO CORE</span>
-            <strong>Delivery Architecture</strong>
+        <aside class="architecture-panel professional-panel" aria-label="System design matrix preview">
+          <div class="architecture-header professional-header">
+            <span>SYSTEM DESIGN MATRIX</span>
+            <strong>Production-oriented delivery model</strong>
           </div>
 
-          <div class="architecture-canvas" aria-hidden="true">
-            <span class="orbit orbit-one"></span>
-            <span class="orbit orbit-two"></span>
-            <span class="orbit orbit-three"></span>
-            <div class="core-node">
-              <span>R&D</span>
-              <strong>System</strong>
+          <div class="system-matrix" aria-label="System architecture layers">
+            <div class="matrix-layer">
+              <span>Source Systems</span>
+              <strong>CNC / PLC / DB / API</strong>
+              <small>Machine controllers, operational databases, field devices and external services.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Acquisition Services</span>
+              <strong>Collectors / Adapters</strong>
+              <small>Polling workers, protocol bridges, vendor SDKs and gateway-side data capture.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Transport Layer</span>
+              <strong>MQTT / REST / WebSocket</strong>
+              <small>Structured payloads, topic design, request routing and real-time update channels.</small>
+            </div>
+            <div class="matrix-connector" aria-hidden="true"></div>
+            <div class="matrix-layer">
+              <span>Operations Layer</span>
+              <strong>Dashboards / Logs / Health</strong>
+              <small>Runtime visibility, service diagnostics, health checks and deployment validation.</small>
             </div>
           </div>
 
-          <div class="pipeline-visual" id="pipelineVisual">
+          <div class="architecture-summary">
+            <div>
+              <span>Primary Output</span>
+              <strong>Production-ready data systems</strong>
+            </div>
+            <div>
+              <span>Delivery Scope</span>
+              <strong>Architecture → Runtime → Deployment</strong>
+            </div>
+          </div>
+
+          <div class="pipeline-visual professional-pipeline" id="pipelineVisual">
             <button class="pipeline-node is-active" type="button" data-stage="collect">
               <span>01</span>
               <strong>Collect</strong>
@@ -92,23 +120,23 @@
             </button>
           </div>
 
-          <div class="architecture-detail" id="architectureDetail">
+          <div class="architecture-detail professional-detail" id="architectureDetail">
             <span>Selected stage</span>
             <strong>Collect operational data from machines, databases, protocols and service endpoints.</strong>
           </div>
 
-          <div class="signal-panel" aria-label="Architecture signals">
+          <div class="signal-panel professional-signals" aria-label="Architecture signals">
             <div>
-              <span>Latency Focus</span>
-              <i style="--level: 86%"></i>
+              <span>Runtime Visibility</span>
+              <i style="--level: 88%"></i>
             </div>
             <div>
-              <span>Deployability</span>
+              <span>Deployment Readiness</span>
               <i style="--level: 94%"></i>
             </div>
             <div>
-              <span>Observability</span>
-              <i style="--level: 88%"></i>
+              <span>Integration Depth</span>
+              <i style="--level: 91%"></i>
             </div>
           </div>
         </aside>
