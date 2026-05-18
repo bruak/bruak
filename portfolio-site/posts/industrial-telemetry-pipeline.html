@@ -18,17 +18,17 @@
     <header class="site-header">
       <a class="brand" href="../index.html#home"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
       <nav class="main-nav" aria-label="Ana navigasyon">
-        <a href="../index.html#systems">Systems</a>
-        <a href="../index.html#projects">Engineering</a>
+        <a href="../index.html#systems">Sistemler</a>
+        <a href="../index.html#projects">Mühendislik</a>
         <a class="is-active" href="../blog.html">Blog</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="../index.html#contact">İletişim</a>
         <a href="./industrial-telemetry-pipeline-en.html">EN</a>
       </nav>
     </header>
 
     <main class="section-shell article-layout">
       <article class="article-shell">
-        <div class="article-meta"><span>Industrial IoT</span><time datetime="2026-05-18">18 Mayıs 2026</time><span>7 min read</span></div>
+        <div class="article-meta"><span>Industrial IoT</span><time datetime="2026-05-18">18 Mayıs 2026</time><span>7 dakikalık okuma</span></div>
         <h1>Machine data’dan MES-ready payloads yapısına industrial telemetry pipeline tasarımı</h1>
         <p class="article-summary">Raw machine, database veya controller data bilgisini dashboards, OEE screens, MES integrations ve runtime monitoring flows için stable telemetry haline getiren pratik bir yapı.</p>
 
@@ -36,7 +36,7 @@
           <h2 id="problem">Problem</h2>
           <p>Industrial data çoğu zaman kaynağında temiz değildir. Bir machine, controller protocol, local database, vendor SDK veya gateway service üzerinden counters, states, alarms ya da program data bilgisi verebilir. İlk engineering görevi visualization değildir; güvenilir acquisition ve normalization path oluşturmaktır.</p>
 
-          <h2 id="pipeline">Pipeline model</h2>
+          <h2 id="pipeline">Pipeline modeli</h2>
           <ol>
             <li><strong>Acquire:</strong> CNC, PLC, database, API veya local service üzerinden oku.</li>
             <li><strong>Normalize:</strong> vendor-specific values bilgisini stable operational states haline getir.</li>
@@ -45,7 +45,7 @@
             <li><strong>Operate:</strong> logs, health checks, restart policy, configuration files ve deployment documentation ekle.</li>
           </ol>
 
-          <h2 id="payload">Payload design</h2>
+          <h2 id="payload">Payload tasarımı</h2>
           <pre class="article-code"><code>{
   "machineId": "CNC-01",
   "state": "START",
@@ -65,13 +65,13 @@
       <aside class="article-toc">
         <span>Bu sayfada</span>
         <a href="#problem">Problem</a>
-        <a href="#pipeline">Pipeline model</a>
-        <a href="#payload">Payload design</a>
+        <a href="#pipeline">Pipeline modeli</a>
+        <a href="#payload">Payload tasarımı</a>
         <a href="#validation">Validation</a>
       </aside>
     </main>
 
-    <footer class="site-footer"><span>© <span id="year"></span> Burak Soykan</span><span>Technical Blog</span></footer>
+    <footer class="site-footer"><span>© <span id="year"></span> Burak Soykan</span><span>Teknik Blog</span></footer>
     <script src="../script.js"></script>
   </body>
 </html>
