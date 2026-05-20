@@ -68,7 +68,7 @@ I work end-to-end: architecture, implementation, executable packaging, Linux com
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![PyInstaller](https://img.shields.io/badge/PyInstaller-Binary_Packaging-CC6600?style=for-the-badge)
 ![Nuitka](https://img.shields.io/badge/Nuitka-Native_Builds-228B22?style=for-the-badge)
-![SmartAssembly](https://img.shields.io/badge/SmartAssembly-.NET_Protection-4B6CB7?style=for-the-badge)
+![SmartAssembly](https://img.shields.io/badge/SmartAssembly-.NET_Protection-5C2D91?style=for-the-badge)
 ![Windows Service Deployment](https://img.shields.io/badge/Windows_Service_Deployment-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux Service Deployment](https://img.shields.io/badge/Linux_Service_Deployment-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Network & Firewall Management](https://img.shields.io/badge/Firewall_%2F_Port_Management-CC0000?style=for-the-badge)
@@ -181,7 +181,7 @@ Web-based camera streaming system with real-time live view and asynchronous play
 
 ---
 
-### [ft\_transcendence](https://github.com/bruak/ft_transcendance)
+### [ft\\_transcendence](https://github.com/bruak/ft_transcendance)
 
 A containerized real-time multiplayer web platform built with service-oriented architecture.
 
