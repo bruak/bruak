@@ -10,7 +10,26 @@
     #__bundler_thumbnail { position: fixed; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #04101c; z-index: 9999; }
     #__bundler_thumbnail svg { width: 100%; height: 100%; object-fit: contain; }
     #__bundler_placeholder { color: #999; font-size: 14px; }
+    /* embed mode: hide playback bar, fill frame */
+    #root > div > div:last-child { display: none !important; }
+    #root > div { background: #04101c !important; }
+    .twk-panel { display: none !important; }
   </style>
+  <script>
+    // Keep playback bar hidden after React hydrates
+    const _obs = new MutationObserver(() => {
+      const root = document.getElementById('root');
+      if (!root) return;
+      root.querySelectorAll('div[style]').forEach(el => {
+        const bg = el.style.background || '';
+        const bTop = el.style.borderTop || '';
+        if (bg.includes('20,20,20') || bTop.includes('255,255,255,0.08')) {
+          el.style.setProperty('display', 'none', 'important');
+        }
+      });
+    });
+    _obs.observe(document.documentElement, { childList: true, subtree: true });
+  </script>
   <noscript>
     <style>#__bundler_loading { display: none; }</style>
     <div style="position:fixed;bottom:12px;left:12px;font:13px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#999;background:rgba(255,255,255,0.9);padding:6px 12px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.08);z-index:10000;">
