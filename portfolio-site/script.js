@@ -52,6 +52,21 @@ const buildDeliveryMapPanel = () => {
 
 buildDeliveryMapPanel();
 
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  mainNav.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+      mainNav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 const cards = document.querySelectorAll('.project-card, .capability-card, .stack-card, .timeline-item');
 
 const observer = new IntersectionObserver(
