@@ -99,14 +99,18 @@
   padding-top: 18px;
 }
 
+.delivery-map-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
 .delivery-map-embed {
   position: relative;
-  width: 100%;
+  width: calc(100% - 44px);
   aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
   margin: 0 22px 22px;
-  width: calc(100% - 44px);
 }
 
 .delivery-map-embed iframe {
