@@ -77,12 +77,6 @@ const buildDeliveryLoopPanel = () => {
           <div class="delivery-output output-app" data-stage="5"><span>MOBILE</span><strong>App UI</strong></div>
         </div>
       </div>
-
-      <div class="delivery-status">
-        <div><span>Services</span><strong>Running</strong></div>
-        <div><span>Realtime</span><strong>Active</strong></div>
-        <div><span>Delivery</span><strong>Ready</strong></div>
-      </div>
     </div>
   `;
 };
