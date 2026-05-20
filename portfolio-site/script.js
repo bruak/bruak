@@ -61,24 +61,18 @@ const buildDeliveryLoopPanel = () => {
       <div class="delivery-loop-scene">
         <div class="delivery-world" id="delivery-world">
           <svg class="delivery-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="deliveryCyan" x1="0" x2="1">
-                <stop offset="0%" stop-color="rgba(56,189,248,0.15)" />
-                <stop offset="100%" stop-color="rgba(34,197,94,0.34)" />
-              </linearGradient>
-            </defs>
-            <path id="p-iot" class="delivery-path" d="M16 14 H31 V28 H40" />
-            <path id="p-api" class="delivery-path" d="M16 27 H31 V28 H40" />
-            <path id="p-db" class="delivery-path" d="M16 40 H31 V28 H40" />
-            <path id="p-mobile" class="delivery-path" d="M16 53 H31 V28 H40" />
-            <path id="p-camera" class="delivery-path" d="M16 66 H31 V28 H40" />
-            <path id="p-edge" class="delivery-path" d="M16 79 H31 V28 H40" />
-            <path id="p-core" class="delivery-path" d="M48 28 H58 H70" />
-            <path id="p-runtime" class="delivery-path" d="M70 28 V66 H53" />
-            <path id="p-observe" class="delivery-path green" d="M53 66 H66" />
-            <path id="p-dashboard" class="delivery-path green" d="M66 66 H83 V38 H91" />
-            <path id="p-app" class="delivery-path green" d="M66 66 H83 V64 H91" />
-            <path id="p-loop" class="delivery-path green" d="M91 38 H96 V10 H8 V14" />
+            <path id="p-iot" class="delivery-path" d="M18 14 H32 V29 H38" />
+            <path id="p-api" class="delivery-path" d="M18 27 H32 V29 H38" />
+            <path id="p-db" class="delivery-path" d="M18 40 H32 V29 H38" />
+            <path id="p-mobile" class="delivery-path" d="M18 53 H32 V29 H38" />
+            <path id="p-camera" class="delivery-path" d="M18 66 H32 V29 H38" />
+            <path id="p-edge" class="delivery-path" d="M18 79 H32 V29 H38" />
+            <path id="p-core" class="delivery-path" d="M45 29 H56 H67" />
+            <path id="p-runtime" class="delivery-path" d="M67 29 V66 H49" />
+            <path id="p-observe" class="delivery-path green" d="M49 66 H64" />
+            <path id="p-dashboard" class="delivery-path green" d="M64 66 H81 V39 H89" />
+            <path id="p-app" class="delivery-path green" d="M64 66 H81 V64 H89" />
+            <path id="p-loop" class="delivery-path green" d="M89 39 H96 V10 H10 V14" />
 
             <circle class="delivery-pulse"><animateMotion dur="5.8s" repeatCount="indefinite" begin="0s"><mpath href="#p-iot" /></animateMotion></circle>
             <circle class="delivery-pulse"><animateMotion dur="6.3s" repeatCount="indefinite" begin=".45s"><mpath href="#p-api" /></animateMotion></circle>
@@ -93,25 +87,25 @@ const buildDeliveryLoopPanel = () => {
             <circle class="delivery-pulse green"><animateMotion dur="8.2s" repeatCount="indefinite" begin="2.2s"><mpath href="#p-loop" /></animateMotion></circle>
           </svg>
 
-          <div class="delivery-node" style="--x: 8; --y: 14"><span>IOT</span><strong>Sensor</strong></div>
-          <div class="delivery-node" style="--x: 8; --y: 27"><span>API</span><strong>Service</strong></div>
-          <div class="delivery-node" style="--x: 8; --y: 40"><span>DB</span><strong>PostgreSQL</strong></div>
-          <div class="delivery-node" style="--x: 8; --y: 53"><span>APP</span><strong>Mobile</strong></div>
-          <div class="delivery-node" style="--x: 8; --y: 66"><span>VIDEO</span><strong>Camera</strong></div>
-          <div class="delivery-node" style="--x: 8; --y: 79"><span>EDGE</span><strong>Device</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 14"><span>IOT</span><strong>Sensor</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 27"><span>API</span><strong>Service</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 40"><span>DB</span><strong>SQL</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 53"><span>APP</span><strong>Mobile</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 66"><span>VIDEO</span><strong>Camera</strong></div>
+          <div class="delivery-node" style="--x: 10; --y: 79"><span>EDGE</span><strong>Device</strong></div>
 
-          <div class="delivery-layer layer-data" style="--x: 42; --y: 28" data-stage="0"><span>DATA</span><strong>Integration</strong></div>
-          <div class="delivery-layer layer-service" style="--x: 58; --y: 28" data-stage="1"><span>API</span><strong>Service Layer</strong></div>
-          <div class="delivery-layer layer-realtime" style="--x: 74; --y: 28" data-stage="2"><span>LIVE</span><strong>Messaging</strong></div>
-          <div class="delivery-layer layer-runtime green" style="--x: 53; --y: 66" data-stage="3"><span>RUN</span><strong>Runtime</strong></div>
-          <div class="delivery-layer layer-observe green" style="--x: 69; --y: 66" data-stage="4"><span>OBS</span><strong>Monitoring</strong></div>
+          <div class="delivery-layer layer-data" style="--x: 41; --y: 29" data-stage="0"><span>DATA</span><strong>Integration</strong></div>
+          <div class="delivery-layer layer-service" style="--x: 56; --y: 29" data-stage="1"><span>API</span><strong>Services</strong></div>
+          <div class="delivery-layer layer-realtime" style="--x: 71; --y: 29" data-stage="2"><span>LIVE</span><strong>Messaging</strong></div>
+          <div class="delivery-layer layer-runtime green" style="--x: 49; --y: 66" data-stage="3"><span>RUN</span><strong>Runtime</strong></div>
+          <div class="delivery-layer layer-observe green" style="--x: 64; --y: 66" data-stage="4"><span>OBS</span><strong>Monitor</strong></div>
 
-          <div class="delivery-output output-dashboard" style="--x: 90; --y: 38" data-stage="5"><span>WEB</span><strong>Dashboard</strong></div>
-          <div class="delivery-output output-app" style="--x: 90; --y: 64" data-stage="5"><span>MOBILE</span><strong>App UI</strong></div>
+          <div class="delivery-output output-dashboard" style="--x: 89; --y: 39" data-stage="5"><span>WEB</span><strong>Dashboard</strong></div>
+          <div class="delivery-output output-app" style="--x: 89; --y: 64" data-stage="5"><span>MOBILE</span><strong>App UI</strong></div>
 
-          <div class="delivery-mini-node" style="--x: 38; --y: 83"><span>WORKER</span><strong>Jobs</strong></div>
-          <div class="delivery-mini-node" style="--x: 55; --y: 83"><span>DOCKER</span><strong>Runtime</strong></div>
-          <div class="delivery-mini-node" style="--x: 72; --y: 83"><span>LOGS</span><strong>Health</strong></div>
+          <div class="delivery-mini-node" style="--x: 36; --y: 84"><span>WORKER</span><strong>Jobs</strong></div>
+          <div class="delivery-mini-node" style="--x: 53; --y: 84"><span>DOCKER</span><strong>Runtime</strong></div>
+          <div class="delivery-mini-node" style="--x: 70; --y: 84"><span>LOGS</span><strong>Health</strong></div>
         </div>
       </div>
     </div>
