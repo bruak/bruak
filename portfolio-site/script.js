@@ -28,7 +28,16 @@ const buildDeliveryMapPanel = () => {
   const panel = document.querySelector('.architecture-panel');
   if (!panel) return;
 
-  panel.className = 'architecture-panel delivery-map-panel';
+  // Collapse hero to single column, animation goes full-width below
+  const heroSection = panel.closest('section');
+  if (heroSection) {
+    heroSection.style.display = 'flex';
+    heroSection.style.flexDirection = 'column';
+    heroSection.style.gap = '48px';
+    heroSection.style.minHeight = 'auto';
+  }
+
+  panel.className = 'delivery-map-panel';
   panel.setAttribute('aria-label', 'Software delivery map animation');
   panel.innerHTML = `
     <div class="delivery-map-embed">

@@ -102,14 +102,22 @@
 .delivery-map-panel {
   padding: 0;
   overflow: hidden;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.delivery-map-panel::before {
+  display: none !important;
 }
 
 .delivery-map-embed {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 480px;
-  border-radius: 28px;
+  min-height: 540px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
