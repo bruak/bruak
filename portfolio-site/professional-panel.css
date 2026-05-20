@@ -108,7 +108,8 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 0 0 28px 28px;
+  min-height: 480px;
+  border-radius: 28px;
   overflow: hidden;
 }
 

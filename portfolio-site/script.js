@@ -31,10 +31,6 @@ const buildDeliveryMapPanel = () => {
   panel.className = 'architecture-panel delivery-map-panel';
   panel.setAttribute('aria-label', 'Software delivery map animation');
   panel.innerHTML = `
-    <div class="architecture-header professional-header">
-      <span>SOFTWARE DELIVERY MAP</span>
-      <strong>Product idea to production-ready system</strong>
-    </div>
     <div class="delivery-map-embed">
       <iframe src="software-delivery-map.html" title="Software Delivery Map animation" allowfullscreen loading="lazy"></iframe>
     </div>
