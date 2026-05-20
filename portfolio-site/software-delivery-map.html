@@ -78,12 +78,13 @@ function Sprite({start=0,end=Infinity,children,keepMounted=false}) {
 }
 
 // Minimal Stage — no playback bar, no controls, pure loop
-function Stage({width=1920,height=1080,duration=28,background='#04101c',loop=true,children}) {
+function Stage({width=1920,height=1080,duration=28,background='#04101c',loop=true,holdEnd=2.5,children}) {
   const [time, setTime] = React.useState(0);
   const [scale, setScale] = React.useState(1);
   const stageRef = React.useRef(null);
   const rafRef = React.useRef(null);
   const lastTsRef = React.useRef(null);
+  const holdRef = React.useRef(0);
 
   React.useEffect(() => {
     if (!stageRef.current) return;
@@ -106,14 +107,20 @@ function Stage({width=1920,height=1080,duration=28,background='#04101c',loop=tru
       lastTsRef.current=ts;
       setTime(t => {
         let next=t+dt;
-        if (next>=duration) next=loop?next%duration:duration;
+        if (next>=duration) {
+          if (!loop) return duration;
+          holdRef.current+=dt;
+          if (holdRef.current<holdEnd) return duration;
+          holdRef.current=0;
+          return next%duration;
+        }
         return next;
       });
       rafRef.current=requestAnimationFrame(step);
     };
     rafRef.current=requestAnimationFrame(step);
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
-  }, [duration,loop]);
+  }, [duration,loop,holdEnd]);
 
   const ctxValue = React.useMemo(
     () => ({time,duration,playing:true,setTime,setPlaying:()=>{}}),
