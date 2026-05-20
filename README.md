@@ -59,7 +59,6 @@ I work end-to-end: architecture, implementation, executable packaging, Linux com
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
-![PostGIS](https://img.shields.io/badge/PostGIS-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 **DevOps, Packaging and Delivery**
 
@@ -69,10 +68,10 @@ I work end-to-end: architecture, implementation, executable packaging, Linux com
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![PyInstaller](https://img.shields.io/badge/PyInstaller-Binary_Packaging-CC6600?style=for-the-badge)
 ![Nuitka](https://img.shields.io/badge/Nuitka-Native_Builds-228B22?style=for-the-badge)
+![SmartAssembly](https://img.shields.io/badge/SmartAssembly-.NET_Protection-4B6CB7?style=for-the-badge)
 ![Windows Service Deployment](https://img.shields.io/badge/Windows_Service_Deployment-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux Service Deployment](https://img.shields.io/badge/Linux_Service_Deployment-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Release Artifact and Environment Management](https://img.shields.io/badge/Release_Artifact_&_Env_Management-6C63FF?style=for-the-badge)
-![Firewall / Port Management](https://img.shields.io/badge/Firewall_%2F_Port_Management-CC0000?style=for-the-badge)
+![Network & Firewall Management](https://img.shields.io/badge/Firewall_%2F_Port_Management-CC0000?style=for-the-badge)
 
 **Real-Time and Service Architecture**
 
@@ -80,11 +79,10 @@ I work end-to-end: architecture, implementation, executable packaging, Linux com
 ![MQTT](https://img.shields.io/badge/MQTT-Telemetry_Messaging-660066?style=for-the-badge&logo=eclipsemosquitto&logoColor=white)
 ![REST API](https://img.shields.io/badge/REST_API-Service_Integration-005571?style=for-the-badge)
 ![Background Workers](https://img.shields.io/badge/Background_Workers-Service_Processing-6C63FF?style=for-the-badge)
+![Python Ray](https://img.shields.io/badge/Python_Ray-Distributed_Computing-0288D1?style=for-the-badge)
 ![Async Queue](https://img.shields.io/badge/Async_Queue-Task_Processing-8A2BE2?style=for-the-badge)
 ![Event Driven](https://img.shields.io/badge/Event--Driven-Data_Flows-8A2BE2?style=for-the-badge)
 ![Scheduled Polling](https://img.shields.io/badge/Scheduled_Polling-Data_Collectors-444444?style=for-the-badge)
-![Windows Service](https://img.shields.io/badge/Windows_Service-On--Premise_Deployment-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Real--Time_Updates-FF6B6B?style=for-the-badge)
 
 **Reverse Engineering and Windows Internals**
 
@@ -144,6 +142,7 @@ Real-time production monitoring system designed for industrial machine data visi
 ---
 
 ### MTConnect CNC Data Collector
+
 CNC data collection system focused on standardizing machine data through MTConnect-based flows.
 
 - Collected CNC machine status, execution state, counters and availability data
@@ -187,6 +186,7 @@ Web-based camera streaming system with real-time live view and asynchronous play
 A containerized real-time multiplayer web platform built with service-oriented architecture.
 
 **Highlights**
+
 - FastAPI-based backend services
 - WebSocket communication
 - JWT authentication and 2FA
