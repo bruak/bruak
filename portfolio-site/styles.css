@@ -116,17 +116,14 @@ a {
   height: 42px;
   place-items: center;
   border-radius: 12px;
-  background: linear-gradient(135deg, #bae6fd 0%, #38bdf8 55%, #22c55e 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  box-shadow:
-    inset 0 0 0 50px #071222,
-    inset 0 0 0 1px rgba(56, 189, 248, 0.45),
-    0 0 14px rgba(56, 189, 248, 0.1);
+  background: linear-gradient(145deg, #0c1f3d, #040d1e);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.82rem;
   font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .main-nav {
