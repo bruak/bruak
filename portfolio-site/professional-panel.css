@@ -99,25 +99,16 @@
   padding-top: 18px;
 }
 
-.delivery-map-panel {
-  padding: 0;
-  overflow: hidden;
-  border: none !important;
-  background: none !important;
-  box-shadow: none !important;
+.delivery-map-section {
   width: 100%;
-}
-
-.delivery-map-panel::before {
-  display: none !important;
+  padding: 0 0 80px;
 }
 
 .delivery-map-embed {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 540px;
-  border-radius: 20px;
+  min-height: 600px;
   overflow: hidden;
 }
 

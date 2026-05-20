@@ -28,22 +28,26 @@ const buildDeliveryMapPanel = () => {
   const panel = document.querySelector('.architecture-panel');
   if (!panel) return;
 
-  // Collapse hero to single column, animation goes full-width below
   const heroSection = panel.closest('section');
+
+  // Remove panel from hero grid, make hero single-column
+  panel.remove();
   if (heroSection) {
-    heroSection.style.display = 'flex';
-    heroSection.style.flexDirection = 'column';
-    heroSection.style.gap = '48px';
+    heroSection.style.gridTemplateColumns = '1fr';
     heroSection.style.minHeight = 'auto';
+    heroSection.style.paddingBottom = '0';
   }
 
-  panel.className = 'delivery-map-panel';
-  panel.setAttribute('aria-label', 'Software delivery map animation');
-  panel.innerHTML = `
+  // Insert full-width animation section right after hero
+  const mapSection = document.createElement('section');
+  mapSection.className = 'delivery-map-section';
+  mapSection.innerHTML = `
     <div class="delivery-map-embed">
       <iframe src="software-delivery-map.html" title="Software Delivery Map animation" allowfullscreen loading="lazy"></iframe>
     </div>
   `;
+  heroSection ? heroSection.insertAdjacentElement('afterend', mapSection)
+              : document.querySelector('main').prepend(mapSection);
 };
 
 buildDeliveryMapPanel();
