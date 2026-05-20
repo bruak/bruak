@@ -99,6 +99,25 @@
   padding-top: 18px;
 }
 
+.delivery-map-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 22px 22px;
+  width: calc(100% - 44px);
+}
+
+.delivery-map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 .matrix-layer {
   position: relative;
   padding: 16px 18px;
