@@ -236,7 +236,14 @@ a {
 }
 
 .app-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: auto;
+}
+
+.app-actions .btn {
+  width: auto;
 }
 
 .legal-page {
@@ -268,6 +275,11 @@ a {
 }
 
 .legal-document ul {
+  margin: 16px 0 0;
+  padding-left: 22px;
+}
+
+.legal-document ol {
   margin: 16px 0 0;
   padding-left: 22px;
 }
@@ -1106,6 +1118,10 @@ h3 {
   }
 
   .btn {
+    width: 100%;
+  }
+
+  .app-actions .btn {
     width: 100%;
   }
 
