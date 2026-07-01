@@ -100,6 +100,7 @@ I work end-to-end: architecture, implementation, executable packaging, Linux com
 ![PE-bear](https://img.shields.io/badge/PE--bear-PE_File_Analysis-8E44AD?style=flat-square)
 ![TCPView](https://img.shields.io/badge/TCPView-Network_Connections-00A3A3?style=flat-square)
 ![Wireshark](https://img.shields.io/badge/Wireshark-Protocol_Inspection-1679A7?style=flat-square&logo=wireshark&logoColor=white)
+[![IDA Pro](https://img.shields.io/badge/IDA_Pro-Disassembler_%26_Decompiler-A0363A?style=flat-square)](https://hex-rays.com/ida-pro)
 
 **Core Programming**
 
