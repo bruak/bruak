@@ -1,5 +1,4 @@
 const readingList = document.getElementById('reading-list');
-const filterButtons = document.querySelectorAll('[data-filter]');
 
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
   '&': '&amp;',
@@ -50,7 +49,6 @@ const buildEntryCard = (entry, locale) => {
   const sourceLabel = getSourceLabel(entry);
   const linkUrl = entry.url || '#';
 
-  article.dataset.topics = topics.join('|').toLowerCase();
   article.innerHTML = `
     <div class="post-meta reading-meta">
       ${sourceLabel ? `<span>${escapeHtml(sourceLabel)}</span>` : ''}
@@ -80,20 +78,15 @@ const renderEntries = entries => {
   if (!readingList) return;
 
   const locale = readingList.dataset.locale || 'tr';
-  const activeFilter = document.querySelector('[data-filter].is-active')?.dataset.filter || 'all';
-  const normalizedFilter = activeFilter.toLowerCase();
   const sortedEntries = [...entries].sort((a, b) => String(b.readAt || '').localeCompare(String(a.readAt || '')));
-  const filteredEntries = normalizedFilter === 'all'
-    ? sortedEntries
-    : sortedEntries.filter(entry => (entry.topics || []).some(topic => topic.toLowerCase() === normalizedFilter));
 
-  if (!filteredEntries.length) {
+  if (!sortedEntries.length) {
     showEmptyState(readingList.dataset.emptyTitle, readingList.dataset.emptyCopy);
     return;
   }
 
   readingList.innerHTML = '';
-  filteredEntries.forEach(entry => readingList.appendChild(buildEntryCard(entry, locale)));
+  sortedEntries.forEach(entry => readingList.appendChild(buildEntryCard(entry, locale)));
 };
 
 const loadReadingList = async () => {
@@ -106,14 +99,6 @@ const loadReadingList = async () => {
     const safeEntries = Array.isArray(entries) ? entries : [];
 
     renderEntries(safeEntries);
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(item => item.classList.remove('is-active'));
-        button.classList.add('is-active');
-        renderEntries(safeEntries);
-      });
-    });
   } catch (error) {
     showEmptyState(readingList.dataset.errorTitle, readingList.dataset.errorCopy);
   }
