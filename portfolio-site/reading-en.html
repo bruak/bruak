@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A selected reading archive of technical articles Burak Soykan wants to remember and share." />
+    <title>Reading | Burak Soykan</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./professional-panel.css" />
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./en.html#home" aria-label="Go to home"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="./en.html#systems">Systems</a>
+        <a href="./en.html#projects">Projects</a>
+        <a href="./en.html#approach">Approach</a>
+        <a href="./en.html#stack">Stack</a>
+        <a href="./blog-en.html">Blog</a>
+        <a class="is-active" href="./reading-en.html">Reading</a>
+        <a href="./en.html#contact">Contact</a>
+        <a href="./reading.html">TR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-shell blog-hero reading-hero">
+        <div>
+          <p class="eyebrow">Reading Archive</p>
+          <h1 class="blog-title">Reading.</h1>
+          <p class="blog-lead">Selected articles I want to remember and share. Each entry keeps the source, topic, date and a short personal note.</p>
+        </div>
+        <aside class="blog-index-panel reading-index-panel">
+          <span>Selected Reading</span>
+          <strong>Not just links, technical notes that stayed with me.</strong>
+          <p>Each entry keeps source context, tags and a short reason for saving it.</p>
+        </aside>
+      </section>
+
+      <section class="section-shell reading-section">
+        <div class="reading-toolbar" aria-label="Topic filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="Backend">Backend</button>
+          <button class="filter-chip" type="button" data-filter="Systems">Systems</button>
+          <button class="filter-chip" type="button" data-filter="Industrial / IoT">Industrial / IoT</button>
+          <button class="filter-chip" type="button" data-filter="AI">AI</button>
+          <button class="filter-chip" type="button" data-filter="Security">Security</button>
+          <button class="filter-chip" type="button" data-filter="Product">Product</button>
+        </div>
+
+        <div
+          id="reading-list"
+          class="reading-list"
+          data-locale="en"
+          data-empty-title="No entries yet."
+          data-empty-copy="Add saved articles to data/reading-list.json and they will appear here as cards."
+          data-error-title="Reading list could not be loaded."
+          data-error-copy="This page reads JSON with fetch. For local testing, serve the portfolio-site folder with a simple static server."
+        ></div>
+        <noscript><p class="reading-noscript">JavaScript is required to view the reading list.</p></noscript>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span id="year"></span> Burak Soykan</span><span>Reading Archive</span></footer>
+    <script src="./script.js"></script>
+    <script src="./reading.js"></script>
+  </body>
+</html>

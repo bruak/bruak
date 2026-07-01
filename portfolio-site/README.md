@@ -8,12 +8,17 @@ Static portfolio website for an R&D Software Developer profile focused on indust
 portfolio-site/
 ├── index.html
 ├── blog.html
+├── reading.html
+├── reading-en.html
 ├── blog.css
 ├── styles.css
 ├── professional-panel.css
 ├── script.js
+├── reading.js
 ├── favicon.svg
 ├── CNAME
+├── data/
+│   └── reading-list.json
 ├── posts/
 │   ├── industrial-telemetry-pipeline.html
 │   ├── multi-brand-cnc-data-acquisition.html
@@ -36,7 +41,10 @@ Then open:
 ```text
 http://127.0.0.1:8080
 http://127.0.0.1:8080/blog.html
+http://127.0.0.1:8080/reading.html
 ```
+
+Use the local static server for `reading.html` and `reading-en.html`, because those pages load `data/reading-list.json` with `fetch`.
 
 ## Deployment
 
@@ -93,3 +101,26 @@ Recommended categories:
 - Deployment
 - Diagnostics & Reverse Engineering
 - Architecture
+
+## Reading List Workflow
+
+To add a selected external article:
+
+1. Open `data/reading-list.json`.
+2. Add a new object to the array:
+
+```json
+{
+  "title": "Article title",
+  "url": "https://example.com/article",
+  "source": "Example Source",
+  "readAt": "2026-07-01",
+  "language": "en",
+  "topics": ["Backend", "Systems"],
+  "note": "Why this article is worth saving.",
+  "favorite": true
+}
+```
+
+3. Use one or more existing topics: `Backend`, `Systems`, `Industrial / IoT`, `AI`, `Security`, `Product`.
+4. Serve the folder locally and open `reading.html` or `reading-en.html`.
