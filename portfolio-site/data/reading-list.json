@@ -11,5 +11,18 @@
       "en": "A useful reminder that being technically right is not the same as getting better. The piece reframes disagreement as a reason to build, ask for feedback, and spend energy where it can actually change something."
     },
     "favorite": true
+  },
+  {
+    "title": "You Only Have Weeks Left to Vibe Code",
+    "url": "https://freedium-mirror.cfd/https://michalmalewicz.medium.com/you-only-have-weeks-left-to-vibe-code-09a89c3d3f9b",
+    "source": "Michal Malewicz / Medium",
+    "readAt": "2026-07-02",
+    "language": "en",
+    "topics": ["Product", "AI"],
+    "note": {
+      "tr": "Yazar, vibe coding akımının sonuna gelindiğini savunuyor. Dört temel nokta: (1) Verimsizlik — çoğu kişi vibe coding ile gerçek, kullanılan ürün ortaya koyamıyor; yarım kalmış projeler ve harcanmış zaman/para biriktiriyor. (2) Maliyet Krizi — yapay zeka servislerinin maliyetleri yakında artacak ve sürdürülemez hale gelecek; mevcut furya şişirilmiş bir balon. (3) Pazar Doygunluğu — herkes yapay zeka ile uygulama yapabildiği için piyasa slop (kalitesiz içerik) ile doldu, kullanıcılar düşük eforlu ürünleri ayırt edip ilgilenmiyor. (4) Gerçekçi Bakış — bu akım sadece doğru zamanda doğru yerde olanların işine yaradı; \"fikir insanı\" olmak yetmiyor, kodlama becerisi olmayanların pazarda tutunması imkansız hale geliyor.",
+      "en": "Malewicz argues the vibe coding window is closing. Four takeaways: (1) Inefficiency — most people never ship real products, only unfinished projects and burned cash/time. (2) Cost Crisis — AI service costs will soon spike unsustainably; the current hype is a bubble. (3) Market Saturation — when everyone can 'code', the market floods with slop; users detect low-effort products and ignore them. (4) Reality Check — the trend only benefited those at the right place at the right time; being an 'idea person' is no longer enough without coding skills."
+    },
+    "favorite": false
   }
 ]
