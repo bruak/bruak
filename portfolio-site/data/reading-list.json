@@ -1,11 +1,62 @@
 [
   {
+    "title": "iPhone Access and the Decline in U.S. Fertility",
+    "url": "https://www.nber.org/system/files/working_papers/w35310/w35310.pdf",
+    "source": "NBER Working Paper No. 35310",
+    "readAt": "2026-07-03",
+    "language": "en",
+    "topics": [
+      "Product",
+      "Systems"
+    ],
+    "note": {
+      "tr": "Çalışma, 2007 sonrası ABD doğum oranındaki sert düşüşü iPhone’un AT&T kapsama alanı üzerinden yayılmasıyla doğal deney gibi inceliyor. Temel iddia: iPhone erişimi özellikle genç kadınlarda doğumları azaltıyor; 15-19 yaşta yaklaşık %4,5-%8,0, 20-24 yaşta %3,2-%6,6 düşüş bulunuyor. Yazarlar, iPhone yayılımının 2007-2011 dönemindeki toplam doğum oranı düşüşünün %33-%52’sini açıklayabileceğini ve mekanizmanın yüz yüze sosyal etkileşim, pornografi kullanımı, zaman kullanımı ve cinsel birliktelik sıklığı üzerinden çalıştığını savunuyor.",
+      "en": "The paper treats early iPhone availability through AT&T coverage as a natural experiment for the post-2007 decline in U.S. fertility. Its core claim is that iPhone access reduced births especially among young women, with estimated declines of roughly 4.5–8.0% for ages 15–19 and 3.2–6.6% for ages 20–24. The authors argue that iPhone diffusion may explain 33–52% of the 2007–2011 fertility decline, through changes in face-to-face interaction, pornography use, time use, and sexual activity."
+    },
+    "favorite": false
+  },
+  {
+    "title": "Reality Has a Surprising Amount of Detail",
+    "url": "https://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail",
+    "source": "John Salvatier",
+    "readAt": "2026-07-03",
+    "language": "en",
+    "topics": [
+      "Product",
+      "Systems"
+    ],
+    "note": {
+      "tr": "Salvatier, gerçekliğin basit görünen işlerde bile beklenenden çok daha fazla kritik detay içerdiğini savunuyor. Merdiven yapımı, fiziksel süreçler ve günlük gözlemler üzerinden görünmez detaylar ile öğrenildikten sonra apaçık gelen şeffaf detayları ayırıyor. Ana fikir: Entelektüel kilitlenme çoğu zaman eksik veriden değil, kendi modelimizin görmediği detayları fark edememekten kaynaklanır; gelişmek için sıradan şeylerdeki alışılmadık ayrıntıları ve farklı düşünen insanların hangi detayları önemli gördüğünü aramak gerekir.",
+      "en": "Salvatier argues that even apparently simple parts of reality contain far more consequential detail than we expect. Through examples like building stairs, physical processes, and everyday observation, he distinguishes invisible details from transparent details that feel obvious only after learning them. The main lesson: intellectual stuckness often comes from missing details outside our current frame, so progress requires actively looking for unusual details and understanding what different thinkers are noticing."
+    },
+    "favorite": false
+  },
+  {
+    "title": "14× Faster Embeddings: How We Rebuilt the ONNX Path in Manticore",
+    "url": "https://manticoresearch.com/blog/onnx-embeddings-speedup/",
+    "source": "Manticore Search Blog",
+    "readAt": "2026-07-03",
+    "language": "en",
+    "topics": [
+      "Backend",
+      "Systems",
+      "AI"
+    ],
+    "note": {
+      "tr": "Manticore Search yazısı, embedding çıkarımındaki Python/SentenceTransformers benzeri darboğazları aşmak için ONNX Runtime tabanlı daha hızlı bir yolun nasıl kurulduğunu anlatıyor. ONNX modeli optimize edilmiş runtime üzerinde çalıştırarak gecikmeyi düşürüyor, işlem kapasitesini artırıyor ve vektör arama/otomatik embedding akışlarını daha uygulanabilir hale getiriyor. Yazı özellikle model servisinden ziyade veritabanı içinde inference yapan sistemlerde batch, concurrency ve runtime ayarlarının performansa etkisini gösteriyor.",
+      "en": "Manticore Search explains how it rebuilt its embedding path around ONNX Runtime to avoid slower Python/SentenceTransformers-style inference bottlenecks. Running models through an optimized ONNX backend reduces latency, increases throughput, and makes vector search and auto-embedding workflows more practical. The most useful part is the engineering detail around batching, concurrency, and runtime settings when inference happens inside the database rather than in a separate model service."
+    },
+    "favorite": false
+  },
+  {
     "title": "Why I Stopped Arguing With People",
     "url": "https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html",
     "source": "A Geek's Page",
     "readAt": "2026-07-01",
     "language": "en",
-    "topics": ["Product"],
+    "topics": [
+      "Product"
+    ],
     "note": {
       "tr": "Yazar, insanlarla tartışmaktan vazgeçmesinin nedenlerini şu temel noktalara dayandırıyor: Haklılık her şey değildir — bir tartışmayı kazanmak her zaman iyi sonuç vermez; karşı tarafı kaybeden konumuna düşürmek sadece düşman yaratır. Mesele fikir değil, egodur — çoğu insan fikrini değil, benliğini savunur. Mantıksız tiplerle ego savaşına girmek tamamen vakit kaybıdır; fikir alışverişini sadece zeki insanlarla yapmalısın. İnsanlar rasyonel değildir — çoğunluk önce hisseder, sonra hislerine mantıklı bir kılıf uydurur. Sağlam bir kanıt, kör bir duyguyu değiştiremez. Kimse tavsiye dinlemez — insanlar istenmeyen tavsiyeleri eleştiri olarak algılar. Çoğu insan kendi hatasıyla kafasını duvara çarpmadan ders almaz. Bırak sonuçlarına katlansınlar. Sadece sorana yardım et — biri açıkça yardım veya tavsiye istemedikçe ona akıl verme. Anlaşmazlıktan kâr et — insanları ikna etmekle uğraşmak yerine, onların göremediği doğruları inşa ederek kendi avantajına kullan. Sadece kendini değiştirebilirsin — başkalarını düzeltme çabası, değiştirebileceğin tek kişi olan kendinden çaldığın zamandır. Egonu kenara bırak, insanlardan geri bildirim iste ve sadece kendini geliştirmeye bak.",
       "en": "A useful reminder that being technically right is not the same as getting better. The piece reframes disagreement as a reason to build, ask for feedback, and spend energy where it can actually change something."
@@ -18,7 +69,10 @@
     "source": "Michal Malewicz / Medium",
     "readAt": "2026-07-02",
     "language": "en",
-    "topics": ["Product", "AI"],
+    "topics": [
+      "Product",
+      "AI"
+    ],
     "note": {
       "tr": "Yazar, vibe coding akımının sonuna gelindiğini savunuyor. Dört temel nokta: (1) Verimsizlik — çoğu kişi vibe coding ile gerçek, kullanılan ürün ortaya koyamıyor; yarım kalmış projeler ve harcanmış zaman/para biriktiriyor. (2) Maliyet Krizi — yapay zeka servislerinin maliyetleri yakında artacak ve sürdürülemez hale gelecek; mevcut furya şişirilmiş bir balon. (3) Pazar Doygunluğu — herkes yapay zeka ile uygulama yapabildiği için piyasa slop (kalitesiz içerik) ile doldu, kullanıcılar düşük eforlu ürünleri ayırt edip ilgilenmiyor. (4) Gerçekçi Bakış — bu akım sadece doğru zamanda doğru yerde olanların işine yaradı; \"fikir insanı\" olmak yetmiyor, kodlama becerisi olmayanların pazarda tutunması imkansız hale geliyor.",
       "en": "Malewicz argues the vibe coding window is closing. Four takeaways: (1) Inefficiency — most people never ship real products, only unfinished projects and burned cash/time. (2) Cost Crisis — AI service costs will soon spike unsustainably; the current hype is a bubble. (3) Market Saturation — when everyone can 'code', the market floods with slop; users detect low-effort products and ignore them. (4) Reality Check — the trend only benefited those at the right place at the right time; being an 'idea person' is no longer enough without coding skills."
