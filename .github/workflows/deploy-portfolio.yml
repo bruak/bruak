@@ -13,6 +13,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
@@ -30,6 +31,14 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Clean up old artifacts
+        run: |
+          gh api "/repos/${{ github.repository }}/actions/artifacts?name=github-pages" \
+            --jq '.artifacts[] | select(.expired == false) | .id' \
+            | xargs -I {} gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/{}"
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
