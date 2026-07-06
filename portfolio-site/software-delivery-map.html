@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Software Delivery Map</title>
 <style>
-  html, body { margin: 0; padding: 0; height: 100%; background: #04101c; overflow: hidden; }
+  html, body { margin: 0; padding: 0; height: 100%; background: #1A202C; overflow: hidden; }
   #root { position: absolute; inset: 0; }
   * { box-sizing: border-box; }
 </style>
@@ -78,7 +78,7 @@ function Sprite({start=0,end=Infinity,children,keepMounted=false}) {
 }
 
 // Minimal Stage — no playback bar, no controls, pure loop
-function Stage({width=1920,height=1080,duration=28,background='#04101c',loop=true,holdEnd=2.5,children}) {
+function Stage({width=1920,height=1080,duration=28,background='#1A202C',loop=true,holdEnd=2.5,children}) {
   const [time, setTime] = React.useState(0);
   const [scale, setScale] = React.useState(1);
   const stageRef = React.useRef(null);
@@ -131,7 +131,7 @@ function Stage({width=1920,height=1080,duration=28,background='#04101c',loop=tru
     <div ref={stageRef} style={{
       position:'absolute',inset:0,
       display:'flex',alignItems:'center',justifyContent:'center',
-      background:'#04101c',overflow:'hidden',
+      background:'#1A202C',overflow:'hidden',
     }}>
       <div style={{
         width,height,background,position:'relative',
@@ -151,16 +151,16 @@ Object.assign(window,{Easing,interpolate,animate,clamp,TimelineContext,useTime,u
 
 <!-- ── elements.jsx ────────────────────────────────────────────── -->
 <script type="text/babel">
-const PANEL_BG = 'rgba(14,28,46,0.55)';
-const PANEL_BG_2 = 'rgba(10,22,38,0.7)';
-const PANEL_STROKE = 'rgba(120,180,220,0.18)';
-const TEXT_DIM = 'rgba(186,214,230,0.55)';
-const TEXT_BRIGHT = 'rgba(220,240,250,0.92)';
+const PANEL_BG = 'rgba(45,55,72,0.55)';
+const PANEL_BG_2 = 'rgba(26,32,44,0.7)';
+const PANEL_STROKE = 'rgba(221,107,32,0.18)';
+const TEXT_DIM = 'rgba(160,172,192,0.6)';
+const TEXT_BRIGHT = 'rgba(247,250,252,0.92)';
 const MONO = 'JetBrains Mono,ui-monospace,SFMono-Regular,monospace';
 const SANS = 'Inter,system-ui,-apple-system,sans-serif';
 
 const PALETTES = {
-  cyber:  {CYAN:'oklch(82% 0.13 200)',GREEN:'oklch(82% 0.16 155)',GLOW1:'rgba(30,70,110,0.35)',GLOW2:'rgba(20,80,60,0.25)',GRID:'rgba(120,200,230,0.04)',GRID_FINE:'rgba(120,200,230,0.025)'},
+  cyber:  {CYAN:'oklch(75% 0.15 55)',GREEN:'oklch(72% 0.18 45)',GLOW1:'rgba(120,60,30,0.35)',GLOW2:'rgba(100,50,20,0.25)',GRID:'rgba(221,107,32,0.04)',GRID_FINE:'rgba(221,107,32,0.025)'},
   aurora: {CYAN:'oklch(78% 0.18 295)',GREEN:'oklch(78% 0.20 335)',GLOW1:'rgba(80,50,130,0.38)',GLOW2:'rgba(130,40,100,0.28)',GRID:'rgba(200,160,230,0.045)',GRID_FINE:'rgba(200,160,230,0.025)'},
   ember:  {CYAN:'oklch(82% 0.15 70)', GREEN:'oklch(72% 0.20 25)', GLOW1:'rgba(120,70,30,0.35)',GLOW2:'rgba(110,40,30,0.28)',GRID:'rgba(230,180,130,0.04)',GRID_FINE:'rgba(230,180,130,0.025)'},
 };
@@ -189,7 +189,7 @@ function BackgroundGrid() {
   const {GLOW1,GLOW2,GRID,GRID_FINE} = useT();
   const pulse = 0.7+0.05*Math.sin(t*0.6);
   return (
-    <div style={{position:'absolute',inset:0,background:`radial-gradient(ellipse at 20% 30%,${GLOW1},transparent 55%),radial-gradient(ellipse at 85% 80%,${GLOW2},transparent 50%),linear-gradient(180deg,#050d18 0%,#06121f 50%,#04101c 100%)`}}>
+    <div style={{position:'absolute',inset:0,background:`radial-gradient(ellipse at 20% 30%,${GLOW1},transparent 55%),radial-gradient(ellipse at 85% 80%,${GLOW2},transparent 50%),linear-gradient(180deg,#1A202C 0%,#1A202C 50%,#1A202C 100%)`}}>
       <div style={{position:'absolute',inset:0,backgroundImage:`linear-gradient(${GRID} 1px,transparent 1px),linear-gradient(90deg,${GRID} 1px,transparent 1px)`,backgroundSize:'60px 60px',opacity:pulse,maskImage:'radial-gradient(ellipse at center,#000 30%,transparent 85%)'}}/>
       <div style={{position:'absolute',inset:0,backgroundImage:`linear-gradient(${GRID_FINE} 1px,transparent 1px),linear-gradient(90deg,${GRID_FINE} 1px,transparent 1px)`,backgroundSize:'15px 15px',opacity:0.5}}/>
       <div style={{position:'absolute',inset:0,background:'radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,0.55) 100%)'}}/>
@@ -227,7 +227,7 @@ function SourceIcon({kind,accent,pulse}) {
   else if (kind==='camera') path=<g><rect x="2" y="7" width="20" height="15" rx="2" stroke={accent} strokeWidth={sw} fill="none"/><path d="M22 11l4-2v12l-4-2" stroke={accent} strokeWidth={sw} fill="none" strokeLinejoin="round"/><circle cx="9" cy="14.5" r="3" stroke={accent} strokeWidth={sw} fill="none"/></g>;
   else if (kind==='machine') path=<g><rect x="3" y="10" width="22" height="14" rx="1.5" stroke={accent} strokeWidth={sw} fill="none"/><circle cx="9" cy="17" r="2.5" stroke={accent} strokeWidth={sw} fill="none"/><circle cx="19" cy="17" r="2.5" stroke={accent} strokeWidth={sw} fill="none"/><path d="M11 10V6h6v4" stroke={accent} strokeWidth={sw} fill="none"/><circle cx="14" cy="4" r="1.2" fill={accent}/></g>;
   return (
-    <div style={{width:36,height:36,borderRadius:8,background:'rgba(8,18,30,0.7)',border:`1px solid ${PANEL_STROKE}`,display:'flex',alignItems:'center',justifyContent:'center',boxShadow:`inset 0 0 ${6+pulse*12}px ${accent}`}}>
+    <div style={{width:36,height:36,borderRadius:8,background:'rgba(26,32,44,0.7)',border:`1px solid ${PANEL_STROKE}`,display:'flex',alignItems:'center',justifyContent:'center',boxShadow:`inset 0 0 ${6+pulse*12}px ${accent}`}}>
       <svg width="28" height="28" viewBox="0 0 28 28">{path}</svg>
     </div>
   );
@@ -253,7 +253,7 @@ function PipelineCard({x,y,w,h,index,label,activeAt}) {
         <div style={{fontFamily:MONO,fontSize:8,color:firstActivated?accent:TEXT_DIM,letterSpacing:'0.1em',opacity:0.6+glow*0.4}}>{firstActivated?'LIVE':'IDLE'}</div>
       </div>
       <div style={{position:'absolute',left:10,right:10,top:36,fontFamily:SANS,fontWeight:700,fontSize:12,color:TEXT_BRIGHT,letterSpacing:'0.04em',textTransform:'uppercase',lineHeight:1.18,whiteSpace:'pre-line'}}>{label}</div>
-      <div style={{position:'absolute',left:12,right:12,bottom:14,height:26,borderRadius:4,background:'rgba(8,18,30,0.6)',border:`1px solid ${PANEL_STROKE}`,overflow:'hidden'}}>
+      <div style={{position:'absolute',left:12,right:12,bottom:14,height:26,borderRadius:4,background:'rgba(26,32,44,0.6)',border:`1px solid ${PANEL_STROKE}`,overflow:'hidden'}}>
         <div style={{position:'absolute',top:0,bottom:0,width:30,left:`${((t*60*pulseMul+index*30)%130)-30}%`,background:`linear-gradient(90deg,transparent,${accent},transparent)`,opacity:0.55+glow*0.45,filter:'blur(0.4px)'}}/>
       </div>
     </div>
@@ -293,7 +293,7 @@ function BackendNode({x,y,w=110,h=50,label,sub,accentKey,runningFrom=0}) {
   const blink=(t*1.6*theme.pulseMul+x*0.01)%2;
   const dot=running?(blink<0.4?1:0.55):0.25;
   return (
-    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:8,background:'rgba(10,22,38,0.75)',border:`1px solid ${PANEL_STROKE}`,boxShadow:running?`0 0 ${14*theme.glowMul}px ${accent}33,inset 0 1px 0 rgba(255,255,255,0.04)`:`inset 0 1px 0 rgba(255,255,255,0.02)`,padding:'8px 10px',display:'flex',flexDirection:'column',justifyContent:'center'}}>
+    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:8,background:'rgba(45,55,72,0.75)',border:`1px solid ${PANEL_STROKE}`,boxShadow:running?`0 0 ${14*theme.glowMul}px ${accent}33,inset 0 1px 0 rgba(255,255,255,0.04)`:`inset 0 1px 0 rgba(255,255,255,0.02)`,padding:'8px 10px',display:'flex',flexDirection:'column',justifyContent:'center'}}>
       <div style={{display:'flex',alignItems:'center',gap:6,fontFamily:SANS,fontWeight:600,fontSize:11,color:TEXT_BRIGHT,letterSpacing:'0.02em'}}>
         <div style={{width:5,height:5,borderRadius:3,background:accent,opacity:dot,boxShadow:`0 0 6px ${accent}`}}/>
         {label}
@@ -322,7 +322,7 @@ function Dashboard({x,y,w,h,appearAt}) {
   const healthVal=Easing.easeOutCubic(clamp((local-0.7)/1.6,0,1))*99.9;
   return (
     <div style={{position:'absolute',left:x,top:y,width:w,height:h,opacity:ease,transform:`translateY(${(1-ease)*14}px)`}}>
-      <div style={{position:'absolute',inset:0,borderRadius:18,background:'linear-gradient(180deg,rgba(14,28,46,0.72),rgba(8,18,32,0.78))',backdropFilter:'blur(14px)',border:`1px solid ${_PS}`,boxShadow:`0 0 ${60*theme.glowMul}px ${CYAN}33,inset 0 1px 0 rgba(255,255,255,0.06)`}}/>
+      <div style={{position:'absolute',inset:0,borderRadius:18,background:'linear-gradient(180deg,rgba(45,55,72,0.72),rgba(26,32,44,0.78))',backdropFilter:'blur(14px)',border:`1px solid ${_PS}`,boxShadow:`0 0 ${60*theme.glowMul}px ${CYAN}33,inset 0 1px 0 rgba(255,255,255,0.06)`}}/>
       <div style={{position:'absolute',left:18,right:18,top:0,height:2,background:`linear-gradient(90deg,transparent,${CYAN},${GREEN},transparent)`,opacity:0.7}}/>
       <div style={{position:'absolute',left:22,top:18,right:22,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
         <div style={{display:'flex',alignItems:'center',gap:10}}>
@@ -351,7 +351,7 @@ function LiveBadge({t,accent}) {
 
 function MetricCard({x,y,w,h,label,value,delta,accent,deltaColor,children}) {
   return (
-    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:12,background:'rgba(8,20,34,0.7)',border:`1px solid ${_PS}`,padding:'14px 16px'}}>
+    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:12,background:'rgba(45,55,72,0.7)',border:`1px solid ${_PS}`,padding:'14px 16px'}}>
       <div style={{fontFamily:_MO,fontSize:9,color:_TD,letterSpacing:'0.22em',fontWeight:600}}>{label}</div>
       {value!=null&&<div style={{display:'flex',alignItems:'baseline',gap:8,marginTop:14}}><div style={{fontFamily:_SA,fontWeight:700,fontSize:28,color:_TB,letterSpacing:'-0.02em',fontVariantNumeric:'tabular-nums'}}>{value}</div>{delta&&<div style={{fontFamily:_MO,fontSize:11,fontWeight:600,color:deltaColor||accent,letterSpacing:'0.04em'}}>{delta}</div>}</div>}
       {children}
@@ -366,7 +366,7 @@ function HealthDonut({value,accent}) {
       <div style={{position:'absolute',left:16,top:36,fontFamily:_SA,fontWeight:700,fontSize:28,color:_TB,letterSpacing:'-0.02em',fontVariantNumeric:'tabular-nums'}}>{value.toFixed(1)}%</div>
       <div style={{position:'absolute',right:14,top:18}}>
         <svg width="76" height="76" viewBox="0 0 76 76">
-          <circle cx={cx} cy={cy} r={r} stroke="rgba(120,200,230,0.12)" strokeWidth="6" fill="none"/>
+          <circle cx={cx} cy={cy} r={r} stroke="rgba(221,107,32,0.12)" strokeWidth="6" fill="none"/>
           <circle cx={cx} cy={cy} r={r} stroke={accent} strokeWidth="6" fill="none" strokeDasharray={`${circ*pct} ${circ}`} strokeLinecap="round" transform={`rotate(-90 ${cx} ${cy})`} style={{filter:`drop-shadow(0 0 4px ${accent})`}}/>
         </svg>
       </div>
@@ -383,7 +383,7 @@ function ChartCard({x,y,w,h,t,appearAt,cyan,green,barLive}) {
     return clamp(0.35+0.45*(Math.sin(t*0.8*barLive+seed)*0.5+0.5)+0.12*Math.sin(t*2.2*barLive+i*1.3),0.12,1);
   });
   return (
-    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:12,background:'rgba(8,20,34,0.7)',border:`1px solid ${_PS}`,padding:'14px 16px 12px',opacity:reveal}}>
+    <div style={{position:'absolute',left:x,top:y,width:w,height:h,borderRadius:12,background:'rgba(45,55,72,0.7)',border:`1px solid ${_PS}`,padding:'14px 16px 12px',opacity:reveal}}>
       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
         <div style={{fontFamily:_MO,fontSize:9,color:_TD,letterSpacing:'0.22em',fontWeight:600}}>NETWORK TRAFFIC · MSG/S</div>
         <div style={{fontFamily:_MO,fontSize:10,color:cyan,letterSpacing:'0.16em'}}>60s</div>
@@ -456,9 +456,9 @@ function MobileScreen({x,y,w,h,appearAt}) {
   const polyline=pts.map((v,i)=>`${(i/(pts.length-1))*w_in},${(1-v)*60}`).join(' ');
   return (
     <div style={{position:'absolute',left:x,top:y,width:w,height:h,opacity:ease,transform:`translate(${(1-ease)*18}px,${(1-ease)*8}px) rotate(${(1-ease)*6}deg)`,transformOrigin:'bottom center'}}>
-      <div style={{position:'absolute',inset:0,borderRadius:28,background:'linear-gradient(150deg,#1a2838 0%,#0a1422 100%)',border:`1.5px solid ${CYAN}55`,boxShadow:`0 0 ${60*theme.glowMul}px ${CYAN}40,inset 0 1px 0 rgba(255,255,255,0.06)`,padding:8}}>
-        <div style={{position:'absolute',inset:8,borderRadius:22,background:'linear-gradient(180deg,#050d18,#081420)',overflow:'hidden'}}>
-          <div style={{position:'absolute',top:8,left:'50%',transform:'translateX(-50%)',width:60,height:14,background:'#020810',borderRadius:8}}/>
+      <div style={{position:'absolute',inset:0,borderRadius:28,background:'linear-gradient(150deg,#2D3748 0%,#1A202C 100%)',border:`1.5px solid ${CYAN}55`,boxShadow:`0 0 ${60*theme.glowMul}px ${CYAN}40,inset 0 1px 0 rgba(255,255,255,0.06)`,padding:8}}>
+        <div style={{position:'absolute',inset:8,borderRadius:22,background:'linear-gradient(180deg,#1A202C,#1A202C)',overflow:'hidden'}}>
+          <div style={{position:'absolute',top:8,left:'50%',transform:'translateX(-50%)',width:60,height:14,background:'#1A202C',borderRadius:8}}/>
           <div style={{position:'absolute',top:12,left:18,right:18,display:'flex',justifyContent:'space-between',fontFamily:_MO,fontSize:9,color:_TD,letterSpacing:'0.1em'}}><span>09:41</span><span>● ● ●</span></div>
           <div style={{position:'absolute',top:40,left:16,right:16,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
             <div><div style={{fontFamily:_SA,fontWeight:700,fontSize:13,color:_TB,letterSpacing:'-0.01em'}}>Operations</div><div style={{fontFamily:_MO,fontSize:8,color:_TD,letterSpacing:'0.18em',marginTop:2}}>SYNC · LIVE</div></div>
@@ -474,7 +474,7 @@ function MobileScreen({x,y,w,h,appearAt}) {
           <div style={{position:'absolute',top:188,left:16,right:16,display:'flex',flexDirection:'column',gap:8}}>
             {[{l:'API Gateway',v:'OK',d:'12ms'},{l:'WebSocket Hub',v:'OK',d:'420 cx'},{l:'MQTT Broker',v:'OK',d:'1.2k/s'}].map((r,i)=>{
               const op=clamp((local-0.5-i*0.15)/0.3,0,1);
-              return <div key={i} style={{display:'flex',alignItems:'center',gap:10,padding:'8px 12px',borderRadius:10,background:'rgba(10,22,36,0.7)',border:`1px solid ${_PS}`,opacity:op,transform:`translateX(${(1-op)*6}px)`}}><div style={{width:6,height:6,borderRadius:3,background:GREEN,boxShadow:`0 0 6px ${GREEN}`}}/><div style={{flex:1,fontFamily:_SA,fontWeight:500,fontSize:11,color:_TB}}>{r.l}</div><div style={{fontFamily:_MO,fontSize:9,color:_TD,letterSpacing:'0.1em'}}>{r.d}</div></div>;
+              return <div key={i} style={{display:'flex',alignItems:'center',gap:10,padding:'8px 12px',borderRadius:10,background:'rgba(45,55,72,0.7)',border:`1px solid ${_PS}`,opacity:op,transform:`translateX(${(1-op)*6}px)`}}><div style={{width:6,height:6,borderRadius:3,background:GREEN,boxShadow:`0 0 6px ${GREEN}`}}/><div style={{flex:1,fontFamily:_SA,fontWeight:500,fontSize:11,color:_TB}}>{r.l}</div><div style={{fontFamily:_MO,fontSize:9,color:_TD,letterSpacing:'0.1em'}}>{r.d}</div></div>;
             })}
           </div>
         </div>
@@ -658,19 +658,19 @@ function BottomStreams() {
   if (op<=0) return null;
   return (
     <div style={{position:'absolute',left:350,top:622,width:700,opacity:op,display:'flex',gap:14}}>
-      <div style={{flex:1,padding:'10px 14px',borderRadius:10,background:'rgba(8,18,30,0.65)',border:`1px solid ${PANEL_STROKE}`}}>
+      <div style={{flex:1,padding:'10px 14px',borderRadius:10,background:'rgba(26,32,44,0.65)',border:`1px solid ${PANEL_STROKE}`}}>
         <div style={{fontFamily:MONO,fontSize:9,color:TEXT_DIM,letterSpacing:'0.22em',marginBottom:8}}>DOCKER · POD CLUSTER</div>
         <div style={{display:'flex',gap:6}}>
           {Array.from({length:12}).map((_,i)=>{
             const blink=((t*1.2*pulseMul+i*0.4)%3)<0.4;
-            return <div key={i} style={{width:18,height:22,borderRadius:3,background:'rgba(20,50,70,0.6)',border:`1px solid ${blink?GREEN:'rgba(120,200,230,0.18)'}`,boxShadow:blink?`0 0 10px ${GREEN}`:'none',position:'relative'}}><div style={{position:'absolute',bottom:3,left:3,right:3,height:2,borderRadius:1,background:GREEN,opacity:blink?1:0.4}}/></div>;
+            return <div key={i} style={{width:18,height:22,borderRadius:3,background:'rgba(45,55,72,0.6)',border:`1px solid ${blink?GREEN:'rgba(221,107,32,0.18)'}`,boxShadow:blink?`0 0 10px ${GREEN}`:'none',position:'relative'}}><div style={{position:'absolute',bottom:3,left:3,right:3,height:2,borderRadius:1,background:GREEN,opacity:blink?1:0.4}}/></div>;
           })}
         </div>
       </div>
-      <div style={{flex:1,padding:'10px 14px',borderRadius:10,background:'rgba(8,18,30,0.65)',border:`1px solid ${PANEL_STROKE}`,position:'relative',overflow:'hidden'}}>
+      <div style={{flex:1,padding:'10px 14px',borderRadius:10,background:'rgba(26,32,44,0.65)',border:`1px solid ${PANEL_STROKE}`,position:'relative',overflow:'hidden'}}>
         <div style={{fontFamily:MONO,fontSize:9,color:TEXT_DIM,letterSpacing:'0.22em',marginBottom:8}}>WEBSOCKET · MQTT STREAMS</div>
         {[0,1,2].map(i=>(
-          <div key={i} style={{position:'relative',height:4,marginTop:5,background:'rgba(120,200,230,0.08)',borderRadius:2,overflow:'hidden'}}>
+          <div key={i} style={{position:'relative',height:4,marginTop:5,background:'rgba(221,107,32,0.08)',borderRadius:2,overflow:'hidden'}}>
             <div style={{position:'absolute',top:0,bottom:0,width:'20%',left:`${((t*(60+i*30)*pulseMul+i*70)%130)-20}%`,background:`linear-gradient(90deg,transparent,${i===0?CYAN:GREEN},transparent)`,filter:'blur(0.5px)'}}/>
           </div>
         ))}
@@ -714,7 +714,7 @@ function App() {
   const themeValue = React.useMemo(() => ({...PALETTES.cyber,...ENERGIES.steady,...CAMERAS.cinematic}),[]);
   return (
     <TweaksContext.Provider value={themeValue}>
-      <Stage width={1920} height={1080} duration={18} background="#04101c">
+      <Stage width={1920} height={1080} duration={18} background="#1A202C">
         <Scene/>
       </Stage>
     </TweaksContext.Provider>
