@@ -257,6 +257,12 @@ I like solving problems around industrial data collection, machine state normali
 
 ---
 
+---
+
+## Okuduklarım / Keşifler
+
+- [**Ternlight**](https://ternlight-demo.vercel.app/) — API veya sunucu bağlantısı gerektirmeyen, doğrudan tarayıcıda (CPU üzerinde) çalışan 7 MB'lık ultra hafif bir embedding (anlamsal arama) modeli. Tek bir npm paketiyle projeye dahil ediliyor, verileri dışarı sızdırmadan milisaniyeler içinde yerel anlamsal arama yapmanı sağlıyor. Sitede React dokümanları üzerinde çalışan canlı bir demosu bulunuyor.
+
 ## Contact
 
 - GitHub: [github.com/bruak](https://github.com/bruak)
