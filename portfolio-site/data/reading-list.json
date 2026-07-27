@@ -78,5 +78,84 @@
       "en": "Malewicz argues the vibe coding window is closing. Four takeaways: (1) Inefficiency — most people never ship real products, only unfinished projects and burned cash/time. (2) Cost Crisis — AI service costs will soon spike unsustainably; the current hype is a bubble. (3) Market Saturation — when everyone can 'code', the market floods with slop; users detect low-effort products and ignore them. (4) Reality Check — the trend only benefited those at the right place at the right time; being an 'idea person' is no longer enough without coding skills."
     },
     "favorite": false
+  },
+  {
+    "title": "The OpenAI rogue hacker story was a media campaign",
+    "url": "https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker",
+    "source": "The Guardian",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "AI",
+      "Systems"
+    ],
+    "note": {
+      "tr": "Guardian makalesi, OpenAI'in 'kaçak AI ajanı' hikâyesinin, yatırım çekmek ve regülasyon avantajı elde etmek için tasarlanmış bir medya kampanyası olduğunu savunuyor. Hikâyenin perde arkasındaki planlı anlatım stratejisini ve medyanın bu tür kurgulara nasıl alet olduğunu inceliyor.",
+      "en": "The Guardian argues that OpenAI's 'rogue AI agent' story was a calculated media campaign designed to attract investment and gain regulatory advantage — examining the narrative strategy behind the scenes."
+    },
+    "favorite": true
+  },
+  {
+    "title": "Hanwha GitHub Token Leak",
+    "url": "https://hhh.hn/hanwha-github-token/",
+    "source": "hhh.hn",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "Security",
+      "Systems"
+    ],
+    "note": {
+      "tr": "Güvenlik araştırmacısı, Hanwha güvenlik kameralarının yazılım güncellemesinde yüzlerce GitHub reposuna admin erişimi olan bir token ve DoD'ye ait IP adresleri buldu. Tedarik zinciri güvenliğinin kritik önemini bir kez daha gözler önüne seriyor.",
+      "en": "A security researcher found a GitHub token with admin access to hundreds of repos, plus DoD-associated IP addresses, inside a Hanwha security camera firmware update. A stark reminder of supply chain security risks."
+    },
+    "favorite": false
+  },
+  {
+    "title": "Attention",
+    "url": "https://glyphack.com/attention/",
+    "source": "Glyphack",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "Product"
+    ],
+    "note": {
+      "tr": "Yazar, uygulamalar, iş kültürü ve LLM'ler yüzünden odaklanma yeteneğinin nasıl zayıfladığını ve derin çalışmanın giderek zorlaştığını anlatıyor. Dikkat dağınıklığı çağında üretken kalmak için kişisel stratejiler üzerine düşündürücü bir yazı.",
+      "en": "A reflective piece on how apps, workplace culture, and LLMs are eroding our ability to focus — making deep work increasingly difficult in the age of constant distraction."
+    },
+    "favorite": false
+  },
+  {
+    "title": "Nothing Works and Everyone Is Euphoric",
+    "url": "https://ptrchm.com/posts/nothing-works-and-everyone-is-euphoric/",
+    "source": "ptrchm",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "Product",
+      "Systems"
+    ],
+    "note": {
+      "tr": "Yazar, AI araçlarının vaat ettiği üretkenlik artışına rağmen yazılım kalitesinin düştüğünü; şirketlerin KPI odaklı yaklaşımı yüzünden hata düzeltme yerine sürekli yeni özellik peşinde koştuğunu eleştiriyor. Sektördeki 'her şey harika' söylemi ile gerçeklik arasındaki uçurumu gözler önüne seriyor.",
+      "en": "A critique of the widening gap between the 'everything is amazing' tech narrative and reality — where AI tools promise productivity but software quality declines, and companies chase new features over fixing bugs due to KPI-driven culture."
+    },
+    "favorite": true
+  },
+  {
+    "title": "Postgres LISTEN/NOTIFY Actually Scales",
+    "url": "https://www.dbos.dev/blog/postgres-listen-notify-scalability",
+    "source": "DBOS Blog",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "Backend",
+      "Systems"
+    ],
+    "note": {
+      "tr": "DBOS ekibi, Postgres LISTEN/NOTIFY'in global lock nedeniyle ölçeklenmediği yönündeki yaygın inanışı test ediyor. Trigger-based NOTIFY ile 2.9K yazma/sn'de takılan sistemi, notification'ları buffer'layıp batch halinde flush ederek 60K yazma/sn'ye (20×) çıkarıyorlar. Postgres 19'daki patch'in bu lock'u kaldırmadığını da not düşüyorlar.",
+      "en": "DBOS challenges the notion that Postgres LISTEN/NOTIFY doesn't scale. By buffering notifications in memory and flushing them in batch transactions (instead of per-row triggers), they achieve 60K writes/sec — a 20x improvement over the naive trigger approach — while maintaining millisecond latencies."
+    },
+    "favorite": true
   }
 ]
