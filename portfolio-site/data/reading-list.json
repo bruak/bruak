@@ -1,5 +1,22 @@
 [
   {
+    "title": "Ternlight — On-Device Sentence Embeddings in 7 MB of WASM",
+    "url": "https://ternlight.dev/",
+    "source": "ternlight.dev",
+    "readAt": "2026-07-27",
+    "language": "en",
+    "topics": [
+      "AI",
+      "Systems",
+      "Backend"
+    ],
+    "note": {
+      "tr": "Kendi projem: 1.58-bit ternary ağırlıklarla eğitilmiş, 7 MB boyutunda bir cümle embedding modeli. Rust'tan WASM'e derlenmiş, tokenizer ve inference motoru tek bundle'da. Sunucusuz, GPU'suz, 5 ms'de embedding çıkarımı. npm paketi olarak yayında.",
+      "en": "My own project: a sentence embedding model with 1.58-bit ternary weights, compressed to 7 MB. Compiled from Rust to WASM with tokenizer and inference engine in a single bundle. No server, no GPU — 5 ms per embedding. Available as an npm package."
+    },
+    "favorite": true
+  },
+  {
     "title": "iPhone Access and the Decline in U.S. Fertility",
     "url": "https://www.nber.org/system/files/working_papers/w35310/w35310.pdf",
     "source": "NBER Working Paper No. 35310",
