@@ -19,6 +19,8 @@ portfolio-site/
 ├── CNAME
 ├── data/
 │   └── reading-list.json
+├── games/
+│   └── pixelflightcontrol/   # built output of the PixelPlaneControlSim game
 ├── posts/
 │   ├── industrial-telemetry-pipeline.html
 │   ├── multi-brand-cnc-data-acquisition.html
@@ -49,6 +51,26 @@ Use the local static server for `reading.html` and `reading-en.html`, because th
 ## Deployment
 
 This folder is prepared as a static site and can be deployed through GitHub Pages, Netlify, Vercel static output, cPanel `public_html`, Nginx or any basic static hosting provider.
+
+## Playable Game (`games/pixelflightcontrol/`)
+
+The PixelFlightControl game is served directly from this site at
+`/games/pixelflightcontrol/`. The folder holds committed build output — do not
+edit it by hand. To refresh it after changing the game
+(`../PixelPlaneControlSim`):
+
+```powershell
+cd ../PixelPlaneControlSim
+npm install
+npm test
+npx vite build --base=/games/pixelflightcontrol/ --outDir ../portfolio-site/games/pixelflightcontrol --emptyOutDir --minify oxc --sourcemap false
+```
+
+The `--base` flag is required: the bundle and the aircraft model are resolved
+against it, so a default `/` build breaks under the subpath. The Supabase
+leaderboard only works when `VITE_SUPABASE_URL` and
+`VITE_SUPABASE_PUBLISHABLE_KEY` are set at build time; without them the game
+runs and reports the leaderboard as unavailable.
 
 ## Content Direction
 

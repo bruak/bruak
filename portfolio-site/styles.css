@@ -811,6 +811,18 @@ h3 {
   padding: 7px 11px;
 }
 
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.card-actions .btn {
+  padding: 11px 20px;
+  font-size: 0.9rem;
+}
+
 .approach-section {
   padding-top: 64px;
 }
