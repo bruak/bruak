@@ -2,12 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover lets the canvas run under a notch; app.css pads
+         the HUD back out with the safe-area insets. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>PixelFlightControl</title>
-    <script type="module" crossorigin src="/games/pixelflightcontrol/assets/index-BWc-YTNV.js"></script>
-    <link rel="stylesheet" crossorigin href="/games/pixelflightcontrol/assets/index-C1KFmJW9.css">
+    <meta
+      name="description"
+      content="An isometric air traffic control game: three colour-coded runways and a drag-to-draw flight path."
+    />
+    <meta name="theme-color" content="#78b67a" />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PixelFlightControl" />
+    <meta
+      property="og:description"
+      content="Three colour-coded runways. Draw the approach, keep them apart."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Inline, so the page still needs exactly one document request. -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2378b67a'/%3E%3Crect x='2' y='7' width='12' height='2' fill='%23facc15'/%3E%3Crect x='7' y='2' width='2' height='12' fill='%233b82f6'/%3E%3Crect x='6' y='6' width='4' height='4' fill='%23f05252'/%3E%3C/svg%3E"
+    />
+    <script type="module" crossorigin src="/games/pixelflightcontrol/assets/index-Br8uahv9.js"></script>
+    <link rel="stylesheet" crossorigin href="/games/pixelflightcontrol/assets/index-rLEcSVyT.css">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"></div>
+    <noscript>
+      <p
+        style="
+          font:
+            16px/1.5 system-ui,
+            sans-serif;
+          padding: 2rem;
+        "
+      >
+        PixelFlightControl is a JavaScript game — please enable JavaScript to
+        play it.
+      </p>
+    </noscript>
   </body>
 </html>

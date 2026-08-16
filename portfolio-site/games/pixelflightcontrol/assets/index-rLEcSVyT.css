@@ -1,0 +1,1134 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap");
+  svg.svelte-1bamv03 {
+    display: block;
+  }
+
+  .board__note.svelte-1u53lav {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .leaders.svelte-1u53lav {
+    display: grid;
+    gap: 0.1rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .leaders__row.svelte-1u53lav {
+    display: grid;
+    grid-template-columns: 1.6rem minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.16rem 0.2rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .leaders__row.svelte-1u53lav:nth-child(odd) {
+    background: rgb(242 246 249 / 0.06);
+  }
+
+  .leaders__rank.svelte-1u53lav {
+    opacity: 0.6;
+    text-align: right;
+  }
+
+  .leaders__name.svelte-1u53lav {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .leaders__score.svelte-1u53lav {
+    font-weight: 700;
+  }
+
+  .dialog__best.svelte-5dx56c {
+    font-weight: 700;
+  }
+
+  .dialog__name.svelte-5dx56c {
+    display: flex;
+    gap: 0.4rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .dialog__name.svelte-5dx56c input:where(.svelte-5dx56c) {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 0.16rem;
+    background: rgb(242 246 249 / 0.08);
+    color: var(--panel-text);
+  }
+
+  .dialog__name.svelte-5dx56c input:where(.svelte-5dx56c)::placeholder {
+    color: var(--panel-text);
+    opacity: 0.45;
+  }
+
+  .board__heading.svelte-lxixu7 {
+    margin: 0.6rem 0 0.1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  .board__note.svelte-lxixu7 {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .runs.svelte-lxixu7 {
+    display: grid;
+    gap: 0.1rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .runs__row.svelte-lxixu7 {
+    display: grid;
+    grid-template-columns: 3.4rem auto minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.16rem 0.2rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .runs__row.svelte-lxixu7:nth-child(odd) {
+    background: rgb(242 246 249 / 0.06);
+  }
+
+  .runs__day.svelte-lxixu7 {
+    opacity: 0.6;
+  }
+
+  .runs__score.svelte-lxixu7 {
+    font-weight: 700;
+  }
+
+  .runs__meta.svelte-lxixu7 {
+    opacity: 0.75;
+  }
+
+  .runs__unit.svelte-lxixu7 {
+    margin-left: 0.1rem;
+    font-size: 0.72em;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+
+  .board__actions.svelte-lxixu7 {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .board__secondary.svelte-lxixu7 {
+    background: transparent;
+    border: 1px solid rgb(242 246 249 / 0.28);
+    color: inherit;
+  }
+
+  .dialog__actions.svelte-nggf0m {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .demo.svelte-16i5pnm {
+    width: min(20rem, 100%);
+    border-radius: 0.2rem;
+    background: rgb(120 182 122 / 0.22);
+    border: 1px solid var(--panel-border);
+    overflow: hidden;
+  }
+
+  .demo.svelte-16i5pnm svg:where(.svelte-16i5pnm) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .demo__other.svelte-16i5pnm {
+    opacity: 0.45;
+  }
+
+  .demo__wipe.svelte-16i5pnm {
+    transform-box: fill-box;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    animation: svelte-16i5pnm-route-wipe 5.5s linear infinite;
+  }
+
+  .demo__gate.svelte-16i5pnm {
+    fill: #fff8dc;
+    animation: svelte-16i5pnm-gate-pulse 5.5s linear infinite;
+  }
+
+  .demo__route.svelte-16i5pnm {
+    fill: none;
+    stroke: #fffdf0;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 8 6;
+    animation: svelte-16i5pnm-route-fade 5.5s linear infinite;
+  }
+
+  .demo__pointer.svelte-16i5pnm {
+    opacity: 0;
+    offset-path: path("M 30 34 C 84 22, 116 28, 150 48");
+    offset-rotate: 0deg;
+    animation: svelte-16i5pnm-pointer-drag 5.5s linear infinite;
+  }
+
+  .demo__plane.svelte-16i5pnm {
+    offset-path: path("M 30 34 C 84 22, 116 28, 150 48 L 286 48");
+    animation: svelte-16i5pnm-plane-fly 5.5s linear infinite;
+  }
+
+  @keyframes svelte-16i5pnm-route-wipe {
+    0% {
+      transform: scaleX(0);
+    }
+    18%,
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes svelte-16i5pnm-route-fade {
+    0%,
+    62% {
+      opacity: 1;
+    }
+    76%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes svelte-16i5pnm-pointer-drag {
+    0% {
+      offset-distance: 0%;
+      opacity: 0.9;
+    }
+    18% {
+      offset-distance: 100%;
+      opacity: 0.9;
+    }
+    24%,
+    100% {
+      offset-distance: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes svelte-16i5pnm-plane-fly {
+    0%,
+    22% {
+      offset-distance: 0%;
+    }
+    64% {
+      offset-distance: 100%;
+    }
+    88% {
+      offset-distance: 100%;
+      opacity: 1;
+    }
+    97%,
+    100% {
+      offset-distance: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes svelte-16i5pnm-gate-pulse {
+    0%,
+    14% {
+      fill: #fff8dc;
+    }
+    20% {
+      fill: #ffffff;
+    }
+    34%,
+    100% {
+      fill: #fff8dc;
+    }
+  }
+
+  /* Reduced motion: hold the finished approach instead of looping it. */
+  .demo--still.svelte-16i5pnm .demo__route,
+  .demo--still.svelte-16i5pnm .demo__pointer,
+  .demo--still.svelte-16i5pnm .demo__plane,
+  .demo--still.svelte-16i5pnm .demo__gate,
+  .demo--still.svelte-16i5pnm .demo__wipe {
+    animation: none;
+  }
+
+  .demo--still.svelte-16i5pnm .demo__wipe:where(.svelte-16i5pnm) {
+    transform: scaleX(1);
+  }
+
+  .demo--still.svelte-16i5pnm .demo__pointer:where(.svelte-16i5pnm) {
+    opacity: 0;
+  }
+
+  .demo--still.svelte-16i5pnm .demo__plane:where(.svelte-16i5pnm) {
+    offset-distance: 100%;
+  }
+
+  .tutorial__rules.svelte-16i5pnm {
+    margin: 0;
+    padding-left: 1.1rem;
+    text-align: left;
+    display: grid;
+    gap: 0.45rem;
+    max-width: 22rem;
+  }
+
+  .tutorial__rules.svelte-16i5pnm li:where(.svelte-16i5pnm) {
+    line-height: 1.35;
+  }
+
+
+:root {
+  /* Translucent so the traffic underneath stays readable through the HUD.
+     `--panel-solid` is for the few surfaces that must not be seen through. */
+  --panel: rgb(18 28 42 / 0.44);
+  --panel-solid: #121c2a;
+  --panel-text: #f3f6f8;
+  --panel-border: rgb(242 246 249 / 0.22);
+  --panel-divider: rgb(242 246 249 / 0.16);
+  --panel-shadow: drop-shadow(0 0.16rem 0 rgb(0 0 0 / 0.22));
+  --panel-elevation: 0 0.16rem 0 rgb(0 0 0 / 0.22);
+  --panel-blur: blur(3px) saturate(1.1);
+  --panel-radius: 0.24rem;
+  color-scheme: light;
+  font-family:
+    "Hind",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #78b67a;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+}
+
+main {
+  position: fixed;
+  inset: 0;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  image-rendering: pixelated;
+}
+
+/* --------------------------------------------------------------------- HUD */
+
+.hud {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.hud > * {
+  pointer-events: auto;
+}
+
+.panel {
+  background: var(--panel);
+  color: var(--panel-text);
+  /* The panel is see-through enough that the world behind it can be bright;
+     the shadow is what keeps the labels legible over a runway. */
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.6);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-elevation);
+  -webkit-backdrop-filter: var(--panel-blur);
+  backdrop-filter: var(--panel-blur);
+  overflow: hidden;
+}
+
+/* Without a backdrop filter the same alpha reads as washed-out rather than
+   frosted, so fall back to something nearly solid. */
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .panel {
+    background: rgb(18 28 42 / 0.78);
+  }
+}
+
+/* -------------------------------------------------------------- fps meter */
+
+/* Laid out by the HUD rather than pinned to the corner: on a phone the same
+   corner is where the stats board goes, and an absolute chip would sit on top
+   of the landings figure. */
+.fps {
+  margin-left: auto;
+  align-self: flex-start;
+  display: flex;
+  align-items: baseline;
+  gap: 0.24rem;
+  padding: 0.2rem 0.4rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  /* Purely informational, and small enough that a stray tap on it would
+     steal a drag from the aircraft underneath. */
+  pointer-events: none;
+  color: #6ee787;
+}
+
+.fps--critical {
+  color: #ff6b6b;
+}
+
+.fps__value {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.fps__unit {
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------- settings */
+
+.dialog--settings {
+  width: min(24rem, calc(100vw - 2rem));
+  text-align: left;
+}
+
+.settings {
+  display: grid;
+  width: 100%;
+  gap: 0.1rem;
+}
+
+.settings__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(5.5rem, auto);
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  box-shadow: inset 0 -1px 0 var(--panel-divider);
+}
+
+.settings__row:last-child {
+  box-shadow: none;
+}
+
+.settings__label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.settings__glyph {
+  display: grid;
+  place-items: center;
+  opacity: 0.8;
+}
+
+/* A switch, not a dialog action: quieter than the `Done` button below it. */
+.settings__switch,
+.settings__choice {
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.34rem 0.6rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.16rem;
+  background: transparent;
+  color: var(--panel-text);
+  cursor: pointer;
+}
+
+.settings__switch[aria-checked="true"],
+.settings__choice[aria-pressed="true"] {
+  background: var(--panel-text);
+  color: var(--panel-solid);
+  border-color: var(--panel-text);
+}
+
+.settings__choices {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+
+/* ------------------------------------------------------------ stats board */
+
+.board {
+  display: grid;
+  width: min(21rem, calc(100vw - 5.4rem));
+  align-content: start;
+}
+
+.board__row {
+  display: grid;
+  grid-template-columns: 2.15rem 2.25rem minmax(4.2rem, 1fr) auto;
+  align-items: center;
+  column-gap: 0.52rem;
+  min-height: 3rem;
+  padding: 0.34rem 0.62rem 0.34rem 0.42rem;
+  box-shadow: inset 0 -1px 0 var(--panel-divider);
+}
+
+.board__row:last-child {
+  box-shadow: none;
+}
+
+.board__arrow {
+  display: grid;
+  place-items: center;
+  width: 2.05rem;
+  height: 2.05rem;
+  color: var(--panel-text);
+}
+
+.board__icon {
+  display: grid;
+  place-items: center;
+  width: 2.08rem;
+  height: 2.08rem;
+  border-radius: 0.16rem;
+  background: var(--panel-text);
+  color: var(--panel-solid);
+}
+
+.board__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.board__title {
+  font-size: 1.125rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.board__value {
+  justify-self: end;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  line-height: 0.82;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ----------------------------------------------------------- control rail */
+
+.rail {
+  order: -1;
+  display: grid;
+  align-content: start;
+  width: 3.3rem;
+}
+
+.rail__button {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--panel-text);
+  box-shadow: inset 0 -1px 0 var(--panel-divider);
+  transition:
+    background-color 150ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+.rail__button:last-child {
+  box-shadow: none;
+}
+
+.rail__button:hover {
+  background: rgb(242 246 249 / 0.08);
+}
+
+.rail__button:active {
+  transform: scale(0.97);
+}
+
+/* A zoom button at its limit: still there, visibly spent. */
+.rail__button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.rail__button:disabled:hover {
+  background: transparent;
+}
+
+.rail__button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid rgb(247 201 72 / 0.55);
+  outline-offset: 2px;
+}
+
+.rail__chip {
+  display: grid;
+  place-items: center;
+  width: 2.05rem;
+  height: 2.05rem;
+  border-radius: 0.16rem;
+  background: var(--panel-text);
+  color: var(--panel-solid);
+}
+
+.slider {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+/*
+ * Fully custom: the native control renders as a hairline in a 3 rem column,
+ * and `accent-color` cannot fix the track. `--volume-fill` is set inline from
+ * the current value so the filled portion is a plain gradient stop.
+ */
+.slider input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  min-width: 2.4rem;
+  height: 0.85rem;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slider input::-webkit-slider-runnable-track {
+  height: 0.3rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--panel-text) 0 var(--volume-fill, 70%),
+    rgb(242 246 249 / 0.22) var(--volume-fill, 70%) 100%
+  );
+}
+
+.slider input::-moz-range-track {
+  height: 0.3rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--panel-text) 0 var(--volume-fill, 70%),
+    rgb(242 246 249 / 0.22) var(--volume-fill, 70%) 100%
+  );
+}
+
+.slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.72rem;
+  height: 0.72rem;
+  margin-top: -0.21rem;
+  border-radius: 0.14rem;
+  border: 0;
+  background: var(--panel-text);
+  box-shadow: 0 0 0 2px var(--panel-solid);
+  transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slider input::-moz-range-thumb {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 0.14rem;
+  border: 0;
+  background: var(--panel-text);
+  box-shadow: 0 0 0 2px var(--panel-solid);
+}
+
+.slider input:hover::-webkit-slider-thumb,
+.slider input:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+
+.slider input:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.slider input:focus-visible {
+  outline: 3px solid rgb(247 201 72 / 0.55);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------------- world overlays */
+
+.world-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.badge {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.24rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.16rem;
+  background: var(--panel);
+  -webkit-backdrop-filter: var(--panel-blur);
+  backdrop-filter: var(--panel-blur);
+  color: var(--panel-text);
+  padding: 0.2rem 0.34rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  filter: var(--panel-shadow);
+  white-space: nowrap;
+}
+
+.badge__dot {
+  width: 0.44rem;
+  height: 0.44rem;
+  border-radius: 999px;
+}
+
+/* Colour-blind mode: the shape replaces the dot, keeping the colour as well. */
+.badge__symbol {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.tooltip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 0.18rem;
+  background: var(--panel);
+  -webkit-backdrop-filter: var(--panel-blur);
+  backdrop-filter: var(--panel-blur);
+  color: var(--panel-text);
+  padding: 0.4rem 0.62rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  filter: var(--panel-shadow);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------- feedback */
+
+/*
+ * Floating score label. Projected once where the landing happened and then
+ * left to the compositor: `left`/`top` are set from the projection, and the
+ * animation only touches transform and opacity so it never lays out again.
+ */
+.popup {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 0.55),
+    0 0 6px rgb(0 0 0 / 0.3);
+  animation: popup-rise 1100ms cubic-bezier(0.22, 0.85, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes popup-rise {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -35%) scale(0.82);
+  }
+  18% {
+    opacity: 1;
+    transform: translate(-50%, -75%) scale(1.06);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200%) scale(1);
+  }
+}
+
+/*
+ * Inbound telegraph. Anchored where the arrival will cross into view, with the
+ * arrow rotated by the projected travel direction — so it survives an orbit.
+ * `--telegraph-urgency` runs 0..1 over the warning, and drives the beat rather
+ * than a second animation.
+ */
+.telegraph {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22rem;
+  padding: 0.18rem 0.34rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.16rem;
+  background: var(--panel);
+  -webkit-backdrop-filter: var(--panel-blur);
+  backdrop-filter: var(--panel-blur);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  filter: var(--panel-shadow);
+  white-space: nowrap;
+  opacity: calc(0.55 + var(--telegraph-urgency, 0) * 0.45);
+  animation: telegraph-beat 900ms ease-in-out infinite;
+}
+
+.telegraph__arrow {
+  display: inline-block;
+  font-size: 0.66rem;
+  line-height: 1;
+}
+
+.telegraph__symbol,
+.telegraph__count {
+  color: var(--panel-text);
+}
+
+.telegraph__symbol {
+  font-size: 0.66rem;
+}
+
+@keyframes telegraph-beat {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.09;
+  }
+}
+
+/* The counter jumps when it is credited: the popup says where, this says what. */
+.board__value--tick {
+  animation: value-pop 280ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+@keyframes value-pop {
+  0% {
+    scale: 1;
+  }
+  35% {
+    scale: 1.22;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/*
+ * A broken streak: red wash from the edges plus a nudge of the world. The
+ * canvas is the viewport, so the shake is scaled up slightly first —
+ * translating it on its own would show the page behind the edges.
+ */
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(240 82 82 / 0) 38%,
+    rgb(240 82 82 / 0.42) 100%
+  );
+  animation: flash-fade 420ms ease-out forwards;
+}
+
+/*
+ * The impact frame. Full-bleed white rather than a vignette: this one is the
+ * hit itself, not a warning around the edges of the screen.
+ */
+.flash--impact {
+  background: rgb(255 255 255 / 0.62);
+  animation: flash-fade 260ms ease-out forwards;
+}
+
+@keyframes flash-fade {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+canvas.is-shaken {
+  animation: world-shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes world-shake {
+  0%,
+  100% {
+    transform: scale(1.02) translate(0, 0);
+  }
+  20% {
+    transform: scale(1.02) translate(-5px, 3px);
+  }
+  40% {
+    transform: scale(1.02) translate(4px, -4px);
+  }
+  60% {
+    transform: scale(1.02) translate(-3px, -2px);
+  }
+  80% {
+    transform: scale(1.02) translate(3px, 2px);
+  }
+}
+
+/* ------------------------------------------------------------- overlays */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  background: rgb(18 28 42 / 0.55);
+  padding: 1rem;
+}
+
+.dialog {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  min-width: min(22rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.25rem 1.5rem;
+  background: rgb(18 28 42 / 0.94);
+  color: var(--panel-text);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-elevation);
+  -webkit-backdrop-filter: var(--panel-blur);
+  backdrop-filter: var(--panel-blur);
+  text-align: center;
+}
+
+.dialog h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.dialog p {
+  margin: 0;
+  opacity: 0.78;
+}
+
+.dialog__stats {
+  display: flex;
+  gap: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dialog__stat {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.dialog__stat b {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.dialog__stat span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.dialog button {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border: 0;
+  border-radius: 0.16rem;
+  background: var(--panel-text);
+  color: var(--panel-solid);
+  cursor: pointer;
+}
+
+.dialog button:hover {
+  background: #ffffff;
+}
+
+/*
+ * Phones: the board stays out of the way at the top, and the rail becomes a
+ * horizontal bar along the bottom where a thumb actually reaches. Wrapping is
+ * deliberate — eight controls do not fit one row on a 320 px screen.
+ */
+@media (max-width: 640px) {
+  .hud {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .rail {
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .rail__button {
+    width: 2.75rem;
+  }
+
+  /* Dividers run between columns now, not rows. */
+  .rail__button {
+    box-shadow: inset -1px 0 0 var(--panel-divider);
+  }
+
+  /* First in the column, so it clears the board instead of covering it. */
+  .fps {
+    order: -1;
+    align-self: flex-end;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .board {
+    width: 100%;
+  }
+
+  .board__row {
+    grid-template-columns: 2rem minmax(3.2rem, 1fr) auto;
+    column-gap: 0.4rem;
+    min-height: 2.5rem;
+    padding: 0.28rem 0.46rem 0.28rem 0.38rem;
+  }
+
+  .board__arrow {
+    display: none;
+  }
+
+  .board__icon {
+    width: 1.82rem;
+    height: 1.82rem;
+  }
+
+  .board__title {
+    font-size: 1rem;
+  }
+
+  .board__value {
+    font-size: 1.25rem;
+  }
+
+  .rail__button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .rail__chip {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+
+/*
+ * The camera already checks `prefers-reduced-motion` before it zooms or
+ * drifts; this covers the DOM half — the control-rail hover transition.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Announced, never drawn. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
