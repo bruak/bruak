@@ -1,0 +1,15 @@
+/* Linewisp support pages use the portfolio's existing legal-page system. */
+.linewisp-page .legal-document a,
+.linewisp-page .site-footer a { overflow-wrap: anywhere; }
+.linewisp-page .app-actions { margin-top: 24px; }
+.linewisp-page .app-actions .btn-primary { color: #1a202c; }
+.linewisp-page .app-actions .btn-secondary { color: var(--text); }
+.linewisp-page .main-nav [aria-current="page"] { color: var(--accent); }
+.linewisp-page a:focus-visible,
+.linewisp-page button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.linewisp-page code { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .linewisp-page .legal-document { padding: 24px 20px; }
+  .linewisp-page .legal-page { padding-top: 48px; }
+  .linewisp-page .app-actions .btn { width: 100%; }
+}
