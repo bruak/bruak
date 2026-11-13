@@ -1,116 +1,53 @@
+document.documentElement.classList.add('js');
 const year = document.getElementById('year');
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
-
-const sanitizeCompanySpecificCopy = root => {
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-  const replacements = [
-    [/Local SMARTFACTORY database/g, 'Local production database'],
-    [/local SMARTFACTORY database/g, 'local production database'],
-    [/SMARTFACTORY/g, 'production database'],
-    [/SmartFactory/g, 'production system'],
-    [/smartfactory/g, 'production system']
-  ];
-
-  while (walker.nextNode()) {
-    let value = walker.currentNode.nodeValue;
-    replacements.forEach(([pattern, replacement]) => {
-      value = value.replace(pattern, replacement);
-    });
-    walker.currentNode.nodeValue = value;
-  }
-};
-
-sanitizeCompanySpecificCopy(document.body);
-
-const buildDeliveryMapPanel = () => {
-  const panel = document.querySelector('.architecture-panel');
-  if (!panel) return;
-
-  const heroSection = panel.closest('section');
-
-  // Remove panel from hero grid, make hero single-column
-  panel.remove();
-  if (heroSection) {
-    heroSection.style.gridTemplateColumns = '1fr';
-    heroSection.style.minHeight = 'auto';
-    heroSection.style.paddingBottom = '0';
-  }
-
-  // Insert full-width animation section right after hero
-  const mapSection = document.createElement('section');
-  mapSection.className = 'delivery-map-section';
-  mapSection.innerHTML = `
-    <div class="delivery-map-embed">
-      <iframe src="software-delivery-map.html" title="Software Delivery Map animation" allowfullscreen loading="lazy"></iframe>
-    </div>
-  `;
-  heroSection ? heroSection.insertAdjacentElement('afterend', mapSection)
-              : document.querySelector('main').prepend(mapSection);
-};
-
-buildDeliveryMapPanel();
-
+if (year) year.textContent = new Date().getFullYear();
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
+const isEnglish = document.documentElement.lang === 'en';
 if (navToggle && mainNav) {
+  const closeMenu = (restoreFocus = false) => {
+    mainNav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', isEnglish ? 'Open menu' : 'Menüyü aç');
+    if (restoreFocus) navToggle.focus();
+  };
   navToggle.addEventListener('click', () => {
-    const isOpen = mainNav.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+    const open = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', isEnglish ? (open ? 'Close menu' : 'Open menu') : (open ? 'Menüyü kapat' : 'Menüyü aç'));
   });
-  mainNav.addEventListener('click', e => {
-    if (e.target.tagName === 'A') {
-      mainNav.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
+  mainNav.addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    closeMenu();
+    if (link.hash && link.pathname === window.location.pathname) {
+      const target = document.getElementById(link.hash.slice(1));
+      if (target) { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }
     }
   });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mainNav.classList.contains('is-open')) closeMenu(true);
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+  window.matchMedia('(min-width: 1001px)').addEventListener('change', () => closeMenu());
 }
-
-const cards = document.querySelectorAll('.project-card, .capability-card, .stack-card, .timeline-item');
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+const filters = document.querySelector('.project-filters');
+if (filters) {
+  const projects = [...document.querySelectorAll('[data-project-category]')];
+  const count = document.getElementById('project-count');
+  filters.hidden = false;
+  filters.addEventListener('click', event => {
+    const selected = event.target.closest('button[data-filter]');
+    if (!selected) return;
+    const category = selected.dataset.filter;
+    filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button === selected)));
+    let visible = 0;
+    projects.forEach(project => {
+      project.hidden = category !== 'all' && project.dataset.projectCategory !== category;
+      if (!project.hidden) visible += 1;
     });
-  },
-  { threshold: 0.12 }
-);
-
-cards.forEach(card => {
-  card.classList.add('reveal-card');
-  observer.observe(card);
-});
-
-const glow = document.querySelector('.cursor-glow');
-if (glow && window.matchMedia('(pointer: fine)').matches) {
-  document.body.classList.add('has-pointer');
-
-  window.addEventListener('pointermove', event => {
-    glow.style.left = `${event.clientX}px`;
-    glow.style.top = `${event.clientY}px`;
+    if (count) count.textContent = isEnglish ? `${visible} projects` : `${visible} çalışma`;
   });
 }
-
-const interactiveCards = document.querySelectorAll('.interactive-card');
-interactiveCards.forEach(card => {
-  card.addEventListener('pointermove', event => {
-    if (!window.matchMedia('(pointer: fine)').matches) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    const rotateX = ((y / rect.height) - 0.5) * -5;
-    const rotateY = ((x / rect.width) - 0.5) * 5;
-
-    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-  });
-
-  card.addEventListener('pointerleave', () => {
-    card.style.transform = '';
-  });
-});

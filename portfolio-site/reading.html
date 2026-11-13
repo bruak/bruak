@@ -6,36 +6,27 @@
     <meta name="description" content="Burak Soykan'ın ileride hatırlamak ve paylaşmak için seçtiği teknik makale okuma arşivi." />
     <title>Okuduklarım | Burak Soykan</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./professional-panel.css" />
     <link rel="stylesheet" href="./blog.css" />
   </head>
   <body>
-    <div class="page-noise"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">İçeriğe geç</a>
     <header class="site-header">
-      <a class="brand" href="./index.html#home" aria-label="Ana sayfaya git"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
-      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="main-nav" aria-label="Ana navigasyon">
-        <a href="./index.html#systems">Sistemler</a>
-        <a href="./index.html#projects">Projeler</a>
+      <a class="brand" href="./index.html#home" aria-label="Ana sayfaya git"><span class="brand-mark" aria-hidden="true">b.</span><span>Burak Soykan</span></a>
+      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-label="Menüyü aç" aria-expanded="false"><span>Menü</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Ana navigasyon">
+        <a href="./index.html#projects">Çalışmalar</a>
+        <a href="./blog.html">Yazılar</a>
+        <a href="./reading.html" aria-current="page">Okuduklarım</a>
         <a href="./apps.html">Uygulamalar</a>
-        <a href="./index.html#approach">Yaklaşım</a>
-        <a href="./index.html#stack">Teknolojiler</a>
-        <a href="./blog.html">Blog</a>
-        <a class="is-active" href="./reading.html">Okuduklarım</a>
-        <a href="./index.html#contact">İletişim</a>
-        <a href="./reading-en.html">EN</a>
+        <a class="language-link" href="./reading-en.html" lang="en" hreflang="en" aria-label="English version">EN</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section-shell blog-hero reading-hero">
         <div>
-          <p class="eyebrow">Okuma Arşivi</p>
+
           <h1 class="blog-title">Okuduklarım.</h1>
           <p class="blog-lead">Geri dönüp hatırlamak ve neyi takip ettiğimi göstermek için seçtiğim makaleler. Her kayıt kısa bir kişisel notla tutulur.</p>
         </div>
@@ -43,14 +34,14 @@
 
       <section class="section-shell reading-section">
         <div
-          id="reading-list"
+          id="reading-list" aria-live="polite" aria-busy="true"
           class="reading-list"
           data-locale="tr"
           data-empty-title="Henüz kayıt yok."
-          data-empty-copy="Beğendiğin makaleleri data/reading-list.json dosyasına eklediğinde burada kart olarak görünecek."
+          data-empty-copy="Seçtiğim yazıları zamanla burada paylaşacağım."
           data-error-title="Okuma listesi yüklenemedi."
-          data-error-copy="Bu sayfa JSON verisini fetch ile okur. Yerelde test ederken portfolio-site klasörünü basit bir statik sunucuyla aç."
-        ></div>
+          data-error-copy="Tekrar denemek için sayfayı yenileyin."
+        ><p class="reading-loading">Okuma listesi yükleniyor…</p></div>
         <noscript><p class="reading-noscript">Okuma listesini görüntülemek için JavaScript gerekir.</p></noscript>
       </section>
     </main>

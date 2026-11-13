@@ -6,52 +6,161 @@
     <meta name="description" content="Burak Soykan - R&D Software Developer building real-time industrial systems, telemetry pipelines and production-ready service architectures." />
     <title>Burak Soykan | R&D Software Developer</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./professional-panel.css" />
   </head>
   <body>
-    <div class="page-noise"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="./en.html#home"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#systems">Systems</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#stack">Stack</a><a href="./blog-en.html">Blog</a><a href="./reading-en.html">Reading</a><a href="#contact">Contact</a><a href="./index.html">TR</a>
+      <a class="brand" href="./en.html#home"><span class="brand-mark" aria-hidden="true">b.</span><span>Burak Soykan</span></a>
+      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-label="Open menu" aria-expanded="false"><span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#projects">Work</a>
+        <a href="./blog-en.html">Writing</a>
+        <a href="./reading-en.html">Reading</a>
+        <a href="./apps.html">Apps</a>
+        <a class="language-link" href="./index.html" lang="tr" hreflang="tr" aria-label="Türkçe sürüm">TR</a>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section id="home" class="hero section-shell">
-        <div class="hero-content">
-          <p class="eyebrow">Industrial IoT • Real-Time Systems • Full-Stack Service Architecture</p>
-          <h1 class="hero-title"><span class="title-kicker">Industrial software & real-time systems</span><span class="title-main">Machine data.</span><span class="title-subline">Runtime-ready software systems.</span></h1>
-          <p class="hero-lead">I design, build and ship production-focused software systems for industrial and operational environments. My work covers machine connectivity, telemetry pipelines, real-time dashboards, cross-platform delivery, background services and deployment-ready architecture.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore Projects</a><a class="btn btn-secondary" href="./blog-en.html">Read Blog</a><a class="btn btn-secondary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a></div>
+        <div class="identity-line"><h1 class="hero-title">Burak Soykan<span>.</span></h1><p class="identity-role">R&D Software Developer</p></div>
+        <div class="hero-intro">
+          <div class="hero-caption"><p>Software, from idea to delivery.</p><a href="#projects">Explore the work <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div>
+          <div><p class="hero-lead">I build the services, interfaces and integrations that make software work. From real-time data to web and mobile products.</p>
+          <div class="hero-links"><a href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div>
         </div>
-        <aside class="architecture-panel professional-panel" aria-label="System architecture map preview">
-          <div class="architecture-header professional-header"><span>SYSTEM ARCHITECTURE MAP</span><strong>Industrial data acquisition to operational delivery</strong></div>
-          <div class="delivery-map-embed">
-            <iframe src="software-delivery-map.html" title="Software Delivery Map animation" allowfullscreen></iframe>
-          </div>
-        </aside>
       </section>
-      <section id="systems" class="section-shell"><div class="section-heading"><p class="eyebrow">Focus Areas</p><h2>Systems I build</h2><p>The portfolio is organized around deployable systems, not isolated UI screens. The emphasis is data flow, service boundaries, observability and delivery.</p></div><div class="capability-grid"><article class="capability-card interactive-card"><h3>Industrial IoT</h3><p>Machine data collection, telemetry pipelines, MQTT flows and dashboard-oriented device modeling.</p></article><article class="capability-card interactive-card"><h3>Real-Time Systems</h3><p>WebSocket, Socket.IO, live dashboards, background workers and async task notifications.</p></article><article class="capability-card interactive-card"><h3>Service Architecture</h3><p>Microservices, API gateways, Redis, PostgreSQL, Docker Compose and deployable service boundaries.</p></article><article class="capability-card interactive-card"><h3>Cross-Platform Delivery</h3><p>Windows services, Linux services, executable packaging, installer workflows and deployment validation.</p></article><article class="capability-card interactive-card"><h3>CNC & Machine Connectivity</h3><p>MTConnect, LSV2, CNC API research, machine state normalization and industrial data extraction.</p></article><article class="capability-card interactive-card"><h3>Internal Tools & Automation</h3><p>Business process tools, sync services, monitoring utilities and operational dashboards.</p></article></div></section>
-      <section id="projects" class="section-shell engineering-work-section"><div class="section-heading split-heading"><div><p class="eyebrow">Projects</p><h2>Technical execution across real systems</h2></div><p>I work below the surface of the interface: data ingestion, protocol handling, service boundaries, runtime behavior, deployment packaging, health checks, logging and production-oriented delivery.</p></div><div class="engineering-grid">
-        <article class="project-card featured interactive-card engineering-card"><div class="project-topline"><span>Telemetry Pipeline</span><a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Publisher</a></div><h3>Industrial data publishing layer</h3><p>Built the service layer that reads operational data from a local SMARTFACTORY database, normalizes machine identity and publishes deterministic telemetry payloads to a cloud MQTT broker.</p><ul class="work-list"><li>Implemented database polling and row state handling for controlled data replay.</li><li>Designed MQTT topic and JSON payload flow for cloud-side machine telemetry.</li><li>Added credential guarding, runtime configuration, rotated logs and testable service behavior.</li></ul><div class="tag-list"><span>Python</span><span>MQTT</span><span>SQLite</span><span>Telemetry</span><span>Testing</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Map + Health Runtime</span><a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">IBBCAM</a></div><h3>Camera monitoring and data proxy architecture</h3><p>Created a FastAPI-backed monitoring application that parses camera source data, protects sensitive fields, exposes clean API endpoints and serves a browser-based operational map interface.</p><ul class="work-list"><li>Parsed XML camera records and exposed only whitelisted public fields.</li><li>Built background health tracking and lightweight liveness endpoints.</li><li>Proxied and normalized external traffic, parking, bridge and weather data layers.</li></ul><div class="tag-list"><span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Checks</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Mobile Product System</span><a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">ParkIt</a></div><h3>Location-based mobile application flow</h3><p>Developed the technical structure for a parking-space rental product with authentication, listings, map discovery, media handling, favorites, messaging and notification-driven user flows.</p><ul class="work-list"><li>Structured Expo / React Native screens around listing, profile and map workflows.</li><li>Integrated Firebase Auth, Firestore data models and Supabase media storage.</li><li>Built real-time messaging and notification flows around operational user actions.</li></ul><div class="tag-list"><span>React Native</span><span>Expo</span><span>Firebase</span><span>Supabase</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Real-Time Web Platform</span><a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">ft_transcendence</a></div><h3>Service-oriented multiplayer architecture</h3><p>Built a containerized web platform with real-time game state synchronization, authentication services, user and social modules, gateway routing and monitoring-oriented service separation.</p><ul class="work-list"><li>Designed service boundaries for auth, game, user, notification and gateway layers.</li><li>Implemented WebSocket-based real-time interaction and JWT-protected flows.</li><li>Packaged the stack with PostgreSQL, Redis, Docker Compose and monitoring components.</li></ul><div class="tag-list"><span>FastAPI</span><span>WebSocket</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Microservice Product Stack</span><a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Matcha</a></div><h3>Distributed application and matching engine</h3><p>Designed a multi-service product architecture with frontend routing, authentication, profile management, media handling, location logic, interaction tracking and match scoring workflows.</p><ul class="work-list"><li>Separated auth, user, photo, interaction and match responsibilities into independent services.</li><li>Used Redis, PostgreSQL and PostGIS-oriented logic for session, event and location flows.</li><li>Built protected frontend flows with Next.js, TypeScript and API gateway routing.</li></ul><div class="tag-list"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>PostGIS</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Industry 4.0 CNC Connectivity</span><a href="https://github.com/bruak/pyLSV2" target="_blank" rel="noreferrer">Machine Data</a></div><h3>Multi-brand CNC data acquisition layer</h3><p>Worked on extracting operational data from industrial CNC machines by researching vendor protocols, native communication libraries and controller-specific access methods for Industry 4.0 monitoring flows.</p><ul class="work-list"><li>Investigated machine connectivity paths for Mitsubishi, NUM, Heidenhain, Siemens, Fanuc and similar CNC environments.</li><li>Mapped machine states, alarms, counters, execution modes and runtime signals into telemetry-ready structures.</li><li>Analyzed vendor SDKs, native DLL exports, LSV2 flows, MTConnect adapters and protocol-level integration constraints.</li></ul><div class="tag-list"><span>CNC</span><span>Industry 4.0</span><span>Mitsubishi</span><span>NUM</span><span>Heidenhain</span><span>MTConnect</span><span>LSV2</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Deployment Engineering</span><a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Tooling</a></div><h3>Build, broker and Linux service tooling</h3><p>Built supporting infrastructure utilities that turn development work into runnable environments: Dockerized brokers, ARM binary build environments and Linux background synchronization services.</p><ul class="work-list"><li>Prepared Docker Compose environments for MQTT broker and ARM/Nuitka compilation flows.</li><li>Implemented systemd-oriented sync service behavior with inotify and rsync workflows.</li><li>Documented repeatable commands for build, run, logs, cleanup and operational validation.</li></ul><div class="tag-list"><span>Docker</span><span>Nuitka</span><span>ARM</span><span>systemd</span><span>MQTT</span></div></article>
-        <article class="project-card interactive-card engineering-card"><div class="project-topline"><span>Real-Time Game & Simulation</span><a href="https://github.com/bruak/PixelPlaneControlSim" target="_blank" rel="noreferrer">PixelFlightControl</a></div><h3>Isometric air traffic control game</h3><p>Built an isometric air traffic control game with three colour-coded runways, aircraft that only land on their matching colour and a drag-to-draw flight path, using Svelte 5, TypeScript and Three.js.</p><ul class="work-list"><li>Kept the simulation layer as pure functions with clear rendering, HUD and game-session boundaries.</li><li>Implemented a Three.js orthographic camera, scenery builder, aircraft/path views and collision warning logic.</li><li>Added a Supabase-backed persistent leaderboard with anti-spam rules plus Vitest and Playwright test flows.</li></ul><div class="tag-list"><span>Svelte 5</span><span>TypeScript</span><span>Three.js</span><span>Supabase</span><span>Vitest</span><span>Playwright</span></div><div class="card-actions"><a class="btn btn-primary" href="./games/pixelflightcontrol/">Play in browser</a></div></article>
+
+      <section id="projects" class="section-shell engineering-work-section" aria-labelledby="work-title">
+        <div class="work-heading"><h2 id="work-title">Selected work.</h2><p id="project-count" role="status" aria-live="polite">8 projects</p></div>
+        <div class="project-filters" role="group" aria-label="Filter projects" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button type="button" data-filter="products" aria-pressed="false">Web & mobile</button>
+          <button type="button" data-filter="systems" aria-pressed="false">Data & systems</button>
+          <button type="button" data-filter="tools" aria-pressed="false">Tools & games</button>
+        </div>
+        <div class="engineering-grid"><article class="project-card" data-project-category="systems">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Publisher</a></h3>
+            <p class="project-kind">Telemetry Pipeline</p>
+            <p class="project-subtitle">Industrial data publishing layer</p>
+          </div>
+          <div class="project-body">
+            <p>Built the service layer that reads operational data from a local production database, normalizes machine identity and publishes deterministic telemetry payloads to a cloud MQTT broker.</p>
+            <div class="tag-list"><span>Python</span><span>MQTT</span><span>SQLite</span><span>Telemetry</span><span>Testing</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Implemented database polling and row state handling for controlled data replay.</li><li>Designed MQTT topic and JSON payload flow for cloud-side machine telemetry.</li><li>Added credential guarding, runtime configuration, rotated logs and testable service behavior.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/CloudPublisher" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="products">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">IBBCAM</a></h3>
+            <p class="project-kind">Map + Health Runtime</p>
+            <p class="project-subtitle">Camera monitoring and data proxy architecture</p>
+          </div>
+          <div class="project-body">
+            <p>Created a FastAPI-backed monitoring application that parses camera source data, protects sensitive fields, exposes clean API endpoints and serves a browser-based operational map interface.</p>
+            <div class="tag-list"><span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Checks</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Parsed XML camera records and exposed only whitelisted public fields.</li><li>Built background health tracking and lightweight liveness endpoints.</li><li>Proxied and normalized external traffic, parking, bridge and weather data layers.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/IBBCAM" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="products">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">ParkIt</a></h3>
+            <p class="project-kind">Mobile Product System</p>
+            <p class="project-subtitle">Location-based mobile application flow</p>
+          </div>
+          <div class="project-body">
+            <p>Developed the technical structure for a parking-space rental product with authentication, listings, map discovery, media handling, favorites, messaging and notification-driven user flows.</p>
+            <div class="tag-list"><span>React Native</span><span>Expo</span><span>Firebase</span><span>Supabase</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Structured Expo / React Native screens around listing, profile and map workflows.</li><li>Integrated Firebase Auth, Firestore data models and Supabase media storage.</li><li>Built real-time messaging and notification flows around operational user actions.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/ParkIt" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="products">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">ft_transcendence</a></h3>
+            <p class="project-kind">Real-Time Web Platform</p>
+            <p class="project-subtitle">Service-oriented multiplayer architecture</p>
+          </div>
+          <div class="project-body">
+            <p>Built a containerized web platform with real-time game state synchronization, authentication services, user and social modules, gateway routing and monitoring-oriented service separation.</p>
+            <div class="tag-list"><span>FastAPI</span><span>WebSocket</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Designed service boundaries for auth, game, user, notification and gateway layers.</li><li>Implemented WebSocket-based real-time interaction and JWT-protected flows.</li><li>Packaged the stack with PostgreSQL, Redis, Docker Compose and monitoring components.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/ft_transcendance" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="products">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Matcha</a></h3>
+            <p class="project-kind">Microservice Product Stack</p>
+            <p class="project-subtitle">Distributed application and matching engine</p>
+          </div>
+          <div class="project-body">
+            <p>Designed a multi-service product architecture with frontend routing, authentication, profile management, media handling, location logic, interaction tracking and match scoring workflows.</p>
+            <div class="tag-list"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>PostGIS</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Separated auth, user, photo, interaction and match responsibilities into independent services.</li><li>Used Redis, PostgreSQL and PostGIS-oriented logic for session, event and location flows.</li><li>Built protected frontend flows with Next.js, TypeScript and API gateway routing.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/Matcha" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="systems">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/pyLSV2" target="_blank" rel="noreferrer">CNC & Machine Data</a></h3>
+            <p class="project-kind">Industry 4.0 CNC Connectivity</p>
+            <p class="project-subtitle">Multi-brand CNC data acquisition layer</p>
+          </div>
+          <div class="project-body">
+            <p>Worked on extracting operational data from industrial CNC machines by researching vendor protocols, native communication libraries and controller-specific access methods for Industry 4.0 monitoring flows.</p>
+            <div class="tag-list"><span>CNC</span><span>Industry 4.0</span><span>Mitsubishi</span><span>NUM</span><span>Heidenhain</span><span>MTConnect</span><span>LSV2</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Investigated machine connectivity paths for Mitsubishi, NUM, Heidenhain, Siemens, Fanuc and similar CNC environments.</li><li>Mapped machine states, alarms, counters, execution modes and runtime signals into telemetry-ready structures.</li><li>Analyzed vendor SDKs, native DLL exports, LSV2 flows, MTConnect adapters and protocol-level integration constraints.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/pyLSV2" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="tools">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Delivery tooling</a></h3>
+            <p class="project-kind">Deployment Engineering</p>
+            <p class="project-subtitle">Build, broker and Linux service tooling</p>
+          </div>
+          <div class="project-body">
+            <p>Built supporting infrastructure utilities that turn development work into runnable environments: Dockerized brokers, ARM binary build environments and Linux background synchronization services.</p>
+            <div class="tag-list"><span>Docker</span><span>Nuitka</span><span>ARM</span><span>systemd</span><span>MQTT</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Prepared Docker Compose environments for MQTT broker and ARM/Nuitka compilation flows.</li><li>Implemented systemd-oriented sync service behavior with inotify and rsync workflows.</li><li>Documented repeatable commands for build, run, logs, cleanup and operational validation.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/ARM-7-Nuitka-Compiler-Docker" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-category="tools">
+          <div class="project-heading">
+            <h3><a href="https://github.com/bruak/PixelPlaneControlSim" target="_blank" rel="noreferrer">PixelFlightControl</a></h3>
+            <p class="project-kind">Real-Time Game & Simulation</p>
+            <p class="project-subtitle">Isometric air traffic control game</p>
+          </div>
+          <div class="project-body">
+            <p>Built an isometric air traffic control game with three colour-coded runways, aircraft that only land on their matching colour and a drag-to-draw flight path, using Svelte 5, TypeScript and Three.js.</p>
+            <div class="tag-list"><span>Svelte 5</span><span>TypeScript</span><span>Three.js</span><span>Supabase</span><span>Vitest</span><span>Playwright</span></div>
+            <details class="project-details"><summary>Engineering details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><ul class="work-list"><li>Kept the simulation layer as pure functions with clear rendering, HUD and game-session boundaries.</li><li>Implemented a Three.js orthographic camera, scenery builder, aircraft/path views and collision warning logic.</li><li>Added a Supabase-backed persistent leaderboard with anti-spam rules plus Vitest and Playwright test flows.</li></ul></details>
+            <div class="project-footer"><a class="project-source" href="https://github.com/bruak/PixelPlaneControlSim" target="_blank" rel="noreferrer">Source on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="btn btn-primary" href="./games/pixelflightcontrol/">Play in browser <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+          </div>
+        </article></div>
+      </section>
+
+      <section id="systems" class="section-shell about-section">
+        <div class="section-heading"><h2>The work behind the interface.</h2><div class="about-copy"><p>I design, build and ship production-focused software systems for industrial and operational environments. My work covers machine connectivity, telemetry pipelines, real-time dashboards, cross-platform delivery, background services and deployment-ready architecture.</p></div></div>
+        <div class="capability-grid"><article class="capability-card"><h3>Industrial IoT</h3><p>Machine data collection, telemetry pipelines, MQTT flows and dashboard-oriented device modeling.</p></article><article class="capability-card"><h3>Real-Time Systems</h3><p>WebSocket, Socket.IO, live dashboards, background workers and async task notifications.</p></article><article class="capability-card"><h3>Service Architecture</h3><p>Microservices, API gateways, Redis, PostgreSQL, Docker Compose and deployable service boundaries.</p></article><article class="capability-card"><h3>Cross-Platform Delivery</h3><p>Windows services, Linux services, executable packaging, installer workflows and deployment validation.</p></article><article class="capability-card"><h3>CNC & Machine Connectivity</h3><p>MTConnect, LSV2, CNC API research, machine state normalization and industrial data extraction.</p></article><article class="capability-card"><h3>Internal Tools & Automation</h3><p>Business process tools, sync services, monitoring utilities and operational dashboards.</p></article></div>
+      </section>
+
+      <section id="approach" class="approach-section"><div class="section-shell approach-inner"><div class="section-heading"><h2>How I work.</h2><p>The recurring pattern across my work is converting raw operational data into monitored, packaged and deployable software systems.</p><p class="delivery-link"><a class="text-link" href="./software-delivery-map.html">Explore the delivery map <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div><div class="timeline"><div class="timeline-item"><span>01</span><div><h3>Collect</h3><p>Read machine, camera, database, protocol or service-level data from the source system.</p></div></div><div class="timeline-item"><span>02</span><div><h3>Normalize</h3><p>Convert raw records into stable identifiers, clean payloads and service-ready structures.</p></div></div><div class="timeline-item"><span>03</span><div><h3>Stream</h3><p>Move data through MQTT, WebSocket, REST, polling workers or gateway services.</p></div></div><div class="timeline-item"><span>04</span><div><h3>Operate</h3><p>Package the system, add logs and health checks, then prepare it for Windows or Linux runtime.</p></div></div></div></div></section>
+
+      <section id="stack" class="section-shell stack-section"><div class="section-heading split-heading"><div><h2>Tools & technologies.</h2></div><p>The stack is intentionally grouped by system responsibility: backend, frontend, industrial protocols, data, delivery, diagnostics and reverse engineering.</p></div><div class="stack-grid"><div class="stack-card"><h3>Backend</h3><p>Python, FastAPI, Flask, Node.js, Go, C, C++, C#</p></div><div class="stack-card"><h3>Frontend & Mobile</h3><p>React, Next.js, TypeScript, React Native, Expo, Tailwind CSS</p></div><div class="stack-card"><h3>Industrial / IoT</h3><p>MQTT, MTConnect, LSV2, Modbus, OPC UA, ThingsBoard, CNC APIs</p></div><div class="stack-card"><h3>Data</h3><p>PostgreSQL, Redis, SQLite, SQL Server, PostGIS, TimescaleDB</p></div><div class="stack-card"><h3>Delivery</h3><p>Docker, Docker Compose, Windows Services, systemd, Nginx, PyInstaller, Nuitka</p></div><div class="stack-card"><h3>Diagnostics & Reverse Engineering</h3><p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, DLL export analysis, protocol tracing, native API inspection and Windows runtime tools</p></div></div></section>
+
+      <section class="section-shell education-section"><div class="section-heading"><h2>42 School project base</h2><p>42 School is a globally recognized, comprehensive and demanding project-based software engineering program that builds strong C, C++, Unix, networking, algorithms, graphics, concurrency and DevOps fundamentals through peer-reviewed assignments.</p></div><div class="school-grid"><span>libft</span><span>ft_printf</span><span>get_next_line</span><span>push_swap</span><span>minitalk</span><span>minishell</span><span>netpractice</span><span>ft_irc</span><span>so_long</span><span>cub3d</span><span>philosophers</span><span>CPP_00 - CPP_09</span><span>Born2beroot</span><span>Inception</span></div></section>
+
+      <section class="section-shell notebook-section"><h2>Elsewhere on the site.</h2><div class="notebook-links">
+        <a href="./blog-en.html"><span><strong>Technical notes</strong><small>Telemetry, architecture and delivery.</small></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        <a href="./reading-en.html"><span><strong>Reading list</strong><small>Articles worth returning to.</small></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        <a href="./apps.html" hreflang="tr"><span><strong>Applications</strong><small>Linewisp & ParkEt — support and policies.</small></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
       </div></section>
-      <section id="approach" class="section-shell approach-section"><div class="section-heading"><p class="eyebrow">Engineering Approach</p><h2>Built for runtime, not only for screenshots</h2><p>The recurring pattern across my work is converting raw operational data into monitored, packaged and deployable software systems.</p></div><div class="timeline"><div class="timeline-item interactive-card"><span>01</span><div><h3>Collect</h3><p>Read machine, camera, database, protocol or service-level data from the source system.</p></div></div><div class="timeline-item interactive-card"><span>02</span><div><h3>Normalize</h3><p>Convert raw records into stable identifiers, clean payloads and service-ready structures.</p></div></div><div class="timeline-item interactive-card"><span>03</span><div><h3>Stream</h3><p>Move data through MQTT, WebSocket, REST, polling workers or gateway services.</p></div></div><div class="timeline-item interactive-card"><span>04</span><div><h3>Operate</h3><p>Package the system, add logs and health checks, then prepare it for Windows or Linux runtime.</p></div></div></div></section>
-      <section id="stack" class="section-shell"><div class="section-heading split-heading"><div><p class="eyebrow">Technology Stack</p><h2>Tools grouped by delivery role</h2></div><p>The stack is intentionally grouped by system responsibility: backend, frontend, industrial protocols, data, delivery, diagnostics and reverse engineering.</p></div><div class="stack-grid"><div class="stack-card interactive-card"><h3>Backend</h3><p>Python, FastAPI, Flask, Node.js, Go, C, C++, C#</p></div><div class="stack-card interactive-card"><h3>Frontend & Mobile</h3><p>React, Next.js, TypeScript, React Native, Expo, Tailwind CSS</p></div><div class="stack-card interactive-card"><h3>Industrial / IoT</h3><p>MQTT, MTConnect, LSV2, Modbus, OPC UA, ThingsBoard, CNC APIs</p></div><div class="stack-card interactive-card"><h3>Data</h3><p>PostgreSQL, Redis, SQLite, SQL Server, PostGIS, TimescaleDB</p></div><div class="stack-card interactive-card"><h3>Delivery</h3><p>Docker, Docker Compose, Windows Services, systemd, Nginx, PyInstaller, Nuitka</p></div><div class="stack-card interactive-card"><h3>Diagnostics & Reverse Engineering</h3><p>Wireshark, dumpbin, Dependencies, ILSpy, TCPView, DLL export analysis, protocol tracing, native API inspection and Windows runtime tools</p></div></div></section>
-      <section class="section-shell education-section"><div class="section-heading"><p class="eyebrow">Core Systems Background</p><h2>42 School project base</h2><p>42 School is a globally recognized, comprehensive and demanding project-based software engineering program that builds strong C, C++, Unix, networking, algorithms, graphics, concurrency and DevOps fundamentals through peer-reviewed assignments.</p></div><div class="school-grid"><span>libft</span><span>ft_printf</span><span>get_next_line</span><span>push_swap</span><span>minitalk</span><span>minishell</span><span>netpractice</span><span>ft_irc</span><span>so_long</span><span>cub3d</span><span>philosophers</span><span>CPP_00 - CPP_09</span><span>Born2beroot</span><span>Inception</span></div></section>
-      <section id="contact" class="section-shell contact-section"><div><p class="eyebrow">Contact</p><h2>Available for system-focused software work.</h2><p>Best fit: industrial data collection, real-time monitoring, internal operational tools, service deployment, integration research and production-oriented dashboards.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:buraksoykan222@gmail.com">buraksoykan222@gmail.com</a><a class="btn btn-secondary" href="https://github.com/bruak" target="_blank" rel="noreferrer">GitHub Profile</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/bruak" target="_blank" rel="noreferrer">LinkedIn</a></div></section>
     </main>
     <footer class="site-footer"><span>© <span id="year"></span> Burak Soykan</span><span>Industrial R&D Developer Portfolio</span></footer>
     <script src="./script.js"></script>

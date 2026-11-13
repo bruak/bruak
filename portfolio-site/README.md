@@ -31,7 +31,15 @@ portfolio-site/
 
 ## Local Preview
 
-Open `index.html` directly in a browser, or serve the folder with a simple static server:
+From the repository root, run the dependency-free Node.js preview server:
+
+```powershell
+node scripts/preview.mjs
+```
+
+Open `http://127.0.0.1:4173`. Stop the server with Ctrl+C. Set `PORT` to choose another port; the server does not stop any existing process.
+
+Alternatively, serve this folder with Python:
 
 ```bash
 cd portfolio-site
@@ -47,6 +55,16 @@ http://127.0.0.1:8080/reading.html
 ```
 
 Use the local static server for `reading.html` and `reading-en.html`, because those pages load `data/reading-list.json` with `fetch`.
+
+## Design and interaction
+
+The portfolio uses a light, type-led layout with Archivo, ink-colored text and uniform neutral project rows. The font and its OFL license are self-hosted in `assets/fonts/`; the site does not call a remote font service.
+
+`styles.css` owns the shared design, and `blog.css` adds writing and reading layouts. `professional-panel.css` and `delivery-loop.css` are legacy assets and are not loaded by the redesigned portfolio pages. The standalone delivery map remains linked from the approach section; the game build is unchanged.
+
+Home-page projects can be filtered by category. Implementation details and school-project descriptions use native disclosures. Without JavaScript, all projects and navigation links remain available; only the reading archive requires JavaScript. The menu supports Escape and the pages provide a skip-to-content link.
+
+The design contract and tokens are recorded in the repository-root `DESIGN.md` and `.impeccable/` files. Verification includes DOM interactions, local paths/anchors, CSS parsing, content preservation and palette contrast. Browser screenshots and actual viewport rendering still need visual verification when browser access is available.
 
 ## Deployment
 

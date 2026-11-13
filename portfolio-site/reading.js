@@ -101,6 +101,8 @@ const loadReadingList = async () => {
     renderEntries(safeEntries);
   } catch (error) {
     showEmptyState(readingList.dataset.errorTitle, readingList.dataset.errorCopy);
+  } finally {
+    readingList.setAttribute('aria-busy', 'false');
   }
 };
 

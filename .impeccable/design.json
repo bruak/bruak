@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T13:55:52.084Z",
+  "title": "Design System: Burak Soykan Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00287 264.54)",
+          "oklch(26.43% 0.00287 264.54)",
+          "oklch(37.86% 0.00287 264.54)",
+          "oklch(49.29% 0.00287 264.54)",
+          "oklch(60.71% 0.00287 264.54)",
+          "oklch(72.14% 0.00287 264.54)",
+          "oklch(83.57% 0.00287 264.54)",
+          "oklch(95.00% 0.00287 264.54)"
+        ]
+      },
+      "bg-soft": {
+        "role": "neutral",
+        "displayName": "Inset Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00627 255.48)",
+          "oklch(26.43% 0.00627 255.48)",
+          "oklch(37.86% 0.00627 255.48)",
+          "oklch(49.29% 0.00627 255.48)",
+          "oklch(60.71% 0.00627 255.48)",
+          "oklch(72.14% 0.00627 255.48)",
+          "oklch(83.57% 0.00627 255.48)",
+          "oklch(95.00% 0.00627 255.48)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.02328 251.45)",
+          "oklch(26.43% 0.02328 251.45)",
+          "oklch(37.86% 0.02328 251.45)",
+          "oklch(49.29% 0.02328 251.45)",
+          "oklch(60.71% 0.02328 251.45)",
+          "oklch(72.14% 0.02328 251.45)",
+          "oklch(83.57% 0.02328 251.45)",
+          "oklch(95.00% 0.02328 251.45)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.02525 252.69)",
+          "oklch(26.43% 0.02525 252.69)",
+          "oklch(37.86% 0.02525 252.69)",
+          "oklch(49.29% 0.02525 252.69)",
+          "oklch(60.71% 0.02525 252.69)",
+          "oklch(72.14% 0.02525 252.69)",
+          "oklch(83.57% 0.02525 252.69)",
+          "oklch(95.00% 0.02525 252.69)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Fine Rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.01405 258.35)",
+          "oklch(26.43% 0.01405 258.35)",
+          "oklch(37.86% 0.01405 258.35)",
+          "oklch(49.29% 0.01405 258.35)",
+          "oklch(60.71% 0.01405 258.35)",
+          "oklch(72.14% 0.01405 258.35)",
+          "oklch(83.57% 0.01405 258.35)",
+          "oklch(95.00% 0.01405 258.35)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Cobalt",
+        "tonalRamp": [
+          "oklch(15.00% 0.20864 266.20)",
+          "oklch(26.43% 0.20864 266.20)",
+          "oklch(37.86% 0.20864 266.20)",
+          "oklch(49.29% 0.20864 266.20)",
+          "oklch(60.71% 0.20864 266.20)",
+          "oklch(72.14% 0.20864 266.20)",
+          "oklch(83.57% 0.20864 266.20)",
+          "oklch(95.00% 0.20864 266.20)"
+        ]
+      },
+      "accent-strong": {
+        "role": "primary",
+        "displayName": "Deep Cobalt",
+        "tonalRamp": [
+          "oklch(15.00% 0.17062 265.56)",
+          "oklch(26.43% 0.17062 265.56)",
+          "oklch(37.86% 0.17062 265.56)",
+          "oklch(49.29% 0.17062 265.56)",
+          "oklch(60.71% 0.17062 265.56)",
+          "oklch(72.14% 0.17062 265.56)",
+          "oklch(83.57% 0.17062 265.56)",
+          "oklch(95.00% 0.17062 265.56)"
+        ]
+      },
+      "on-accent": {
+        "role": "neutral",
+        "displayName": "On Cobalt",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Identity display",
+        "purpose": "The home-page name."
+      },
+      "display-mobile": {
+        "displayName": "Mobile identity display",
+        "purpose": "The name at viewport widths of 640px or less."
+      },
+      "headline": {
+        "displayName": "Page headline",
+        "purpose": "Shared page and blog titles."
+      },
+      "section-title": {
+        "displayName": "Supporting section title",
+        "purpose": "Compact home-section headings."
+      },
+      "project-title": {
+        "displayName": "Project title",
+        "purpose": "Ordinary project entry titles."
+      },
+      "title": {
+        "displayName": "Compact title",
+        "purpose": "Stack headings; other compact headings retain their source-specific leading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "General prose, with a readable paragraph measure."
+      },
+      "article-body": {
+        "displayName": "Article body",
+        "purpose": "Article paragraphs and lists with more open leading."
+      },
+      "label": {
+        "displayName": "Interface label",
+        "purpose": "Navigation, action links and disclosure summaries."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Article dates, types and application context; dates use tabular numerals."
+      },
+      "tag": {
+        "displayName": "Technology tag",
+        "purpose": "Unboxed technology names and compact supporting text."
+      },
+      "code": {
+        "displayName": "Code block",
+        "purpose": "Technical code examples, never decorative labeling."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "action-color",
+        "value": "background-color 160ms ease, color 160ms ease",
+        "purpose": "Button hover state changes."
+      },
+      {
+        "name": "state-indicator",
+        "value": "transform 180ms ease",
+        "purpose": "Menu rules and disclosure SVG respond to open state."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "In-page navigation; becomes auto for reduced-motion preference."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Production prefers-reduced-motion override; no decorative loop is present."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-header",
+        "value": "1000px"
+      },
+      {
+        "name": "single-column",
+        "value": "640px"
+      },
+      {
+        "name": "wide-hero",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "The shared outline action, with ink hover and visible focus; preview has no attached action.",
+      "html": "<button class=\"ds-button\" type=\"button\">Application support</button>",
+      "css": ".ds-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; min-height: 46px; border: 1px solid var(--text, #17202a); background: none; color: var(--text, #17202a); text-decoration: none; font: 14px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); cursor: pointer; transition: background-color 160ms ease, color 160ms ease; } .ds-button:hover { color: var(--on-accent, #ffffff); background: var(--text, #17202a);  } .ds-button:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } .ds-button:disabled { cursor: not-allowed; opacity: 0.55; } @media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } }"
+    },
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cobalt emphasis for a concrete action such as opening the game; preview has no attached action.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Play in browser</button>",
+      "css": ".ds-button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; min-height: 46px; border: 1px solid var(--accent, #2549ce); background: var(--accent, #2549ce); color: var(--on-accent, #ffffff); text-decoration: none; font: 14px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); cursor: pointer; transition: background-color 160ms ease, color 160ms ease; } .ds-button-primary:hover { color: var(--on-accent, #ffffff); background: var(--accent-strong, #18379e); border-color: var(--accent-strong, #18379e); } .ds-button-primary:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } .ds-button-primary:disabled { cursor: not-allowed; opacity: 0.55; } @media (prefers-reduced-motion: reduce) { .ds-button-primary { transition: none; } }"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Shared desktop link treatment; production adds the responsive toggle and Escape/focus behavior.",
+      "html": "<nav class=\"ds-navigation\" aria-label=\"Portfolio preview\"><a href=\"#work\" aria-current=\"page\">Work</a><a href=\"#writing\">Writing</a><a href=\"#reading\">Reading</a><a class=\"ds-locale\" href=\"#turkish\" lang=\"tr\">TR</a></nav>",
+      "css": ".ds-navigation { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: clamp(16px, 2vw, 28px); border-bottom: 1px solid var(--text, #17202a); font-family: var(--font, Archivo, 'Segoe UI', sans-serif); } .ds-navigation a { color: var(--text, #17202a); text-decoration: none; font-size: 14px; line-height: 1.65; padding-block: 12px; white-space: nowrap; text-underline-offset: 5px; } .ds-navigation a:hover, .ds-navigation [aria-current='page'] { color: var(--accent, #2549ce); text-decoration: underline; } .ds-navigation .ds-locale { margin-left: 8px; font-weight: 600; } .ds-navigation a:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; }"
+    },
+    {
+      "name": "Project filters",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Text controls with a bottom rule for the selected state; production JavaScript changes the pressed state, hidden projects and live count.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Project filter preview\"><button type=\"button\" aria-pressed=\"true\">All work</button><button type=\"button\" aria-pressed=\"false\">Web &amp; mobile</button><button type=\"button\" aria-pressed=\"false\">Data &amp; systems</button></div>",
+      "css": ".ds-filters { display: flex; flex-wrap: wrap; gap: 4px 24px; padding-bottom: 24px; } .ds-filters button { min-height: 44px; padding: 8px 0; color: var(--muted, #505b68); background: none; border: 0; border-bottom: 2px solid transparent; font: 14px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); cursor: pointer; } .ds-filters button:hover { color: var(--accent, #2549ce); } .ds-filters button[aria-pressed='true'] { color: var(--text, #17202a); border-bottom-color: var(--text, #17202a); } .ds-filters button:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } @media (max-width: 640px) { .ds-filters { gap: 0 22px; padding-bottom: 18px; } .ds-filters button { font-size: 13px; } }"
+    },
+    {
+      "name": "Technology tags",
+      "kind": "chip",
+      "refersTo": "text-tag",
+      "description": "Non-interactive text metadata with no filled badge or pill.",
+      "html": "<div class=\"ds-tags\"><span>FastAPI</span><span>Leaflet</span><span>Docker</span><span>Health Checks</span></div>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 16px; } .ds-tags span { font: 12px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); color: var(--muted, #505b68); }"
+    },
+    {
+      "name": "Project index entry",
+      "kind": "custom",
+      "refersTo": "project-row",
+      "description": "An open ruled entry, with heading/context and a wider explanatory column.",
+      "html": "<article class=\"ds-project\"><div class=\"ds-project-heading\"><h3>IBBCAM</h3><p class=\"ds-project-kind\">Map + Health Runtime</p><p class=\"ds-project-subtitle\">Camera monitoring and data proxy architecture</p></div><div class=\"ds-project-body\"><p>Created a FastAPI-backed monitoring application that parses camera source data, protects sensitive fields, exposes clean API endpoints and serves a browser-based operational map interface.</p><a href=\"https://github.com/bruak/IBBCAM\">Source on GitHub <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></div></article>",
+      "css": ".ds-project { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border, #cdd3dc); color: var(--text, #17202a); font: 16px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); } .ds-project h3 { margin: 0 0 12px; font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.12; font-weight: 500; letter-spacing: -.03em; overflow-wrap: anywhere; } .ds-project-kind { margin: 0 0 22px; color: var(--muted, #505b68); font-size: 14px; } .ds-project-subtitle { margin: 0; font-size: 17px; line-height: 1.5; max-width: 30ch; } .ds-project-body { min-width: 0; } .ds-project-body > p { color: var(--muted, #505b68); margin: 0 0 18px; max-width: 72ch; } .ds-project a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; color: inherit; text-decoration: none; text-underline-offset: 5px; } .ds-project a:hover { color: var(--accent, #2549ce); text-decoration: underline; } .ds-project svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.6; } .ds-project a:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } @media (max-width: 1000px) { .ds-project { gap: 32px; } } @media (max-width: 640px) { .ds-project { grid-template-columns: 1fr; gap: 16px; padding-block: 28px; } .ds-project h3 { font-size: 30px; } .ds-project-kind { margin-bottom: 14px; } .ds-project-subtitle { max-width: none; margin-bottom: 4px; } }"
+    },
+    {
+      "name": "Engineering disclosure",
+      "kind": "custom",
+      "refersTo": "project-disclosure",
+      "description": "Native details/summary provides the expandable content behavior without a framework.",
+      "html": "<details class=\"ds-disclosure\"><summary>Engineering details <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><ul><li>Parsed XML camera records and exposed only whitelisted public fields.</li><li>Built background health tracking and lightweight liveness endpoints.</li></ul></details>",
+      "css": ".ds-disclosure { margin-top: 24px; border-top: 1px solid var(--border, #cdd3dc); color: var(--text, #17202a); font: 14px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); } .ds-disclosure summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 52px; cursor: pointer; list-style: none; } .ds-disclosure summary::-webkit-details-marker { display: none; } .ds-disclosure summary:hover { color: var(--accent, #2549ce); } .ds-disclosure summary:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } .ds-disclosure svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.6; flex: 0 0 auto; transition: transform 180ms ease; } .ds-disclosure[open] svg { transform: rotate(45deg); } .ds-disclosure ul { margin: 8px 0 16px; padding-left: 20px; color: var(--muted, #505b68); } .ds-disclosure li { padding-left: 4px; margin-bottom: 12px; } @media (max-width: 640px) { .ds-disclosure { margin-top: 16px; } } @media (prefers-reduced-motion: reduce) { .ds-disclosure svg { transition: none; } }"
+    },
+    {
+      "name": "Writing row",
+      "kind": "custom",
+      "refersTo": "writing-row",
+      "description": "A ruled writing entry with compact metadata and an open headline, not an elevated card.",
+      "html": "<article class=\"ds-writing\"><div class=\"ds-writing-meta\"><span>Technical note</span></div><h2><a href=\"#article-preview\">Industrial telemetry pipeline</a></h2><p>Technical writing about telemetry, architecture and software delivery.</p></article>",
+      "css": ".ds-writing { padding: 32px 0; border-bottom: 1px solid var(--border, #cdd3dc); color: var(--text, #17202a); font: 16px/1.65 var(--font, Archivo, 'Segoe UI', sans-serif); } .ds-writing-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted, #505b68); font-size: 13px; font-variant-numeric: tabular-nums; } .ds-writing-meta span:first-child { color: var(--accent, #2549ce); } .ds-writing h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.22; font-weight: 500; letter-spacing: -.035em; margin: 16px 0; max-width: 28ch; } .ds-writing h2 a { color: inherit; text-decoration: none; text-underline-offset: 5px; } .ds-writing h2 a:hover { color: var(--accent, #2549ce); text-decoration: underline; } .ds-writing a:focus-visible { outline: 2px solid var(--accent, #2549ce); outline-offset: 5px; } .ds-writing p { color: var(--muted, #505b68); margin-top: 0; max-width: 72ch; } @media (max-width: 640px) { .ds-writing h2 { font-size: 26px; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Technical Journal",
+    "overview": "The portfolio reads like a personal engineering publication. Cool paper, ink type, open margins and fine rules give real project descriptions room to carry the identity. Cobalt identifies interactive elements. All projects use the same neutral row treatment.\n\nThe same restrained vocabulary supports Turkish and English navigation, technical articles, selected reading and application documents. Information is progressively disclosed through native details elements; the default view remains easy to scan. Decoration does not compete with project names or readable prose.",
+    "keyCharacteristics": [
+      "Cool neutral surfaces with one cobalt accent family.",
+      "Archivo for the identity, headings, prose and interface labels.",
+      "Open columns and ruled rows with compact metadata.",
+      "Native disclosures, visible focus and concise state changes.",
+      "Text and inline SVG rather than invented imagery."
+    ],
+    "rules": [
+      {
+        "name": "The Cobalt Signal Rule",
+        "body": "Cobalt marks interactive affordances; all project surfaces stay neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Voice Rule",
+        "body": "Archivo carries identity, headings, body and interface labels; monospace is reserved for code.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Page Rule",
+        "body": "Separate content with spacing, fine rules and tonal fields; do not add floating surfaces or ornamental shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the source palette and local Archivo asset across the shared portfolio surfaces.",
+      "Do separate long-form content with readable measures, whitespace and rules.",
+      "Do retain visible keyboard focus, native disclosure semantics and accessible state attributes.",
+      "Do carry the same information hierarchy into the single-column layout.",
+      "Do distinguish static source verification from rendered visual approval."
+    ],
+    "donts": [
+      "Don't add decorative eyebrow labels, icon tiles or invented project imagery.",
+      "Don't turn the project index and reading rows into rounded, elevated cards.",
+      "Don't use monospace as decorative interface labeling.",
+      "Don't add gradients, ornamental shadows or looping animation to this visual system.",
+      "Don't treat sidecar preview ramps or unused CSS variables as production color tokens."
+    ]
+  }
+}

@@ -6,36 +6,27 @@
     <meta name="description" content="A selected reading archive of technical articles Burak Soykan wants to remember and share." />
     <title>Reading | Burak Soykan</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./professional-panel.css" />
     <link rel="stylesheet" href="./blog.css" />
   </head>
   <body>
-    <div class="page-noise"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="./en.html#home" aria-label="Go to home"><span class="brand-mark">BS</span><span>Burak Soykan</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="./en.html#systems">Systems</a>
-        <a href="./en.html#projects">Projects</a>
+      <a class="brand" href="./en.html#home" aria-label="Go to home"><span class="brand-mark" aria-hidden="true">b.</span><span>Burak Soykan</span></a>
+      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-label="Open menu" aria-expanded="false"><span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="./en.html#projects">Work</a>
+        <a href="./blog-en.html">Writing</a>
+        <a href="./reading-en.html" aria-current="page">Reading</a>
         <a href="./apps.html">Apps</a>
-        <a href="./en.html#approach">Approach</a>
-        <a href="./en.html#stack">Stack</a>
-        <a href="./blog-en.html">Blog</a>
-        <a class="is-active" href="./reading-en.html">Reading</a>
-        <a href="./en.html#contact">Contact</a>
-        <a href="./reading.html">TR</a>
+        <a class="language-link" href="./reading.html" lang="tr" hreflang="tr" aria-label="Türkçe sürüm">TR</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section-shell blog-hero reading-hero">
         <div>
-          <p class="eyebrow">Reading Archive</p>
+
           <h1 class="blog-title">Reading.</h1>
           <p class="blog-lead">Selected articles I want to remember and share. Each entry keeps the source, topic, date and a short personal note.</p>
         </div>
@@ -43,14 +34,14 @@
 
       <section class="section-shell reading-section">
         <div
-          id="reading-list"
+          id="reading-list" aria-live="polite" aria-busy="true"
           class="reading-list"
           data-locale="en"
           data-empty-title="No entries yet."
-          data-empty-copy="Add saved articles to data/reading-list.json and they will appear here as cards."
+          data-empty-copy="Selected articles will appear here as the reading archive grows."
           data-error-title="Reading list could not be loaded."
-          data-error-copy="This page reads JSON with fetch. For local testing, serve the portfolio-site folder with a simple static server."
-        ></div>
+          data-error-copy="Please refresh the page to try again."
+        ><p class="reading-loading">Loading reading list…</p></div>
         <noscript><p class="reading-noscript">JavaScript is required to view the reading list.</p></noscript>
       </section>
     </main>
